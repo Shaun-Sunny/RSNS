@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rino Simonetti Memorial School of Nursing</title>
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="stylesheet" href="facility.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-info">
+      <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="Rino Simonetti Memorial School of Nursing Logo"></a>
+      </div>
+      <div class="contact-info">
+        <div class="icon">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 xxxxx xxxxx</span>
+        </div>
+        <div class="icon">
+          <i class="fa fa-envelope"></i>
+          <span>contact@example.com</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Tura, Meghalaya 794101</span>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="facility.html?section=hospital">Facilities</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="news.html">News and Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      const sectionParam = getQueryParam('section');
+      if (sectionParam === 'hospital') {
+        const hospitalTab = document.getElementById('hospital');
+        hospitalTab.classList.add('active');
+        document.getElementById('hospital-content').classList.add('active');
+        document.getElementById('hostel-content').classList.remove('active');
+      }
+    });
+  </script>
+  <nav class="menu">
+    <ul>
+      <li id="hospital">Hospital</li>
+      <li id="hostel">Hostel</li>
+    </ul>
+  </nav>
+
+  <script>
+    document.getElementById('hospital').addEventListener('click', function() {
+      document.getElementById('hospital-content').classList.add('active');
+      document.getElementById('hostel-content').classList.remove('active');
+    });
+
+    document.getElementById('hostel').addEventListener('click', function() {
+      document.getElementById('hostel-content').classList.add('active');
+      document.getElementById('hospital-content').classList.remove('active');
+    });
+  </script>
+
+  <div id="hospital-content" class="content">
+  <div class="container">
+    <div class="left-section">
+      <div class="image-wrapper">
+        <img src="hospital2.jpg" alt="Hospital 2" class="image2">
+        <img src="hospital1.jpg" alt="Hospital 1" class="image1">
+      </div>
+    </div>
+    <div class="right-section">
+      <h2>Hospital</h2>
+      <p><strong>Holy Cross Hospital, Walbakgre, Tura</strong></p>
+      <p>The hospital started functioning in the year 1993 under the auspices of Holy Cross Congregation. It is the fulfilment of a great dream of Most Rev. George Mamlassery, the Bishop of Tura Meghalaya. The inadequate health care facilities existing in Garo Hills had invoked in his grace a missionary zeal to construct a 100-bed hospital. The hospital was inaugurated by the Parliamentarian Shri Purno A Sangma. Holy Cross Hospital is the most sought after medical institution in West Garo Hills.</p>
+    </div>
+  </div>
+
+
+
+  <div class="centered-content-box">
+    <div class="centered-content">
+      <img src="pic1.png" alt="Rt. Rev. George Mamlassery" class="profile-pic">
+      <p>Rt. Rev. George Mamlassery, Bishop Emeritus, Tura</p>
+    </div>
+  </div>
+  
+
+  <div class="centered-content">
+    <p>The hospital provides comprehensive health care services in the field of Paediatrics, Gynecology, Neonatology, General Medicine and Surgery, Ultrasound scanning, X-Ray, ECG and Echocardiography and also renders medical assistance to Cardiology, Urology, Paedriatric and general surgery, Orthopaedic and Laparoscopic surgeries.</p>
+  </div>
+
+ 
+  <div class="diagnosis-services">
+    <h2>Diagnosis Services</h2>
+    <div class="service-section">
+      <ul>
+        <li><i class="far fa-hand-point-right"></i> Imaging services</li>
+        <li><i class="far fa-hand-point-right"></i> X-Ray</li>
+        <li><i class="far fa-hand-point-right"></i> Ultrasound</li>
+        <li><i class="far fa-hand-point-right"></i> ECG</li>
+        <li><i class="far fa-hand-point-right"></i> Laparoscopic services</li>
+      </ul>
+    </div>
+    <div class="service-section">
+      <ul>
+        <li><i class="far fa-hand-point-right"></i> Clinical pathology</li>
+        <li><i class="far fa-hand-point-right"></i> Clinical Biochemistry</li>
+        <li><i class="far fa-hand-point-right"></i> Haematology</li>
+        <li><i class="far fa-hand-point-right"></i> Microbiology</li>
+        <li><i class="far fa-hand-point-right"></i> Serology</li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+
+  <div id="hostel-content" class="content">
+
+
+
+
+    <div class="library-section-wrapper">
+        <div class="library-section">
+            <div class="library-image">
+                <img src="library1.jpg" alt="Library Image">
+            </div>
+            <div class="library-content">
+                <h2>Library</h2>
+                <p>The school has a well-established Library, where we foster an environment of learning, exploration, and growth for our students. Our library has computers and WIFI connections and it is a hub of academic support, and a gateway to the vast world of healthcare knowledge.</p>
+            </div>
+        </div>
+      </div>
+      
+    
+      
+
+      <div class="hostel-section-wrapper">
+        <div class="hostel-section">
+          <img src="hostel1.jpg" alt="Hostel Accommodation" class="hostel-image">
+          <h2>Hostel Accommodation</h2>
+          <p>The course is strictly residential. All students will be provided hostel accommodation in the school campus.</p>
+          <p>As you step into our hostel, you'll find a warm and inclusive environment where students from diverse backgrounds come together in pursuit of their nursing education. Our rooms are designed to provide comfort and privacy, ensuring that you have a peaceful haven to rest and recharge after a day of rigorous study and clinical practice. Here, lifelong friendships are forged, where students support and uplift each other through the challenges of academic life. Our common areas are vibrant hubs of activity, where you can unwind, socialize, and engage in meaningful conversations with your peers. As part of a Catholic institution, we offer opportunities for prayer, Holy Mass, and spiritual guidance, providing a supportive environment for students to nurture their faith and deepen their connection to something greater than themselves.</p>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-segment logo-segment">
+      <img src="logo.jpg" alt="College Logo" class="footer-logo">
+      <div class="footer-college-name">R.S.M School of Nursing</div>
+      <p>R.S.M School of Nursing is recognized by the Indian as well as the Meghalaya Nursing Councils for the revised General Nursing & Midwifery Course of three years.</p>
+    </div>
+    <div class="footer-segment">
+      <h3>Important Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="#">News and Events</a></li>
+      </ul>
+    </div>
+    <div class="footer-segment">
+      <h3>Get in Touch</h3>
+      <p>New Tura, West Garo Hills, Pin-794001, New Tura West Garo Hills Meghalaya India</p>
+      <p><i class="fas fa-phone"></i> <a href="#">#</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> <a href="#">#</a></p>
+    </div>
+  </footer>
+</body>
+</html>

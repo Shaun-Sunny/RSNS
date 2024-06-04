@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-/* Root variables */
-:root {
-  --primary-color: #0ef;
-  --text-color: #333;
-  --background-color: #fff;
-  --footer-background-color: #333;
-  --footer-text-color: white;
-  --border-color: skyblue;
-}
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 
 /* Reset and base styles */
 * {
@@ -24,7 +13,7 @@ body {
 
 /* Header styles */
 header {
-  background-color: var(--background-color);
+  background-color: #fff;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -37,11 +26,11 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid skyblue; /* Use shorthand for border */
 }
 
 .logo {
-  margin-right: auto;
+  margin-right: auto; /* Pushes the logo to the left */
 }
 
 .logo img {
@@ -58,7 +47,12 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: #333;
+}
+
+:root {
+  --primary-color: #0ef;
+  --text-color: #333;
 }
 
 /* Navigation styles */
@@ -108,15 +102,59 @@ nav a:hover::before {
   left: 0;
 }
 
+
+/* Main heading styles */
+.main-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #87CEEB; /* light blue */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* News box styles */
+.news-box {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* News image styles */
+.news-image-container {
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 1000px; /* add perspective for 3D effect */
+}
+
+.news-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth the tilting effect and shadow transition */
+}
+
+
+
+
+
+
+
+
+
+
 /* Footer styles */
 .footer {
-  background-color: var(--footer-background-color);
-  color: var(--footer-text-color);
+  background-color: #333;
+  color: white;
   padding: 20px 0;
   text-align: center;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .footer-segment {
@@ -130,8 +168,7 @@ nav a:hover::before {
 }
 
 .footer-logo {
-  max-width: 120px; /* Increased width */
-  max-height: 120px; /* Added height */
+  max-width: 100px;
 }
 
 .footer-college-name {
@@ -153,7 +190,7 @@ nav a:hover::before {
 }
 
 .footer-segment ul li a {
-  color: var(--footer-text-color);
+  color: white;
   text-decoration: none;
 }
 
@@ -169,36 +206,6 @@ nav a:hover::before {
   margin: 5px 0;
 }
 
-/* Focus styles for accessibility */
-a:focus,
-button:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .top-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  .footer {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Custom classes */
 .center-heading {
   font-size: 40px;
   text-align: center;
@@ -209,14 +216,14 @@ button:focus {
 .container {
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid var(--border-color);
-  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border-color); /* Add border here */
+  margin-bottom: 20px; /* Ensure there's some space below the border */
 }
 
 .offer-box {
   position: relative;
-  background-color: var(--background-color);
-  border: 2px solid var(--text-color);
+  background-color: #ffffff;
+  border: 2px solid #333333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 20px;
@@ -229,11 +236,12 @@ button:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  position: relative; /* Ensure the box is positioned relative */
 }
 
 .box-image {
-  width: 60%;
+  width: 60%; /* Center the image with a moderate width */
   height: auto;
   object-fit: cover;
   display: block;
@@ -246,7 +254,7 @@ button:focus {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   transition: opacity 0.3s ease;
-  color: var(--text-color);
+  color: #000;
 }
 
 .offer-box a {
@@ -269,16 +277,16 @@ button:focus {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  padding: 20px; /* Padding for better readability */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for better contrast */
   border-radius: 10px;
-  width: calc(100% - 40px);
+  width: calc(100% - 40px); /* Adjust width to fit the box with padding */
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
+  position: absolute; /* Ensure the description is positioned absolutely */
+  top: 50%; /* Position the description in the middle of the box */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Center the description */
 }
 
 .offer-box:hover .box-image {
@@ -291,6 +299,38 @@ button:focus {
 
 .offer-box:hover .box-description {
   opacity: 1;
-  color: var(--text-color);
+  color: #000;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .top-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .offer-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }

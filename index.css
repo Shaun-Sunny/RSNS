@@ -34,7 +34,8 @@ header {
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 320px; /* Increased width */
+  max-height: 320px; /* Added height */
 }
 
 .contact-info {
@@ -230,23 +231,37 @@ nav a:hover::before {
   }
 }
 
-/* Additional styles for sec1 */
 .sec1 {
   margin-top: 50px;
   padding: 20px;
   text-align: left;
   position: relative;
+  overflow: hidden;
+  height: 500px; /* Adjust height as needed */
 }
 
 .sec1 h1 {
   font-size: 48px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
+  text-align: center;
+  font-family: Sora, sans-serif;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.sec1 div {
+.sec1 p {
   font-size: 24px;
   line-height: 1.5;
+  font-family: Sora, sans-serif;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .sec1::before,
@@ -267,152 +282,129 @@ nav a:hover::before {
   bottom: 0;
 }
 
-/* Infographic styles */
-.infographic-container {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 50px auto;
-}
-
-.infographic-container .core-values {
+/*.background-image {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #007bff;
-  color: #fff;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
+  background: url('corebg.jpg') center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+  transition: transform 0.1s ease-out; /* Smooth transition 
+}*/
+
+.infographic-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px; /* Keep the height fixed */
+  margin: 50px auto;
+ /* background: url('corebg.jpg') no-repeat center center;
+  background-size: cover;*/
 }
 
-.infographic-container .value-box {
+.infographic-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.core-values-section {
+  align-items: flex-start; /* Align content to the left */
+  justify-content: center; /* Center vertically */
+}
+
+.core-values {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.values-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.value-box {
   text-align: center;
-  position: absolute;
   background-color: #fff;
   border: 2px solid #007bff;
-  padding: 10px;
-  font-size: 14px;
+  padding: 30px; /* Increased padding */
+  font-size: 18px; /* Increased font size */
   font-weight: bold;
   border-radius: 10px;
-  width: 150px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 80%;
+  margin: 10px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Positioning the boxes around the center circle with more spacing */
-.infographic-container .box1 { /* North */
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.infographic-container .box2 { /* South */
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-
-.infographic-container .box3 { /* East */
-  top: 50%;
-  right: 5%;
-  transform: translate(50%, -50%);
-}
-
-.infographic-container .box4 { /* West */
-  top: 50%;
-  left: 5%;
-  transform: translate(-50%, -50%);
-}
-
-.infographic-container .box5 { /* Northeast */
-  top: 15%;
-  right: 15%;
-  transform: translate(50%, -50%);
-}
-
-.infographic-container .box6 { /* Northwest */
-  top: 15%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-}
-
-.infographic-container .box7 { /* Southeast */
-  bottom: 15%;
-  right: 15%;
-  transform: translate(50%, 50%);
-}
-
-.infographic-container .box8 { /* Southwest */
-  bottom: 15%;
-  left: 15%;
-  transform: translate(-50%, 50%);
-}
-
-@media (max-width: 768px) {
-  .infographic-container {
-    width: 100%;
-    height: auto;
-  }
-
-  .infographic-container .core-values {
-    width: 80px;
-    height: 80px;
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .infographic-container .value-box {
-    width: 100px;
-    height: 50px;
-    padding: 8px;
-    font-size: 12px;
-  }
-
-  /* Adjust positions for smaller screens */
-  .infographic-container .box1 { top: 5%; }
-  .infographic-container .box2 { bottom: 5%; }
-  .infographic-container .box3 { right: 5%; }
-  .infographic-container .box4 { left: 5%; }
-  .infographic-container .box5 { top: 10%; right: 10%; }
-  .infographic-container .box6 { top: 10%; left: 10%; }
-  .infographic-container .box7 { bottom: 10%; right: 10%; }
-  .infographic-container .box8 { bottom: 10%; left: 10%; }
-}
-
-.infographic-container .value-box:hover {
+.value-box:hover {
   background-color: #007bff;
   color: #fff;
+  transform: scale(1.2); /* Increased scale */
   cursor: pointer;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .infographic-container {
+    flex-direction: column;
+    height: auto; /* Adjust height for better fit on smaller screens */
+  }
+
+  .core-values {
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .value-box {
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+
 
 /* Principal's Message Styles */
 .principal-message {
   margin: 50px auto;
   padding: 20px;
-  border-top: 2px solid lightblue; /* Light blue top border */
+  border-top: 2px solid lightblue;
   background-color: #fff;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.principal-message h1 {
+.principal-message-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.principal-message-header h1 {
   font-size: 36px;
   color: #333;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
-.principal-message h2 {
+.principal-message-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.principal-message-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.principal-message-text h2 {
   font-size: 24px;
   color: #666;
   font-style: italic;
@@ -420,12 +412,26 @@ nav a:hover::before {
   margin-bottom: 20px;
 }
 
-.principal-message p {
+.principal-message-text p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #333;
+  text-align: justify;
 }
+
+.principal-message-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal-message-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 
 
 .footer {
