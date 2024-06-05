@@ -155,7 +155,8 @@ header {
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 320px; /* Increased width */
+  max-height: 320px; /* Added height */
 }
 
 .contact-info {
