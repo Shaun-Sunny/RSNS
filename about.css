@@ -29,6 +29,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 .top-info {
@@ -45,8 +47,8 @@ header {
 }
 
 .logo img {
-  max-width: 320px; /* Increased width */
-  max-height: 320px; /* Added height */
+  max-width: 364px; /* Increased width */
+  max-height: 364px; /* Added height */
 }
 
 .contact-info {
@@ -64,6 +66,8 @@ header {
 /* Navigation styles */
 nav {
   width: 100%;
+  background-color: var(--background-color); /* Optional: add a background color */
+  z-index: 100;
 }
 
 nav ul {
@@ -72,9 +76,12 @@ nav ul {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
+  position: relative;
   margin: 0 10px;
 }
 
@@ -85,10 +92,43 @@ nav a {
   padding: 6px 20px;
   transition: color 0.3s, background-color 0.3s;
   display: inline-block;
+  outline: none; /* Remove focus outline */
+}
+
+nav a:focus, nav a:active {
+  outline: none; /* Ensure focus outline is removed */
+  box-shadow: none;
 }
 
 nav a:hover {
   color: var(--primary-color);
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--background-color); /* Optional: add a background color */
+  box-shadow: 20px 8px 16px rgba(0, 0, 0, 0.6); /* Darker and stronger shadow */
+  border-radius: 10px; /* Rounded edges */
+  padding: 0;
+  margin: 0;
+  z-index: 150;
+}
+
+nav ul ul li {
+  width: 200px;
+  text-align: left;
+}
+
+nav ul ul a {
+  padding: 10px 20px;
+  transition: none; /* Disable underline animation for submenu items */
+}
+
+nav li:hover > ul {
+  display: block;
 }
 
 nav a::before {
@@ -107,6 +147,223 @@ nav a:hover::before {
   width: 100%;
   left: 0;
 }
+
+nav ul ul a::before {
+  content: none; /* Disable underline for submenu items */
+}
+
+/* Background section styles */
+.background-section {
+  position: relative;
+  background-image: url('rsm1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark filter */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+
+
+
+
+
+.content-box {
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 95%; /* Increased width */
+  max-width: 1000px; /* Maximum width */
+  background-color: lightblue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(lightblue, white);
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 54px;
+  margin-bottom: 20px;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  font-weight: bolder;
+}
+
+.history-section .text-content {
+  text-align: left;
+}
+
+.history-section .image-container {
+  float: right;
+  margin: 0 0 10px 20px; /* Adjust margins as needed */
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 40%; /* Adjusted width */
+}
+
+.popup-image {
+  width: 100%; /* Adjusted width */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.popup-image:hover {
+  transform: scale(1.05);
+}
+
+.history-section .text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.organogram-section {
+  background-image: linear-gradient(to right, rgb(255, 229, 147), white, rgb(255, 229, 147));
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.organogram-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.tilt-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.founders-box-container {
+  background-image: linear-gradient(to right, lightblue, white, lightblue);
+  padding-top: 50px; /* Match the margin-top of .founders-box */
+  padding-bottom: 50px; /* Match the margin-bottom of .founders-box */
+}
+
+.founders-box {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 80%; /* Set the maximum width */
+  margin-left: auto; /* Center the div horizontally */
+  margin-right: auto; /* Center the div horizontally */
+  box-shadow: 5px 10px;
+  border-style: solid;
+  background-color: white;
+}
+
+
+.founders-heading {
+  font-family: Copperplate, "Copperplate Gothic Light";
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.founder-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.founder {
+  text-align: center;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+.founder img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.founder h2 {
+  font-family: "Copperplate Gothic Bold", sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.founder p {
+  font-family: "Times New Roman", serif;
+  margin-top: 0;
+}
+
+.founder img:hover {
+  transform: scale(1.1);
+}
+
+.founders-text {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Bahnschrift', cursive;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Footer styles */
 .footer {
@@ -130,8 +387,8 @@ nav a:hover::before {
 }
 
 .footer-logo {
-  max-width: 120px; /* Increased width */
-  max-height: 120px; /* Added height */
+  max-width: 260px; /* Increased width */
+  max-height: 260px; /* Added height */
 }
 
 .footer-college-name {
@@ -161,6 +418,11 @@ nav a:hover::before {
   text-decoration: underline;
 }
 
+.footer-segment ul li a:focus, .footer-segment ul li a:active {
+  outline: none; /* Remove focus outline for links in footer */
+  box-shadow: none;
+}
+
 .footer i {
   margin-right: 5px;
 }
@@ -170,10 +432,9 @@ nav a:hover::before {
 }
 
 /* Focus styles for accessibility */
-a:focus,
-button:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+a:focus, a:active, button:focus, button:active {
+  outline: none;
+  box-shadow: none;
 }
 
 /* Responsive styles */
@@ -250,47 +511,11 @@ button:focus {
 }
 
 .offer-box a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  transition: color 0.3s;
 }
 
 .offer-box a:hover {
-  opacity: 1;
-}
-
-.box-description {
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  width: calc(100% - 40px);
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.offer-box:hover .box-image {
-  opacity: 0;
-}
-
-.offer-box:hover .box-title {
-  opacity: 0;
-}
-
-.offer-box:hover .box-description {
-  opacity: 1;
-  color: var(--text-color);
-  font-weight: bold;
+  color: var(--primary-color);
 }
