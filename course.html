@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rino Simonetti Memorial School of Nursing</title>
+  <link rel="icon" type="image/jpeg" href="tab.jpg">
+  <link rel="stylesheet" href="course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-info">
+      <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="Rino Simonetti Memorial School of Nursing Logo"></a>
+      </div>
+      <div class="contact-info">
+        <div class="icon">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 xxxxx xxxxx</span>
+        </div>
+        <div class="icon">
+          <i class="fa fa-envelope"></i>
+          <span>contact@example.com</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Tura, Meghalaya 794101</span>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li>
+          <a href="">Academics</a>
+          <ul>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="faculty.html">Faculties</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Facilities</a>
+          <ul>
+            <li><a href="hospital.html">Hospital</a></li>
+            <li><a href="#">Laboratories</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="hostel.html">Hostel</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Co-Curricular Activities</a>
+          <ul>
+            <li><a href="#">Professional Development Activities</a></li>
+            <li><a href="#">Student Welfare Activities</a></li>
+            <li><a href="#">SNA</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Alumni</a></li>
+        <li><a href="#">Career</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  
+  <div class="background-section">
+    <div class="overlay">
+      <h1>Acadamics</h1>
+    </div>
+  </div>
+
+
+
+<!-- Courses Section -->
+<div class="courses-offered-section">
+    <h2>Courses offered</h2>
+    <div class="course-box">
+      <img src="gnm.jpg" alt="GNM Nursing" class="tilting-image">
+      <div class="course-title">GNM Nursing</div>
+    </div>
+  </div>
+  
+  <!-- Admission Criteria Section -->
+  <div class="admission-criteria-section">
+    <h2>Admission Criteria</h2>
+    <div class="admission-content">
+      <p>1. Educational qualification: 10+2 with Minimum 40% marks in English and 50% in other subject from any recognized board. However Science is preferable.</p>
+      <p>2. Age: Minimum age for admission is 17yrs (as on 31st December of that year).</p>
+      <p>3. Ability to follow class room instruction in English.</p>
+      <p>4. Basic Computer course and Spoken English Certificate</p>
+      <p>5. Single females of good health, good moral character and aptitude for nursing.</p>
+    </div>
+  </div>
+  
+
+<script>
+  window.onload = function() {
+    const imageElement = document.querySelector('.tilting-image');
+    if (imageElement) {
+      const handleMouseMove = (e) => {
+        let rect = imageElement.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        let dx = (x - rect.width / 2) / (rect.width / 2);
+        let dy = (y - rect.height / 2) / (rect.height / 2);
+
+        imageElement.style.transform = `perspective(500px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
+      };
+
+      const handleMouseLeave = () => {
+        imageElement.style.transform = "";
+      };
+
+      imageElement.addEventListener('mousemove', handleMouseMove);
+      imageElement.addEventListener('mouseleave', handleMouseLeave);
+    }
+  }
+</script>
+
+
+<!-- Selection and Admission Section -->
+<div class="selection-admission-section">
+  <h2>Selection and Admission</h2>
+  <div class="selection-admission-content">
+    <ul>
+      <li>Duly filled application form, together with self-attested true copies of the documents mentioned therein, should reach the office on or before the stipulated date.</li>
+      <li>Candidates eligible for admission will be called for a written test and a personal interview after initial screening of applications.</li>
+      <li>Selection list is finalised based on the pass in the entrance test and personal interview conducted by the management and clearance in the subsequent medical check up. The candidate shall bear the expenses towards any special investigation, if found necessary.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Preliminary Course and Confirmation of Admission Section -->
+<div class="preliminary-course-section">
+  <h2>Preliminary Course and Confirmation of Admission</h2>
+  <div class="preliminary-course-content">
+    <p>The provisionally selected candidates have to undergo a course of three months which will conclude with an examination. Candidates who exhibit the intellectual and practical ability and right aptitude for Nursing will have their admission confirmed. Those who fail in the examination will have to clear the examination or leave the Institution.</p>
+    <p>The students who gain admission for the course are expected to demonstrate diligence in their studies, both theoretical and practical, and to complete the course successfully in due time.</p>
+  </div>
+</div>
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-segment logo-segment">
+    <img src="logo.jpg" alt="College Logo" class="footer-logo">
+    <div class="footer-college-name">R.S.M School of Nursing</div>
+    <p>R.S.M School of Nursing is recognized by the Indian as well as the Meghalaya Nursing Councils for the revised General Nursing & Midwifery Course of three years.</p>
+  </div>
+  <div class="footer-segment">
+    <h3>Important Links</h3>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="course.html">Courses</a></li>
+      <li><a href="hospital.html">Hospital</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="hostel.html">Hostel</a></li>
+    </ul>
+  </div>
+  <div class="footer-segment">
+    <h3>Get in Touch</h3>
+    <p>New Tura, West Garo Hills, Pin-794001, New Tura West Garo Hills Meghalaya India</p>
+    <p><i class="fas fa-phone"></i> +91 xxxxx xxxxx</p>
+    <p><i class="fas fa-map-marker-alt"></i> Tura, Meghalaya 794101</p>
+  </div>
+</footer>
+</body>
+</html>

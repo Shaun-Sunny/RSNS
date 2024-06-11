@@ -186,180 +186,115 @@ nav ul ul a::before {
 
 
 
+/* Courses section styles */
+.courses-offered-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .courses-offered-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .course-box {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-box img {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-title {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  /* Admission criteria section styles */
+  .admission-criteria-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admission-criteria-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .admission-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
 
-.content-box {
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  width: 95%; /* Increased width */
-  max-width: 1000px; /* Maximum width */
-  background-color: lightblue; /* For browsers that do not support gradients */
-  background-image: linear-gradient(lightblue, white);
-}
-
-.section-heading {
-  text-align: center;
-  font-size: 54px;
-  margin-bottom: 20px;
-  font-family: Copperplate, "Copperplate Gothic Light";
-  font-weight: bolder;
-}
-
-.history-section .text-content {
-  text-align: left;
-}
-
-.history-section .image-container {
-  float: right;
-  margin: 0 0 10px 20px; /* Adjust margins as needed */
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 40%; /* Adjusted width */
-}
-
-.popup-image {
-  width: 100%; /* Adjusted width */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.popup-image:hover {
-  transform: scale(1.05);
-}
-
-.history-section .text-content p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.organogram-section {
-  background-image: linear-gradient(to right, rgb(255, 229, 147), white, rgb(255, 229, 147));
+/* Selection and Admission section styles */
+.selection-admission-section {
+  margin: 40px auto;
   padding: 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section-heading {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.organogram-image-container {
+  max-width: 800px;
+  background-color: var(--background-color);
   border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-.tilt-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.founders-box-container {
-  background-image: linear-gradient(to right, lightblue, white, lightblue);
-  padding-top: 50px; /* Match the margin-top of .founders-box */
-  padding-bottom: 50px; /* Match the margin-bottom of .founders-box */
-}
-
-.founders-box {
-  display: flex;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 80%; /* Set the maximum width */
-  margin-left: auto; /* Center the div horizontally */
-  margin-right: auto; /* Center the div horizontally */
-  box-shadow: 5px 10px;
-  border-style: solid;
-  background-color: white;
-}
-
-
-.founders-heading {
-  font-family: Copperplate, "Copperplate Gothic Light";
-  text-align: center;
+.selection-admission-section h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.founder-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.selection-admission-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-.founder {
-  text-align: center;
-  margin: 0 20px;
-  border-radius: 10px;
-}
-
-.founder img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.selection-admission-content li {
   margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-.founder h2 {
-  font-family: "Copperplate Gothic Bold", sans-serif;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.founder p {
-  font-family: "Times New Roman", serif;
-  margin-top: 0;
-}
-
-.founder img:hover {
-  transform: scale(1.1);
-}
-
-.founders-text {
-  text-align: center;
-  margin-top: 20px;
-  font-family: 'Bahnschrift', cursive;
-  margin-left: 150px;
-  margin-right: 150px;
-  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 
+/* Preliminary Course section styles */
+.preliminary-course-section {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.preliminary-course-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.preliminary-course-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
 
 
 
@@ -425,65 +360,65 @@ nav ul ul a::before {
 .footer-segment p i {
   margin-right: 10px;
 }
-
-
-/* Custom classes */
-.center-heading {
-  font-size: 40px;
-  text-align: center;
-  margin-top: 150px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid var(--border-color);
-  margin-bottom: 20px;
-}
-
-.offer-box {
-  position: relative;
-  background-color: var(--background-color);
-  border: 2px solid var(--text-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  margin: 20px;
-  width: 455px;
-  height: 350px;
-  box-sizing: border-box;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.box-image {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-.box-title {
-  font-size: 24px;
-  margin-top: 10px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  transition: opacity 0.3s ease;
-  color: var(--text-color);
-}
-
-.offer-box a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.offer-box a:hover {
-  color: var(--primary-color);
-}
+  
+  /* Custom classes */
+  .center-heading {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+  }
+  
+  .offer-box {
+    position: relative;
+    background-color: var(--background-color);
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 20px;
+    width: 455px;
+    height: 350px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .box-image {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+  
+  .box-title {
+    font-size: 24px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    color: var(--text-color);
+  }
+  
+  .offer-box a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .offer-box a:hover {
+    color: var(--primary-color);
+  }
+  
