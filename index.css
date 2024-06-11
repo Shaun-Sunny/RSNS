@@ -1,4 +1,15 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Root variables */
+:root {
+  --primary-color: #0ef;
+  --text-color: #333;
+  --background-color: #fff;
+  --footer-background-color: #333;
+  --footer-text-color: white;
+  --border-color: skyblue;
+}
 
 /* Reset and base styles */
 * {
@@ -13,11 +24,13 @@ body {
 
 /* Header styles */
 header {
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 .top-info {
@@ -26,16 +39,16 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 2px solid skyblue; /* Use shorthand for border */
+  border-bottom: 2px solid var(--border-color);
 }
 
 .logo {
-  margin-right: auto; /* Pushes the logo to the left */
+  margin-right: auto;
 }
 
 .logo img {
-  max-width: 320px; /* Increased width */
-  max-height: 320px; /* Added height */
+  max-width: 364px; /* Increased width */
+  max-height: 364px; /* Added height */
 }
 
 .contact-info {
@@ -47,17 +60,14 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #333;
-}
-
-:root {
-  --primary-color: #0ef;
-  --text-color: #333;
+  color: var(--text-color);
 }
 
 /* Navigation styles */
 nav {
   width: 100%;
+  background-color: var(--background-color); /* Optional: add a background color */
+  z-index: 100;
 }
 
 nav ul {
@@ -66,9 +76,12 @@ nav ul {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
+  position: relative;
   margin: 0 10px;
 }
 
@@ -79,10 +92,43 @@ nav a {
   padding: 6px 20px;
   transition: color 0.3s, background-color 0.3s;
   display: inline-block;
+  outline: none; /* Remove focus outline */
+}
+
+nav a:focus, nav a:active {
+  outline: none; /* Ensure focus outline is removed */
+  box-shadow: none;
 }
 
 nav a:hover {
   color: var(--primary-color);
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--background-color); /* Optional: add a background color */
+  box-shadow: 20px 8px 16px rgba(0, 0, 0, 0.6); /* Darker and stronger shadow */
+  border-radius: 10px; /* Rounded edges */
+  padding: 0;
+  margin: 0;
+  z-index: 150;
+}
+
+nav ul ul li {
+  width: 200px;
+  text-align: left;
+}
+
+nav ul ul a {
+  padding: 10px 20px;
+  transition: none; /* Disable underline animation for submenu items */
+}
+
+nav li:hover > ul {
+  display: block;
 }
 
 nav a::before {
@@ -100,6 +146,10 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
   left: 0;
+}
+
+nav ul ul a::before {
+  content: none; /* Disable underline for submenu items */
 }
 
 
@@ -435,12 +485,13 @@ nav a:hover::before {
 
 
 .footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
   padding: 20px 0;
   text-align: center;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer-segment {
@@ -454,7 +505,8 @@ nav a:hover::before {
 }
 
 .footer-logo {
-  max-width: 100px;
+  max-width: 260px; /* Increased width */
+  max-height: 260px; /* Added height */
 }
 
 .footer-college-name {
@@ -472,22 +524,23 @@ nav a:hover::before {
 }
 
 .footer-segment ul li {
-  margin: 5px 0;
+  margin-bottom: 10px; /* Adds spacing between items */
 }
 
 .footer-segment ul li a {
-  color: white;
-  text-decoration: none;
+  color: var(--footer-text-color); /* Ensures text color matches footer text color */
+  text-decoration: none; /* Removes underline */
 }
 
 .footer-segment ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer i {
-  margin-right: 5px;
+  text-decoration: none; /* Ensures no underline on hover */
 }
 
 .footer-segment p {
-  margin: 5px 0;
+  margin: 10px 0;
+  color: var(--footer-text-color); /* Ensures text color matches footer text color */
+}
+
+.footer-segment p i {
+  margin-right: 10px;
 }
