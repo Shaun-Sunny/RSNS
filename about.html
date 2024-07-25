@@ -155,6 +155,128 @@
 </div> 
 
   
+
+
+<div class="container-section">
+  <div class="left-container">
+    <h2>Our Benefactors</h2>
+    <img src="benefactor.jpg" alt="Benefactor" class="benefactor-image">
+    <p>Mr & Mrs. Rino Simoneti, Italy</p>
+  </div>
+
+
+
+
+
+
+  <div class="right-container">
+    <div class="collapsible-menu">
+      <div class="collapsible-header">Mission</div>
+      <div class="description-content">
+        Rooted in the Gospel values of love, compassion, and justice, an institution of integrity strives to educate students to deliver holistic excellence in health care that addresses the physical, emotional, and spiritual needs of individuals and communities.
+      </div>
+    </div>
+    
+    <div class="collapsible-menu">
+      <div class="collapsible-header">Vision</div>
+      <div class="description-content">
+        Instilling a culture of service and altruism in our students and moulding them to nurses who are not only skilled clinicians but also compassionate caregivers, ethical leaders, and faithful witnesses to the healing ministry of Jesus Christ.
+      </div>
+    </div>
+    
+    <div class="collapsible-menu">
+      <div class="collapsible-header">Motto</div>
+      <div class="description-content">
+        “THAT THEY MAY HAVE LIFE IN ITS FULLNESS” (JOHN 10:10).
+      </div>
+    </div>
+    
+    <div class="collapsible-menu">
+      <div class="collapsible-header">Philosophy</div>
+      <div class="description-content">
+        We the management and staff of R.S.M School of Nursing, believe that; <br><br>
+        <ul>
+          <li>God created all human beings in God’s own image and likeness. Therefore, we respect LIFE as sacred and precious from the moment of conception till its natural end.</li>
+          <li>Health is the right of every individual and that we are called to promote health and prevent and cure illness wherever possible.</li>
+          <li>Modern nursing education should keep abreast of the research and developments in the medical field.</li>
+          <li>A substantial portion of learning in nursing is acquired through clinical practice.</li>
+          <li>Nursing education should provide for the holistic development of students and also mould them to be providers of holistic health care to the needy.</li>
+          <li>As responsible citizens of the country, the nurses can contribute significantly, towards building up of a healthy nation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const collapsibleMenus = document.querySelectorAll(".collapsible-menu");
+
+  function toggleMenu(menu) {
+    if (menu.classList.contains("active")) {
+      menu.classList.remove("active");
+      setTimeout(() => menu.classList.add("collapsed"), 500); // Delay to ensure collapsing is complete
+    } else {
+      menu.classList.remove("collapsed");
+      menu.classList.add("active");
+    }
+  }
+
+  collapsibleMenus.forEach(menu => {
+    const descriptionContent = menu.querySelector(".description-content");
+
+    menu.addEventListener("click", function(event) {
+      event.stopPropagation();
+      toggleMenu(menu);
+    });
+
+    descriptionContent.addEventListener("click", function(event) {
+      event.stopPropagation();
+      menu.classList.remove("active");
+      setTimeout(() => menu.classList.add("collapsed"), 500); // Delay to ensure collapsing is complete
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
