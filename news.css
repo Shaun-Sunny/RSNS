@@ -334,3 +334,15 @@ button:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
+
+.footer-segment ul li a {
+  color: #ddd; /* Set the link color to match the footer text color */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the links bold */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.footer-segment ul li a:hover {
+  color: red; /* Changes color on hover to blue */
+  text-decoration: none; /* Ensures no underline on hover */
+}
