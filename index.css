@@ -362,6 +362,87 @@ nav ul ul a::before {
 
 
 
+.core-values-section {
+  background-image: url('tab.jpg');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.core-values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Faint white overlay */
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6); /* Light background for text readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.core-values-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.core-values-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Stretch the items to align parallelly */
+}
+
+.core-values-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 45%; /* Set width to ensure two columns */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure items are equally spaced */
+  height: 100%; /* Full height for even spacing */
+}
+
+.core-values-list li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0; /* Remove bottom margin to ensure even spacing */
+  padding-left: 0; /* Remove left padding */
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px; /* Ensures equal spacing for all items */
+}
+
+.core-values-list li i {
+  margin-right: 10px; /* Space between icon and text */
+  color: #0ef; /* Icon color */
+  font-size: 1.5rem; /* Increase icon size for better visibility */
+}
+
+.core-values-list li::before {
+  content: ''; /* Remove the bullet point */
+}
 
 
 
@@ -376,6 +457,75 @@ nav ul ul a::before {
 
 
 
+
+
+.principal-message-section {
+  background-color: #f9f9f9; /* Light background color for contrast */
+  padding: 40px 20px; /* Adjust padding as needed */
+  display: flex; /* Spread section sidewise */
+  justify-content: center;
+  text-align: center; /* Center align text in the section */
+}
+
+.principal-message-section .content-wrapper {
+  max-width: 1200px; /* Increase max width to spread section */
+  margin: 0 auto; /* Center align the content wrapper */
+  padding: 20px;
+  background-color: #fff; /* White background for the content */
+  border: 2px solid #000; /* Black border for consistency */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+.principal-message-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.message-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Reduced space between text and image */
+}
+
+.message-text {
+  max-width: 60%; /* Adjust width as needed */
+  text-align: center; /* Center align text */
+}
+
+.message-text h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem; /* Adjusted font size for quote */
+  color: #555;
+  font-style: italic; /* Italic style for quote */
+  margin-bottom: 10px;
+}
+
+.message-text p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6; /* Improve readability with line height */
+  margin: 0; /* Remove bottom margin */
+}
+
+.message-image {
+  position: relative;
+}
+
+.message-image img {
+  width: 300px; /* Adjusted size of the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.message-image img:hover {
+  transform: scale(1.1); /* Scale image on hover */
+}
 
 
 
