@@ -7,6 +7,8 @@
   <link rel="icon" type="image/jpeg" href="tab.jpg">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
   <header>
@@ -17,15 +19,15 @@
       <div class="contact-info">
         <div class="icon">
           <i class="fas fa-phone-alt"></i>
-          <span>+91 xxxxx xxxxx</span>
+          <span>+91 9378001174</span>
         </div>
         <div class="icon">
           <i class="fa fa-envelope"></i>
-          <span>contact@example.com</span>
+          <span>rsnschooltura@gmail.com</span>
         </div>
         <div class="icon">
           <i class="fas fa-map-marker-alt"></i>
-          <span>Tura, Meghalaya 794101</span>
+          <span>West Garo Hills, Meghalaya 794101</span>
         </div>
       </div>
     </div>
@@ -68,9 +70,9 @@
       <img src="slide1.jpg" alt="Nursing students in a classroom setting">
       <div class="blue-filter"></div>
       <div class="text bottom-left">
-        <div class="word" data-text="Create">Create</div>
-        <div class="word" data-text="Liberate">Liberate</div>
-        <div class="word" data-text="Transform">Transform</div>
+        <div class="word" data-text="Care">Care</div>
+        <div class="word" data-text="Knowledge">Knowledge</div>
+        <div class="word" data-text="Compassion">Compassion</div>
       </div>
     </div>
     
@@ -78,9 +80,9 @@
       <img src="slide2.jpg" alt="Medical training with instructors and students">
       <div class="blue-filter"></div>
       <div class="text bottom-left">
-        <div class="word" data-text="Create">Create</div>
-        <div class="word" data-text="Liberate">Liberate</div>
-        <div class="word" data-text="Transform">Transform</div>
+        <div class="word" data-text="Care">Care</div>
+        <div class="word" data-text="Knowledge">Knowledge</div>
+        <div class="word" data-text="Compassion">Compassion</div>
       </div>
     </div>
     
@@ -88,9 +90,9 @@
       <img src="slide3.jpg" alt="Nurses in a hospital setting">
       <div class="blue-filter"></div>
       <div class="text bottom-left">
-        <div class="word" data-text="Create">Create</div>
-        <div class="word" data-text="Liberate">Liberate</div>
-        <div class="word" data-text="Transform">Transform</div>
+        <div class="word" data-text="Care">Care</div>
+        <div class="word" data-text="Knowledge">Knowledge</div>
+        <div class="word" data-text="Compassion">Compassion</div>
       </div>
     </div>
   
@@ -138,8 +140,7 @@ window.addEventListener('scroll', () => {
 <div class="content">
   <div class="welcome-section">
     <hr class="top-line">
-    <h1>THIS IS MY CALL – THIS IS OUR CALL</h1>
-    <p>To immerse in human reality and to be a transforming presence in our context today.</p>
+    <h1>HEALING HANDS – CARING HEARTS</h1>
     <p>May we be guided by the light of compassion, the warmth of empathy, and the wisdom of experience. Let us approach each patient with reverence, recognizing the sacredness of their journey and the privilege of being invited into their lives during moments of vulnerability.</p>
     <hr class="bottom-line">
   </div>
@@ -204,6 +205,38 @@ window.addEventListener('scroll', () => {
 
 
 
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top">
+  <i class="fas fa-arrow-up"></i> <!-- Optional: Using Font Awesome for icon -->
+</button>
+
+
+
+<script>
+// Get the button
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when scrolling down
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+// Smooth scrolling to top
+scrollToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
 
 
 
@@ -213,33 +246,119 @@ window.addEventListener('scroll', () => {
 
 
 
+<footer class="footer">
+  <div class="footer-segment logo-segment">
+    <img src="logo.jpg" alt="College Logo" class="footer-logo">
+    <div class="footer-college-name">R.S.M School of Nursing</div>
+    <p>R.S.M School of Nursing is recognized by the Indian as well as the Meghalaya Nursing Councils for the revised General Nursing & Midwifery Course of three years.</p>
+  </div>
 
-
-
-
-  <footer class="footer">
-    <div class="footer-segment logo-segment">
-      <img src="logo.jpg" alt="College Logo" class="footer-logo">
-      <div class="footer-college-name">R.S.M School of Nursing</div>
-      <p>R.S.M School of Nursing is recognized by the Indian as well as the Meghalaya Nursing Councils for the revised General Nursing & Midwifery Course of three years.</p>
+  <!-- Gallery Section -->
+  <div class="footer-segment gallery-segment">
+    <h3>Gallery</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="1.jpg" alt="Gallery Image 1" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="2.jpg" alt="Gallery Image 2" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="3.jpg" alt="Gallery Image 3" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="4.jpg" alt="Gallery Image 4" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="5.jpg" alt="Gallery Image 5" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="6.jpg" alt="Gallery Image 6" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="7.jpg" alt="Gallery Image 7" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="8.jpg" alt="Gallery Image 8" class="gallery-image">
+      </div>
+      <div class="gallery-item">
+        <img src="9.jpg" alt="Gallery Image 9" class="gallery-image">
+      </div>
     </div>
-    <div class="footer-segment">
-      <h3>Important Links</h3>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="hospital.html">Hospital</a></li>
-        <li><a href="library.html">Library</a></li>
-        <li><a href="hostel.html">Hostel</a></li>
-      </ul>
+    <!-- Fullscreen Modal -->
+    <div class="fullscreen-modal">
+      <span class="close">&times;</span>
+      <img class="fullscreen-image" alt="Fullscreen View">
     </div>
-    <div class="footer-segment">
-      <h3>Get in Touch</h3>
-      <p>New Tura, West Garo Hills, Pin-794001, New Tura West Garo Hills Meghalaya India</p>
-      <p><i class="fas fa-phone"></i> <a href="#">#</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> <a href="#">#</a></p>
+  </div>
+  <!-- End of Gallery Section -->
+
+  <div class="footer-segment">
+    <h3>Important Links</h3>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="course.html">Courses</a></li>
+      <li><a href="hospital.html">Hospital</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="hostel.html">Hostel</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-segment">
+    <h3>Get in Touch</h3>
+    <p>New Tura, West Garo Hills, Pin-794001, New Tura West Garo Hills Meghalaya India</p>
+    <p><i class="fas fa-phone"></i> <a href="tel:+919378001174" class="phone-number">+91 9378001174</a></p>
+    <!-- Map Embed -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.593702654733!2d90.16720667539235!3d25.518593477505522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3757f194e1cd74c3%3A0xb3f670b39f411159!2sRSM%20Nursing%20School%2C%20Walbakgre!5e0!3m2!1sen!2sin!4v1722536100278!5m2!1sen!2sin" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </footer>
+  </div>
+</footer>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const galleryImages = document.querySelectorAll(".gallery-image");
+    const modal = document.querySelector(".fullscreen-modal");
+    const modalImg = modal.querySelector(".fullscreen-image");
+    const closeModal = modal.querySelector(".close");
+
+    galleryImages.forEach(image => {
+      image.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+      });
+    });
+
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target !== modalImg) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="slider.js"></script>
 </body>
