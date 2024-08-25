@@ -378,6 +378,7 @@ nav ul ul a::before {
 
 
 .nurse-call-box {
+  position: relative; /* Position relative for pseudo-element */
   border: 5px solid lightblue;
   border-radius: 10px;
   padding: 20px;
@@ -385,7 +386,24 @@ nav ul ul a::before {
   max-width: 1000px;
   margin: 20px auto;
   font-family: 'Poppins', sans-serif;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent for blending */
+  z-index: 1; /* Ensure content is above the pseudo-element */
+}
+
+.nurse-call-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px; /* Match the box's border radius */
+  z-index: -1; /* Place the background behind the content */
+  opacity: 0.3; /* Adjust opacity if needed */
 }
 
 .nurse-call-box h2 {
@@ -404,6 +422,7 @@ nav ul ul a::before {
 .nurse-call-box ul li {
   margin-bottom: 10px;
 }
+
 
 
 
@@ -538,7 +557,6 @@ nav ul ul a::before {
   backdrop-filter: blur(10px); /* Optional: Adds a blur effect for better text readability */
 }
 
-
 .principal-message-section h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
@@ -549,13 +567,15 @@ nav ul ul a::before {
 .message-content {
   display: flex;
   align-items: center; /* Align items vertically center */
-  justify-content: center; /* Center align items horizontally */
   gap: 20px; /* Space between text and image */
 }
 
 .message-text {
-  max-width: 60%; /* Adjust width as needed */
-  text-align: left; /* Left align text for better readability with image beside */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center the content vertically */
+  flex: 1 1 60%; /* Allow text to take up 60% of the width, flexible */
+  text-align: left; /* Left align text for better readability */
 }
 
 .message-text h3 {
@@ -565,16 +585,21 @@ nav ul ul a::before {
   font-style: italic; /* Italic style for quote */
   margin: 0; /* Remove margin */
   text-align: left; /* Left align the quote */
-  white-space: nowrap; /* Ensure the quote stays in a single line */
+  white-space: nowrap; /* Prevent the quote from wrapping to a new line */
   overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+  display: flex; /* Enable flexbox for alignment */
+  align-items: center; /* Center align items vertically */
 }
+
 .message-text h3:last-of-type {
-  font-size: 1.1rem; /* Increased size for the author */
+  font-size: 1.1rem; /* Adjusted size for the author */
   text-align: right; /* Right align the author */
+  margin-top: 10px; /* Reduced spacing between quote and author */
   display: block; /* Ensure the author is on its own line */
-  margin-top: 20px; /* Increased spacing between quote and author */
+  white-space: nowrap; /* Prevent wrapping */
 }
+
 .message-text p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
@@ -588,10 +613,12 @@ nav ul ul a::before {
   position: relative;
   display: flex;
   align-items: center; /* Center align image vertically */
+  flex: 0 1 35%; /* Allow image to take up 35% of the width, flexible */
+  justify-content: center; /* Center align image horizontally */
 }
 
 .message-image img {
-  width: 250px; /* Decreased size of the image */
+  width: 350px; /* Increased size of the image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Rounded corners for image */
   transition: transform 0.3s ease; /* Smooth transition for the hover effect */
@@ -602,6 +629,8 @@ nav ul ul a::before {
 .message-image img:hover {
   transform: scale(1.1); /* Scale image on hover */
 }
+
+
 
 
 

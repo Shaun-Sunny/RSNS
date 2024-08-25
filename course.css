@@ -155,7 +155,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('rsm1.jpg');
+  background-image: url('carreerimg.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -170,7 +170,7 @@ nav ul ul a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark filter */
+  background: rgba(0, 0, 0, 0.5); /* Dark filter */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,7 +183,25 @@ nav ul ul a::before {
 }
 
 
+.careerbg{
+  background-image: url('careerbg\ \(2\).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
 
+
+.tilting-image {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tilting-image:hover {
+  transform: scale(1.05); /* Increase the size on hover */
+}
 
 
 /* Courses section styles */
@@ -229,11 +247,10 @@ nav ul ul a::before {
   /* Admission criteria section styles */
   .admission-criteria-section {
     margin: 40px auto;
-    padding: 20px;
+    padding: 20px 0; /* Adjust padding to create space only on top and bottom */
     max-width: 800px;
-    background-color: var(--background-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid var(--text-color); /* Top border line */
+    border-bottom: 2px solid var(--text-color); /* Bottom border line */
   }
   
   .admission-criteria-section h2 {
@@ -246,6 +263,7 @@ nav ul ul a::before {
     line-height: 1.6;
     color: var(--text-color);
   }
+  
   
 
 /* Selection and Admission section styles */
@@ -278,11 +296,10 @@ nav ul ul a::before {
 /* Preliminary Course section styles */
 .preliminary-course-section {
   margin: 40px auto;
-  padding: 20px;
+  padding: 20px 0; /* Adjust padding to create space only on top and bottom */
   max-width: 800px;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid var(--text-color); /* Top border line */
+  border-bottom: 2px solid var(--text-color); /* Bottom border line */
 }
 
 .preliminary-course-section h2 {
@@ -300,24 +317,73 @@ nav ul ul a::before {
 
 
 
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed positioning for the button */
+  bottom: 40px; /* Distance from the bottom */
+  right: 40px; /* Distance from the right */
+  background-color: rgba(30,63,157,255); /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Rounded shape */
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  z-index: 1000; /* Ensure it is above other elements */
+  font-size: 20px; /* Font size for the icon */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  display: flex; /* Flexbox to center icon */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #587ab9; /* Darker shade on hover */
+}
+
+#scrollToTopBtn:active {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
-  background-color: var(--footer-background-color);
+  background-color: #192841;
   color: var(--footer-text-color);
   padding: 20px 0;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Align segments evenly */
   flex-wrap: wrap;
 }
 
 .footer-segment {
   flex: 1;
   margin: 20px;
-  max-width: 300px;
+  max-width: 280px;
+  min-width: 200px;
 }
 
 .logo-segment {
   text-align: left;
+  max-width: 100%;
 }
 
 .footer-logo {
@@ -360,76 +426,122 @@ nav ul ul a::before {
 .footer-segment p i {
   margin-right: 10px;
 }
-  
-  /* Custom classes */
-  .center-heading {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 150px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid var(--border-color);
-    margin-bottom: 20px;
-  }
-  
-  .offer-box {
-    position: relative;
-    background-color: var(--background-color);
-    border: 2px solid var(--text-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    margin: 20px;
-    width: 455px;
-    height: 350px;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .box-image {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    transition: opacity 0.3s ease;
-  }
-  
-  .box-title {
-    font-size: 24px;
-    margin-top: 10px;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    transition: opacity 0.3s ease;
-    color: var(--text-color);
-  }
-  
-  .offer-box a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .offer-box a:hover {
-    color: var(--primary-color);
-  }
-  
-  .footer-segment ul li a {
-    color: #ddd; /* Set the link color to match the footer text color */
-    text-decoration: none; /* Removes underline */
-    font-weight: bold; /* Makes the links bold */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-  }
-  
-  .footer-segment ul li a:hover {
-    color: red; /* Changes color on hover to blue */
-    text-decoration: none; /* Ensures no underline on hover */
-  }
+
+.footer-segment ul li a {
+  color: #ddd; /* Set the link color to match the footer text color */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the links bold */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.footer-segment ul li a:hover {
+  color: red; /* Changes color on hover to red */
+  text-decoration: none; /* Ensures no underline on hover */
+}
+
+.map-container {
+  margin-top: 20px; /* Adds space above the map */
+  border: 2px solid #ccc; /* Optional: Add border for the map */
+  border-radius: 8px; /* Rounded corners for the map */
+  overflow: hidden; /* Ensures the map does not overflow */
+  max-width: 100%; /* Ensures the map is responsive */
+  width: 230px; /* Decreased the fixed width */
+  height: 160px; /* Decreased the fixed height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.map-container iframe {
+  width: 100%; /* Makes the map responsive to container width */
+  height: 100%; /* Makes the map responsive to container height */
+  border: none; /* Removes the default border */
+}
+
+
+.footer-segment .phone-number {
+  color: white; /* Set the phone number color to white */
+  text-decoration: none; /* Remove underline */
+  font-weight: normal; /* Normal font weight */
+}
+
+.footer-segment .phone-number:hover {
+  color: white; /* Ensures no color change on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+/* Gallery Styling */
+.gallery-segment {
+  max-width: 100%;
+  text-align: left;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #333; /* Fallback background */
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the square */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fullscreen Modal */
+.fullscreen-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.fullscreen-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.fullscreen-modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.fullscreen-modal .close:hover {
+  color: red;
+}
+
+
