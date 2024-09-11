@@ -20,8 +20,11 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  background-image: url('careerbg (2).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 /* Header styles */
 header {
   background-color: var(--background-color);
@@ -155,7 +158,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('rsm1.jpg');
+  background-image: url('library1.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -185,82 +188,36 @@ nav ul ul a::before {
 
 
 .library-section-wrapper {
-    margin: 0 auto; /* Center the wrapper horizontally */
-    max-width: 800px; /* Limit the width of the wrapper */
-  }
-  
-  .library-section {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9; /* Background color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding around the content */
-    margin-bottom: 20px; /* Add margin at the bottom */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Add shadow */
-  }
-  
-  .library-image {
-    border-radius: 10px; /* Rounded edges for the image */
-    overflow: hidden; /* Hide overflow */
-    margin-right: 20px; /* Margin between the image and content */
-  }
-  
-  .library-image img {
-    width: 150px; /* Adjust image width as needed */
-    border-radius: 10px; /* Rounded edges */
-  }
-  
-  .library-content {
-    flex: 1; /* Take remaining space */
-  }
-  
-  .library-content h2 {
-    font-family: 'Poppins', sans-serif; /* Font family for the heading */
-    color: var(--primary-color); /* Text color */
-  }
-  
-  .library-content p {
-    font-family: 'Raleway', sans-serif; /* Font family for the paragraph */
-    color: var(--text-color); /* Text color */
-    margin-top: 10px; /* Add some space above the paragraph */
-    line-height: 1.6; /* Line height for better readability */
-  }
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px 0;
+}
 
+.library-section {
+  background: rgba(255, 255, 255, 0.2); /* Light translucent background */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  padding: 20px;
+  border-bottom: 3px solid #000; /* Black bottom border */
+  border-radius: 12px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
 
+.library-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Preferred heading color */
+}
 
-
-
-  .hostel-section-wrapper {
-    margin: 20px auto;
-    max-width: 800px;
-  }
-  
-  .hostel-section {
-    margin-top: 50px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  }
-  
-  .hostel-image {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .hostel-section h2 {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .hostel-section p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-  }
+.library-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
 
 
 
