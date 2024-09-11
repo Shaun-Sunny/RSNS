@@ -196,116 +196,119 @@ nav ul ul a::before {
 
 /* Container styles */
 .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border: 2px solid var(--border-color);
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  margin: 20px;
+}
+
+/* Left section styles */
+.left-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Set a max-width for the images */
+}
+
+.image2 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(50%); /* Apply darker shade */
+  animation: glide-down 3s infinite alternate ease-in-out;
+  z-index: 1; /* Ensure this image is under the other image */
+  position: relative;
+  border-radius: 15px; /* Add curved edges */
+}
+
+.image1 {
+  width: 70%; /* Ensure both images are similar in size */
+  height: auto;
+  position: absolute;
+  bottom: 50%; /* Center vertically within the container */
+  left: 50%;
+  transform: translate(-50%, 50%); /* Center the first image at the bottom center of the second image */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  animation: glide-up 3s infinite alternate ease-in-out;
+  z-index: 2; /* Ensure this image is above the other image */
+}
+
+/* Right section styles */
+.right-section {
+  flex: 2;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 3;
+}
+
+.right-section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.right-section p {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
-  /* Left section styles */
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+  }
+
   .left-section {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
     height: auto;
   }
-  
-  .image-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 400px; /* Set a max-width for the images */
-    margin: 0 auto; /* Center the images */
-  }
-  
-  .image2 {
+
+  .image1, .image2 {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    filter: brightness(50%); /* Apply darker shade */
-    animation: glide-down 3s infinite alternate ease-in-out;
-    z-index: 1; /* Ensure this image is under the other image */
     position: relative;
-    border-radius: 15px; /* Add curved edges */
+    transform: none;
+    animation: none;
   }
-  
-  .image1 {
-    width: 70%; /* Ensure both images are similar in size */
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(-50%, 50%); /* Center the first image at the left bottom corner of the second image */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    animation: glide-up 3s infinite alternate ease-in-out;
-    z-index: 2; /* Ensure this image is above the other image */
+}
+
+@keyframes glide-up {
+  0% {
+    transform: translateY(0);
   }
-  
-  /* Right section styles */
-  .right-section {
-    flex: 2;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    position: relative;
-    z-index: 3;
+  100% {
+    transform: translateY(-10px);
   }
-  
-  .right-section h2 {
-    font-family: 'Poppins', sans-serif;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+}
+
+@keyframes glide-down {
+  0% {
+    transform: translateY(0);
   }
-  
-  .right-section p {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    margin-bottom: 10px;
-    text-align: justify;
+  100% {
+    transform: translateY(10px);
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .left-section, .right-section {
-      flex: none;
-      width: 100%;
-    }
-  
-    .left-section {
-      height: auto;
-    }
-  
-    .image1, .image2 {
-      width: 100%;
-      height: auto;
-      position: relative;
-      transform: none;
-      animation: none;
-    }
-  }
-  
-  @keyframes glide-up {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  @keyframes glide-down {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(10px);
-    }
-  }
+}
+
   
   
   .centered-content-box {
@@ -363,112 +366,227 @@ nav ul ul a::before {
   background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .specialties-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  text-align: left;
+}
+
+.specialties-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
 }
 
 .specialties-content ul {
-  list-style-type: disc;
-  margin-left: 20px;
+  list-style: none; /* Remove default bullets */
+  margin: 0;
+  padding: 0;
 }
 
 .specialties-content li {
   margin-bottom: 10px;
   line-height: 1.6;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
 }
 
-/* Medical Assistance and Amenities section styles */
-.medical-assistance-section {
+.specialties-content i {
+  margin-right: 10px; /* Space between icon and text */
+  color: var(--primary-color); /* Change icon color if needed */
+  font-size: 1.2rem; /* Adjust size of the icon */
+}
+
+
+
+
+
+
+
+
+/* Facilities section styles */
+.facilities-section {
   margin: 40px auto;
   padding: 20px;
   max-width: 800px;
   background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.medical-assistance-section h2 {
+.facilities-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  text-align: center; /* Center align heading */
 }
 
-.medical-assistance-content ul {
-  list-style-type: disc;
-  margin-left: 20px;
+.facilities-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for better layout */
+  gap: 20px;
+  width: 100%;
 }
 
-.medical-assistance-content li {
+.facilities-content ul {
+  list-style: none; /* Remove default bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.facilities-content li {
   margin-bottom: 10px;
   line-height: 1.6;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
 }
 
-.amenities-content {
+.facilities-content i {
+  margin-right: 10px; /* Space between icon and text */
+  color: var(--primary-color); /* Change icon color if needed */
+  font-size: 1.2rem; /* Adjust size of the icon */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Billboard section styles */
+.billboard-section {
+  padding: 40px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative; /* Make sure the container is positioned relative for the vertical line */
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.subheading-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.subheadings {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  line-height: 1.6;
-  color: var(--text-color);
+  width: 100%;
+  position: relative;
 }
 
-.amenities-column {
-  width: 45%;
+.subheading {
+  width: 45%; /* Adjust to ensure subheadings fit within the container */
+  text-align: left;
+  padding: 0 20px; /* Adjust padding for spacing from vertical line */
 }
 
-.amenities-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.amenities-column li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.amenities-column i {
-  margin-right: 10px;
-  color: var(--primary-color);
-}
-
-
-
-/* Diagnostic Services section styles */
-.diagnostic-services-section {
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 800px;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.diagnostic-services-section h2 {
+.subheading h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
-.diagnostic-services-content ul {
+.points-list {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.diagnostic-services-content li {
-  display: flex;
-  align-items: center;
+.points-list li {
   margin-bottom: 10px;
   line-height: 1.6;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Align bullet points to the same area */
 }
 
-.diagnostic-services-content i {
+.points-list i {
   margin-right: 10px;
   color: var(--primary-color);
+  font-size: 1.2rem;
 }
+
+/* Vertical line between subheadings */
+.vertical-line {
+  width: 2px;
+  background-color: black;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(50%); /* Center the line in the middle of the container */
+  z-index: 1;
+}
+
+.dialysis-department {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialysis-department i {
+  margin-right: 10px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.dialysis-department span {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

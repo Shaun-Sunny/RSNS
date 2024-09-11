@@ -7,6 +7,8 @@
   <link rel="icon" type="image/jpeg" href="tab.jpg">
   <link rel="stylesheet" href="alumni.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>    
@@ -70,9 +72,27 @@
   </div>
 
 
-  <div class="main-heading">
-    <h1>Our Alumni - Our Pride</h1>
-  </div>
+  <div class="alumni-section-wrapper">
+    <div class="alumni-section">
+        <h2>Our Alumni</h2>
+        <p>
+            RSM has produced a host of brilliant alumni, whose contributions in the health care domain have been significant. 
+            Our graduates since the first batch of 2009, have excelled and acquired lucrative positions in the realms of health care, 
+            counting government and private sector and across the globe. Significantly, they have also acted as instruments of change 
+            wherever they have been, and apart from sincerity, hard work and diligence, they have demonstrated social commitment 
+            and now increasingly, a responsibility towards the nation and their alma mater. A fairly large number of them have secured 
+            attractive positions in the academics sphere as tutors and lecturers. Their abilities are well attested by the excellent reports 
+            from their recruiters. Witnessing the progress of our alumni gives us immense gratification. Their successful journey into the 
+            professional world, upholding our motto <strong>"That they may have life in fullness”</strong> (John 10:10), is an inspiration 
+            for aspiring students.
+        </p>
+        <p>
+            Our alumni are our pride. They are the true ambassadors of RSM and nothing makes us happier than seeing them 
+            making their mark as healthcare professionals.
+        </p>
+    </div>
+</div>
+
   
   <div class="alumni-container">
     <div class="alumni-image">
@@ -145,7 +165,6 @@ The serene environment,  my teachers, classmates and  friends, helped me in real
   
   
 
-  
   <div class="alumni-container">
     <div class="alumni-content">
       <p>
@@ -159,11 +178,65 @@ The serene environment,  my teachers, classmates and  friends, helped me in real
   </div>
 
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const containers = document.querySelectorAll(".alumni-container");
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const container = entry.target;
+            // Apply animation only if not already applied
+            if (container.classList.contains("slide-in-left") || container.classList.contains("slide-in-right")) {
+              return;
+            }
+  
+            const index = Array.from(containers).indexOf(container);
+  
+            // Check if it's the last container
+            if (index === containers.length - 1) {
+              // Force last container to align on the left
+              container.classList.add("slide-in-left");
+            } else if (index % 2 === 0) {
+              container.classList.add("slide-in-right");
+            } else {
+              container.classList.add("slide-in-left");
+            }
+  
+            observer.unobserve(container); // Stop observing once the animation has played
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+  
+      containers.forEach(container => {
+        observer.observe(container);
+      });
+    });
+  </script>
+  
+  
 
 
 
 
 
+
+  
+
+
+
+
+
+
+
+
+  <div class="success-marquee-wrapper">
+    <marquee class="success-marquee" behavior="scroll" direction="left">
+        ...their success is a reflection of our pursuit of academic excellence guided by the spirit of Almighty
+    </marquee>
+</div>
 
 
 
@@ -212,7 +285,7 @@ scrollToTopBtn.addEventListener("click", function() {
   <div class="footer-segment logo-segment">
     <img src="logo.jpg" alt="College Logo" class="footer-logo">
     <div class="footer-college-name">Rino Simonetti Memorial School of Nursing</div>
-    <p>RSM School of Nursing is recognized by the Indian Nursing Council and the Meghalaya Nursing Councils for the revised General Nursing & Midwifery Course of three years.</p>
+    <p>RSM School of Nursing is recognized by the Indian Nursing Council and the Meghalaya Nursing Council for the revised General Nursing & Midwifery Course of three years.</p>
   </div>
 
   <!-- Gallery Section -->
@@ -268,7 +341,7 @@ scrollToTopBtn.addEventListener("click", function() {
 
   <div class="footer-segment">
     <h3>Get in Touch</h3>
-    <p>New Tura, West Garo Hills, Pin-794001, New Tura West Garo Hills Meghalaya India</p>
+    <p>New Tura, West Garo Hills, Pin-794001, New Tura, West Garo Hills, Meghalaya, India</p>
     <p><i class="fas fa-phone"></i> <a href="tel:+919378001174" class="phone-number">+91 9378001174</a></p>
     <!-- Map Embed -->
     <div class="map-container">

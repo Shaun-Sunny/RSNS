@@ -20,6 +20,10 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  background-image: url('careerbg (2).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Header styles */
@@ -155,7 +159,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('rsm1.jpg');
+  background-image: url('hostel.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -185,36 +189,285 @@ nav ul ul a::before {
 
 
 
+
+
+
+
+
+
+
+
 .hostel-section-wrapper {
-    margin: 20px auto;
-    max-width: 800px;
-  }
-  
-  .hostel-section {
-    margin-top: 50px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  }
-  
-  .hostel-image {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .hostel-section h2 {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .hostel-section p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-  }
+  margin: 20px auto;
+  max-width: 1000px; /* Increased width of the container */
+}
+
+.hostel-section {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly translucent background */
+  backdrop-filter: blur(10px); /* Blur effect for frozen glass appearance */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  padding: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7); /* Frosted bottom border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hostel-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hostel-section h2 {
+  font-size: 24px;
+  color: #000;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hostel-section p {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+.instructions-section-wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.instructions-section {
+  background: rgba(255, 255, 255, 0.2); /* Translucent glass-like background */
+  backdrop-filter: blur(8px); /* Blurred effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  padding: 20px;
+  border-radius: 12px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Frosted bottom border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.instructions-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Your preferred heading color */
+}
+
+.instructions-section ol {
+  margin-left: 20px;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.instructions-section li {
+  margin-bottom: 10px;
+}
+
+.instructions-section li:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+.instructions-section-wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px 0;
+}
+
+.instructions-section {
+  background: none; /* No background, creating a transparent effect */
+  padding-bottom: 20px; /* Space between text and the bottom border */
+  border-bottom: 3px solid #000; /* Only a black bottom border */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.instructions-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Your preferred heading color */
+}
+
+.instructions-section ol {
+  margin-left: 20px;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.instructions-section li {
+  margin-bottom: 10px;
+}
+
+.instructions-section li:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+.policies-section-wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px 0;
+}
+
+.policies-section {
+  background: rgba(255, 255, 255, 0.2); /* Light translucent background for contrast */
+  backdrop-filter: blur(8px); /* Blurred effect for frosted glass appearance */
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  padding: 20px;
+  border-bottom: 3px solid #000; /* Black bottom border line */
+  border-radius: 12px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.policies-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Preferred heading color */
+}
+
+.policies-section ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.policies-section li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.policies-section li strong {
+  display: block;
+  font-weight: bold;
+  color: #1e3f9d; /* Highlighted policy headings */
+}
+
+
+
+
+
+
+
+
+.mess-section-wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px 0;
+}
+
+.mess-section {
+  background: rgba(255, 255, 255, 0.2); /* Light translucent background */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  padding: 20px;
+  border-bottom: 3px solid #000; /* Black bottom border */
+  border-radius: 12px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.mess-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Preferred heading color */
+}
+
+.mess-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+.transport-section-wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px 0;
+}
+
+.transport-section {
+  background: rgba(255, 255, 255, 0.2); /* Light translucent background */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  padding: 20px;
+  border-bottom: 3px solid #000; /* Black bottom border */
+  border-radius: 12px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.transport-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Preferred heading color */
+}
+
+.transport-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

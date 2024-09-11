@@ -20,6 +20,10 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  background-image: url('careerbg (2).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Header styles */
@@ -155,7 +159,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('rsm1.jpg');
+  background-image: url('alumnibanner.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -185,15 +189,34 @@ nav ul ul a::before {
 
 
 
-.main-heading {
-  text-align: center;
-  margin: 50px 0;
+.alumni-section-wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px 0;
 }
 
-.main-heading h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
-  color: var(--text-color);
+.alumni-section {
+  background: none; /* Transparent background */
+  padding: 20px;
+  border-top: 3px solid #000; /* Black top border */
+  border-bottom: 3px solid #000; /* Black bottom border */
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold; /* Bold text */
+}
+
+.alumni-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3f9d; /* Preferred heading color */
+}
+
+.alumni-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000;
+  margin-bottom: 15px;
 }
 
 
@@ -204,12 +227,21 @@ nav ul ul a::before {
   background-color: var(--background-color);
   border: 5px solid var(--border-color); /* Thick border */
   padding: 20px;
-  margin: 50px auto;
-  max-width: 1000px;
+  margin: 50px 5%; /* Adds 5% space from the edges */
+  width: 70%; /* Increased width for a longer box */
   border-radius: 50px; /* Pill shape */
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Dark shadow */
   transition: transform 0.3s ease;
+  position: relative;
+}
+
+.alumni-container:nth-child(even) {
+  margin-left: auto; /* Align even containers to the right */
+}
+
+.alumni-container:nth-child(odd) {
+  margin-right: auto; /* Align odd containers to the left */
 }
 
 .alumni-container:hover {
@@ -255,6 +287,118 @@ nav ul ul a::before {
   line-height: 1.6;
 }
 
+/* For responsive handling to avoid overflow on smaller screens */
+@media (max-width: 768px) {
+  .alumni-container {
+    flex-direction: column;
+    width: 90%; /* Full width on smaller screens */
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+  }
+
+}
+/* Keyframe for sliding in from the left */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframe for sliding in from the right */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* General styling */
+.alumni-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  border: 5px solid var(--border-color);
+  padding: 20px;
+  margin: 50px 5%;
+  width: 70%;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  position: relative;
+  opacity: 0; /* Hidden initially */
+  transform: translateX(0); /* Prevent initial sliding */
+}
+
+/* Slide in from the left (odd containers) */
+.alumni-container.slide-in-left {
+  animation: slideInFromLeft 1s ease forwards;
+}
+
+/* Slide in from the right (even containers) */
+.alumni-container.slide-in-right {
+  animation: slideInFromRight 1s ease forwards;
+}
+
+.alumni-image {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.alumni-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alumni-image:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.alumni-image p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.alumni-content {
+  flex: 2;
+  padding-left: 30px;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.alumni-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* For responsive handling to avoid overflow on smaller screens */
+@media (max-width: 768px) {
+  .alumni-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+  }
+}
 
 
 
@@ -262,6 +406,27 @@ nav ul ul a::before {
 
 
 
+
+
+
+
+
+
+
+.success-marquee-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.success-marquee {
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
+  font-style: italic;
+  color: red;
+  white-space: nowrap; /* Ensures the text scrolls in one line */
+  padding: 30px;
+}
 
 
 
