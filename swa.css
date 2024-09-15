@@ -290,6 +290,111 @@ nav ul ul a::before {
 
 
 
+  .sports-meet-container {
+    border-top: 2px solid #1e3f9d;
+    border-bottom: 2px solid #1e3f9d;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.sports-meet-title {
+    color: #1e3f9d;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sports-meet-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.sports-meet-quote {
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive; /* Apply a proper cursive font */
+    quotes: "“" "”"; /* Stylish quotes */
+    font-size: 24px; /* Make the quote slightly larger */
+}
+
+.sports-meet-author {
+    font-size: 16px;
+    font-style: normal;
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.unique-sports-section {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Space around the section */
+}
+
+.unique-sports-section h2 {
+  font-size: 28px; /* Adjust font size if needed */
+  color: black; /* Ensures text color is consistent */
+}
+
+.unique-content-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.unique-activity-image {
+  float: left;
+  margin: 20px 20px 20px 0; /* Space around the image */
+  width: 15%; /* Reduced image width */
+  max-width: 150px; /* Maximum width to ensure it's small */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow to the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.unique-activity-image:hover {
+  transform: scale(1.1); /* Makes the image pop up on hover */
+}
+
+
+.unique-sports-section p {
+  font-size: 18px; /* Adjust font size as preferred */
+  color: black; /* Ensures text color is consistent */
+  line-height: 1.6; /* Increases readability */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

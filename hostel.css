@@ -458,6 +458,72 @@ nav ul ul a::before {
 
 
 
+.school-mess-section, .transport-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 2px solid black;
+}
+
+.school-mess-image, .transport-image {
+  width: 20%; /* Smaller image size */
+}
+
+.school-mess-image {
+  margin-left: 20px; /* Add gap between the image and the left edge */
+}
+
+.school-mess-image img, .transport-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.school-mess-content, .transport-content {
+  width: 75%;
+}
+
+.school-mess-content h1, .transport-content h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.school-mess-content p, .transport-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+}
+
+/* Reversed layout for transport section */
+.transport-section {
+  flex-direction: row-reverse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
