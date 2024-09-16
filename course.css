@@ -19,12 +19,13 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 /* Header styles */
 header {
   background-color: var(--background-color);
+  font-family: "Arial", sans-serif;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -68,6 +69,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -244,25 +246,34 @@ nav ul ul a::before {
     text-align: center;
   }
   
-  /* Admission criteria section styles */
-  .admission-criteria-section {
-    margin: 40px auto;
-    padding: 20px 0; /* Adjust padding to create space only on top and bottom */
-    max-width: 800px;
-    border-top: 2px solid var(--text-color); /* Top border line */
-    border-bottom: 2px solid var(--text-color); /* Bottom border line */
-  }
-  
-  .admission-criteria-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .admission-content p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: var(--text-color);
-  }
+/* Admission criteria section styles */
+.admission-criteria-section {
+  margin: 40px auto;
+  padding: 20px 0; /* Adjust padding to create space only on top and bottom */
+  max-width: 800px;
+  border-top: 2px solid var(--text-color); /* Top border line */
+  border-bottom: 2px solid var(--text-color); /* Bottom border line */
+}
+
+.admission-criteria-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left; /* Center-align heading */
+}
+
+.admission-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-indent: -20px; /* Create space for custom number */
+  padding-left: 20px; /* Add padding for text to start below the number */
+  position: relative; /* For positioning the number */
+}
+
+
+
+
+
   
   
 
@@ -282,15 +293,29 @@ nav ul ul a::before {
 }
 
 .selection-admission-content ul {
-  list-style-type: disc;
-  margin-left: 20px;
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove left padding */
+  margin-left: 0; /* Remove left margin */
 }
 
 .selection-admission-content li {
+  position: relative; /* Position relative for custom bullet */
+  padding-left: 40px; /* Increased space for custom bullet */
   margin-bottom: 10px;
   line-height: 1.6;
   color: var(--text-color);
 }
+
+.selection-admission-content li::before {
+  content: '❖'; /* Custom bullet point */
+  position: absolute;
+  left: 10px; /* Adjust space from the left */
+  top: 25%; /* Vertically center the bullet point */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+  color: var(--text-color); /* Bullet point color */
+  font-size: 1.5rem; /* Size of the bullet point */
+}
+
 
 
 /* Preliminary Course section styles */

@@ -19,12 +19,13 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 /* Header styles */
 header {
   background-color: var(--background-color);
+  font-family: "Arial", sans-serif;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -68,6 +69,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -200,7 +202,7 @@ nav ul ul a::before {
 
 .content-box {
   margin: 20px auto;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 30px;
@@ -215,7 +217,7 @@ nav ul ul a::before {
   text-align: center;
   font-size: 54px;
   margin-bottom: 20px;
-  font-family: Copperplate, "Copperplate Gothic Light";
+  font-family: 'Poppins', sans-serif;
   font-weight: bolder;
 }
 
@@ -244,10 +246,10 @@ nav ul ul a::before {
 }
 
 .history-section .text-content p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 20px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -319,8 +321,8 @@ nav ul ul a::before {
 
 .founders-box-container {
   background-image: linear-gradient(to right, lightblue, white, lightblue);
-  padding-top: 50px; /* Match the margin-top of .founders-box */
-  padding-bottom: 50px; /* Match the margin-bottom of .founders-box */
+  padding-top: 50px; 
+  padding-bottom: 50px;
 }
 
 .founders-box {
@@ -333,17 +335,16 @@ nav ul ul a::before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 20px;
-  max-width: 80%; /* Set the maximum width */
-  margin-left: auto; /* Center the div horizontally */
-  margin-right: auto; /* Center the div horizontally */
+  max-width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 5px 10px;
   border-style: solid;
   background-color: white;
 }
 
-
 .founders-heading {
-  font-family: Copperplate, "Copperplate Gothic Light";
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -361,23 +362,26 @@ nav ul ul a::before {
 }
 
 .founder img {
-  width: 100px;
-  height: 100px;
+  width: 150px;  /* Increased width */
+  height: 150px; /* Increased height */
   border-radius: 50%;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
 .founder h2 {
-  font-family: "Copperplate Gothic Bold", sans-serif;
-  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px; /* Increased font size */
   margin-bottom: 5px;
 }
 
 .founder p {
   font-family: "Times New Roman", serif;
   margin-top: 0;
+  font-size: 20px; /* Increased font size for the years */
+  font-weight: bold; /* Optional: Make the years bold */
 }
+
 
 .founder img:hover {
   transform: scale(1.1);
@@ -391,6 +395,8 @@ nav ul ul a::before {
   margin-right: 150px;
   font-size: 18px;
 }
+
+
 
 
 
@@ -421,10 +427,12 @@ nav ul ul a::before {
   justify-content: center; /* Center contents vertically */
   text-align: center;
   transition: all 0.3s ease; /* Smooth transition for resizing */
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .benefactor-image {
-  width: 150px; /* Increased size */
+  width: 200px; /* Increased size */
   height: auto;
   border-radius: 50%;
   margin: 10px 0;

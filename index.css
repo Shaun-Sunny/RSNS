@@ -83,6 +83,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -421,7 +422,20 @@ nav ul ul a::before {
 
 .nurse-call-box ul li {
   margin-bottom: 10px;
+  padding-left: 30px; /* Add padding to the left for space */
+  text-indent: -20px; /* Create a hanging indent */
+  line-height: 1.5; /* Improve readability with better line spacing */
 }
+
+.nurse-call-box ul li::before {
+  /*content: '\10162';  Bullet point symbol */
+  padding-right: 10px; /* Space between bullet point and text */
+  color: #1e3f9d; /* Color for the bullet point */
+  font-size: 1.5rem; /* Adjust bullet size if needed */
+  position: absolute; /* Ensure bullet is aligned correctly */
+  margin-left: -30px; /* Align bullet point outside of the padding */
+}
+
 
 
 
@@ -504,11 +518,12 @@ nav ul ul a::before {
   display: flex;
   align-items: center;
   min-height: 70px; /* Increased min-height for better spacing */
+  font-weight: bold;
 }
 
 .core-values-list li i {
   margin-right: 15px; /* Increased space between icon and text */
-  color: #000; /* Icon color */
+  color: rgb(11, 75, 252); /* Icon color */
   font-size: 1.8rem; /* Increased icon size for better visibility */
 }
 

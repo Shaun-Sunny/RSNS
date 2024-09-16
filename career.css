@@ -155,7 +155,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('careerbanner.jpg');
+  background-image: url('careerbanner\ \(2\).jpg');
   background-size: cover;
   background-position: center;
   height: 300px;

@@ -27,6 +27,7 @@ body {
 /* Header styles */
 header {
   background-color: var(--background-color);
+  font-family: "Arial", sans-serif;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -70,6 +71,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -257,8 +259,9 @@ nav ul ul a::before {
 
 .right-section h2 {
   font-family: 'Poppins', sans-serif;
-  color: var(--primary-color);
+  color: rgb(22, 121, 252);
   margin-bottom: 10px;
+  font-size: 24px;
 }
 
 .right-section p {
@@ -266,6 +269,7 @@ nav ul ul a::before {
   color: var(--text-color);
   margin-bottom: 10px;
   text-align: justify;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -482,7 +486,7 @@ nav ul ul a::before {
 }
 
 .main-heading {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-bottom: 30px;
 }
 

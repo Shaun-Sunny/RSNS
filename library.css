@@ -173,7 +173,7 @@ nav ul ul a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark filter */
+  background: rgba(0, 0, 0, 0.5); /* Dark filter */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,37 +187,131 @@ nav ul ul a::before {
 
 
 
-.library-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 20px 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General container for the library sections */
+.library-section-container, .general-guidelines-container, .book-issue-container {
+  margin: 0 auto; /* Centers the div */
+  width: 80%; /* Makes the div broader */
+  padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
+  background-color: transparent; /* Makes the background fully transparent */
+  text-align: center; /* Centers text inside the div */
+  font-size: 1.5em; /* Slightly increases the font size */
+  line-height: 1.6; /* Improves readability */
+  color: black; /* Sets text color to black */
+  font-weight: bolder;
+  position: relative; /* Position relative for the image placement */
+  overflow: hidden; /* Ensure the image stays within bounds */
 }
 
-.library-section {
-  background: rgba(255, 255, 255, 0.2); /* Light translucent background */
-  backdrop-filter: blur(8px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(8px); /* For Safari support */
-  padding: 20px;
-  border-bottom: 3px solid #000; /* Black bottom border */
-  border-radius: 12px;
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease-in-out;
+/* Specific styles for the first section */
+.library-section-container {
+  font-size: 24px; /* Sets font size for the first section */
+  color: black; /* Sets font color for the first section */
+  text-align: left; /* Aligns text to the left for better readability */
 }
 
-.library-section h2 {
-  text-align: center;
+/* Specific styles for headings */
+.library-section-container h2, .general-guidelines-container h2, .book-issue-container h2 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #1e3f9d; /* Preferred heading color */
+  text-align: center;
 }
 
-.library-section p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #555;
+/* Specific styles for paragraphs */
+.library-section-container p {
+  font-size: 24px; /* Sets font size for paragraphs in the first section */
+  line-height: 1.8; /* Improves readability */
+  color: black; /* Sets font color for paragraphs in the first section */
   margin-bottom: 15px;
+  text-align: center;
 }
+
+/* Specific styles for lists */
+.general-guidelines-container ul, .book-issue-container ul {
+  list-style: none; /* Remove default list styling */
+  padding-left: 0; /* Remove padding for list items */
+  text-align: center; /* Align text to the left for better readability */
+}
+
+.general-guidelines-container li, .book-issue-container li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+/* Styling for the horizontal rule */
+hr.custom-hr {
+  border: 0;
+  height: 2px;
+  background: #000; /* Color of the line */
+  margin: 20px 0; /* Space around the line */
+}
+
+/* Specific styles for the image in the library section */
+.library-image {
+  position: absolute;
+  right: 20px; /* Adds space from the right edge */
+  top: 50%;
+  transform: translateY(-50%); /* Centers image vertically */
+  width: 250px; /* Increased size */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1; /* Ensures the image is above other content */
+}
+
+.library-image:hover {
+  transform: scale(1.2) translateY(-50%); /* Popup effect */
+}
+
+/* Adjust content padding to prevent overlap */
+.library-content {
+  position: relative; /* Ensures content is positioned relative to the container */
+  padding-right: 320px; /* Increased padding on the right to accommodate the larger image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

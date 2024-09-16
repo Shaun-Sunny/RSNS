@@ -159,7 +159,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('hostel.jpg');
+  background-image: url('hostel1.jpeg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -174,7 +174,7 @@ nav ul ul a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark filter */
+  background: rgba(0, 0, 0, 0.5); /* Dark filter */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,309 +197,229 @@ nav ul ul a::before {
 
 
 
+/* General container styles */
+.library-section-container, .general-guidelines-container, .book-issue-container, .hostel-section-wrapper, .transport-section, .instructions-section-wrapper, .policies-section-wrapper, .school-mess-section {
+  margin: 0 auto; /* Centers the div */
+  width: 80%; /* Makes the div broader */
+  padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
+  background-color: transparent; /* Makes the background fully transparent */
+  text-align: center; /* Centers text inside the div */
+  font-size: 1.5em; /* Slightly increases the font size */
+  line-height: 1.6; /* Improves readability */
+  color: black; /* Sets text color to black */
+  font-weight: bolder;
+  position: relative; /* Position relative for the image placement */
+  overflow: hidden; /* Ensure the image stays within bounds */
+}
+
 .hostel-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px; /* Increased width of the container */
+  margin: 0 auto;
+  width: 80%;
+  padding: 40px 20px;
+  background-color: transparent;
+  text-align: center;
 }
 
 .hostel-section {
-  margin-top: 50px;
-  background: rgba(255, 255, 255, 0.1); /* Slightly translucent background */
-  backdrop-filter: blur(10px); /* Blur effect for frozen glass appearance */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  padding: 20px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7); /* Frosted bottom border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-.hostel-image {
-  width: 100%;
-  border-radius: 10px;
+  border-bottom: 3px solid black;
+  padding-bottom: 20px;
 }
 
 .hostel-section h2 {
   font-size: 24px;
-  color: #000;
-  margin-top: 20px;
-  text-align: center;
+  color: black;
 }
 
 .hostel-section p {
-  color: #000;
   font-size: 16px;
-  line-height: 1.6;
+  color: black;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 
 
-
-
-
-
-
+/* Styles for the instructions section */
 .instructions-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 20px;
+  margin: 0 auto;
+  width: 80%;
+  padding: 40px 20px;
+  background-color: transparent;
+  text-align: center;
 }
 
 .instructions-section {
-  background: rgba(255, 255, 255, 0.2); /* Translucent glass-like background */
-  backdrop-filter: blur(8px); /* Blurred effect */
-  -webkit-backdrop-filter: blur(8px); /* Safari support */
-  padding: 20px;
-  border-radius: 12px;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Frosted bottom border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid black;
+  padding-bottom: 20px;
 }
 
 .instructions-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1e3f9d; /* Your preferred heading color */
+  font-size: 24px;
+  color: black;
 }
 
 .instructions-section ol {
-  margin-left: 20px;
-  color: #555;
-  font-size: 18px;
-  line-height: 1.8;
+  list-style-type: decimal;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
 }
 
 .instructions-section li {
-  margin-bottom: 10px;
+  font-size: 16px;
+  color: black;
 }
 
-.instructions-section li:last-child {
-  margin-bottom: 0;
-}
-
-
-
-
-
-
-
-.instructions-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 20px 0;
-}
-
-.instructions-section {
-  background: none; /* No background, creating a transparent effect */
-  padding-bottom: 20px; /* Space between text and the bottom border */
-  border-bottom: 3px solid #000; /* Only a black bottom border */
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease-in-out;
-}
-
-.instructions-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1e3f9d; /* Your preferred heading color */
-}
-
-.instructions-section ol {
-  margin-left: 20px;
-  color: #555;
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-.instructions-section li {
-  margin-bottom: 10px;
-}
-
-.instructions-section li:last-child {
-  margin-bottom: 0;
-}
-
-
-
-
-
-
-
-
+/* Styles for the policies section */
 .policies-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 20px 0;
+  margin: 0 auto;
+  width: 80%;
+  padding: 40px 20px;
+  background-color: transparent;
+  text-align: center;
 }
 
 .policies-section {
-  background: rgba(255, 255, 255, 0.2); /* Light translucent background for contrast */
-  backdrop-filter: blur(8px); /* Blurred effect for frosted glass appearance */
-  -webkit-backdrop-filter: blur(8px); /* For Safari support */
-  padding: 20px;
-  border-bottom: 3px solid #000; /* Black bottom border line */
-  border-radius: 12px;
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid black;
+  padding-bottom: 20px;
 }
 
 .policies-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1e3f9d; /* Preferred heading color */
+  font-size: 24px;
+  color: black;
 }
 
 .policies-section ul {
-  list-style-type: none; /* Remove default list styling */
+  list-style-type: none;
   padding: 0;
 }
 
 .policies-section li {
-  margin-bottom: 15px;
-  font-size: 18px;
-  color: #555;
-}
-
-.policies-section li strong {
-  display: block;
-  font-weight: bold;
-  color: #1e3f9d; /* Highlighted policy headings */
-}
-
-
-
-
-
-
-
-
-.mess-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 20px 0;
-}
-
-.mess-section {
-  background: rgba(255, 255, 255, 0.2); /* Light translucent background */
-  backdrop-filter: blur(8px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(8px); /* For Safari support */
-  padding: 20px;
-  border-bottom: 3px solid #000; /* Black bottom border */
-  border-radius: 12px;
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease-in-out;
-}
-
-.mess-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1e3f9d; /* Preferred heading color */
-}
-
-.mess-section p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-
-
-
-
-
-.transport-section-wrapper {
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 20px 0;
-}
-
-.transport-section {
-  background: rgba(255, 255, 255, 0.2); /* Light translucent background */
-  backdrop-filter: blur(8px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(8px); /* For Safari support */
-  padding: 20px;
-  border-bottom: 3px solid #000; /* Black bottom border */
-  border-radius: 12px;
-  color: #333;
-  font-family: 'Arial', sans-serif;
-  transition: all 0.3s ease-in-out;
-}
-
-.transport-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1e3f9d; /* Preferred heading color */
-}
-
-.transport-section p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.school-mess-section, .transport-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  border-bottom: 2px solid black;
-}
-
-.school-mess-image, .transport-image {
-  width: 20%; /* Smaller image size */
-}
-
-.school-mess-image {
-  margin-left: 20px; /* Add gap between the image and the left edge */
-}
-
-.school-mess-image img, .transport-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.school-mess-content, .transport-content {
-  width: 75%;
-}
-
-.school-mess-content h1, .transport-content h1 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: black;
-}
-
-.school-mess-content p, .transport-content p {
   font-size: 16px;
-  line-height: 1.6;
+  color: black;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the hostel section */
+.hostel-section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 40px 20px;
+  background-color: transparent;
+}
+
+.hostel-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hostel-image {
+  max-width: 30%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.hostel-section h2 {
+  font-size: 24px;
   color: black;
 }
 
-/* Reversed layout for transport section */
-.transport-section {
-  flex-direction: row-reverse;
+.hostel-section p {
+  font-size: 16px;
+  color: black;
+  line-height: 1.6;
 }
+
+/* Styles for the transport section */
+.transport-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 40px 20px;
+  background-color: transparent;
+}
+
+.transport-image {
+  flex: 1;
+}
+
+.transport-image img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+}
+
+.transport-content {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.transport-content h1 {
+  font-size: 24px;
+  color: black;
+}
+
+.transport-content p {
+  font-size: 16px;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Styles for the second transport image */
+.transport-secondary-image {
+  flex: 1;
+}
+
+.transport-secondary-image img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+}
+
 
 
 

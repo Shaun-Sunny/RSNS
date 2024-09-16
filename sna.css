@@ -216,116 +216,104 @@ nav ul ul a::before {
 
 
 
-.objectives {
-  font-size: 18px;
-  color: black;
-  line-height: 1.6;
-  margin: 20px 0;
-}
-
-.objectives h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 15px;
-}
-
-.objectives p {
-  margin-bottom: 10px;
-}
 
 
 
 
-/* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Light grey background for a soft look */
-  color: black; /* Consistent black font color */
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Objectives Section Styling */
 .objectives {
-  max-width: 1000px; /* Increase width to accommodate image */
-  margin: auto; /* Center the content horizontally */
-  background-color: rgba(255, 255, 255, 0.3); /* White background with 30% opacity */
-  padding: 20px; /* Padding for spacing inside the box */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  backdrop-filter: blur(10px); /* Blurs the content behind the div */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  position: relative; /* Allows positioning of the image */
-  display: flex; /* Use Flexbox for layout */
-  align-items: center; /* Center items vertically */
-  flex-wrap: wrap; /* Allow wrapping of content */
+  max-width: 1100px; /* Increase the width of the container */
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between; /* Space between text and image column */
+  align-items: center; /* Align items vertically to the center */
+  position: relative;
+}
+
+/* Text Styling */
+.objectives-text {
+  flex: 1;
+  margin-right: 40px; /* Space between text and images */
+}
+
+.objectives h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e3f9d;
+  margin-bottom: 20px;
+}
+
+.objectives-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Image Container Styling */
+.sna-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute images evenly */
+  align-items: flex-end; /* Align images to the rightmost side */
+  height: 500px; /* Set a fixed height for the images column */
+  margin-right: 20px; /* Add some space between the image and the right side */
+  position: relative;
 }
 
 /* Image Styling */
 .sna-image {
-  margin: 20px; /* Add margin for spacing */
-  width: 30%; /* Set width to a fixed percentage */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Rounded corners for the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to match the box */
-  transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
-  align-self: center; /* Center image vertically */
+  width: 150px; /* Set a uniform size for the images */
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 30px; /* Increase space between images */
 }
 
 .sna-image:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-.objectives {
-  max-width: 1000px; /* Increase width to accommodate image */
-  margin: auto; /* Center the content horizontally */
-  background-color: rgba(255, 255, 255, 0.3); /* White background with 30% opacity */
-  padding: 20px; /* Padding for spacing inside the box */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  backdrop-filter: blur(10px); /* Blurs the content behind the div */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  display: flex; /* Use Flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping of content */
-  justify-content: space-between; /* Justify content to space between */
-}
-/* Text Styling */
-.objectives h3 {
-  font-size: 28px; /* Slightly larger font size for the heading */
-  font-weight: bold;
-  color: #1e3f9d; /* Dark blue color for heading for contrast */
-  margin-bottom: 20px;
-  text-align: center; /* Center the heading */
-  width: 100%; /* Ensure heading takes full width */
-}
-.objectives-text p {
-  font-size: 18px; /* Increased font size for readability */
-  line-height: 1.8; /* Improved line spacing for readability */
-  margin-bottom: 15px; /* Consistent spacing between paragraphs */
-  text-align: justify; /* Justify text for better alignment */
-}
-
-.objectives p {
-  font-size: 18px; /* Increased font size for readability */
-  line-height: 1.8; /* Improved line spacing for readability */
-  margin-bottom: 15px; /* Consistent spacing between paragraphs */
-  text-align: justify; /* Justify text for better alignment */
-}
-.objectives-text {
-  flex: 1; /* Take up remaining space */
-  margin: 20px; /* Add margin for spacing */
-}
-
-/* Ensure text wraps around the image */
-.objectives::before {
-  content: "";
-  display: block;
-  width: 100%; /* Full width for wrapping */
-  height: 0; /* Zero height to not affect layout */
-  clear: both; /* Clear floating elements */
-}
-.objectives::after {
-  content: "";
-  display: table;
-  clear: both;
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
 /* Media Query for Smaller Screens */
@@ -334,15 +322,30 @@ body {
     display: block; /* Stack elements vertically on smaller screens */
   }
 
+  .sna-images {
+    position: static; /* Remove absolute positioning on smaller screens */
+    width: 100%;
+    margin: 20px auto;
+    height: auto;
+  }
+
   .sna-image {
-    margin: 20px auto; /* Center image with margin */
     width: 80%; /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space between images */
   }
 
   .objectives-text {
-    margin: 20px; /* Add margin for spacing */
+    margin-right: 0; /* Remove right margin for text on smaller screens */
   }
 }
+
+
+
+
+
+
+
 
 
 
