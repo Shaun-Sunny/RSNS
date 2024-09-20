@@ -58,13 +58,15 @@ header {
 .contact-info {
   display: flex;
   gap: 20px;
+  font-family: "Arial", sans-serif;
 }
 
 .contact-info .icon {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -72,6 +74,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -162,7 +165,7 @@ nav ul ul a::before {
   background-image: url('swabanner.jpg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,41 +195,48 @@ nav ul ul a::before {
 
 
 .educational-social-activities-section {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px; /* Space around the section */
-  }
-  
-  .educational-social-activities-section h2 {
-    font-size: 28px; /* Adjust font size if needed */
-    color: black; /* Ensures text color is consistent */
-  }
-  
-  .content-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .activity-image {
-    float: right;
-    margin: 40px 40px 20px 20px;
-    width: 40%;
-    max-width: 300px; /* Ensures the image does not become too large */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow to the image */
-    transition: transform 0.3s ease; /* Smoothly transition the image size on hover */
-  }
-  
-  .activity-image:hover {
-    transform: scale(1.1); /* Makes the image pop up on hover */
-  }
-  
-  .educational-social-activities-section p {
-    font-size: 18px; /* Adjust font size as preferred */
-    color: black; /* Ensures text color is consistent */
-    line-height: 1.6; /* Increases readability */
-  }
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Space around the section */
+}
+
+.educational-social-activities-section h2 {
+  font-size: 32px; /* Adjust font size if needed */
+  color: #1e3f9d; /* Ensures text color is consistent */
+}
+
+.content-wrapper {
+  position: relative;
+  overflow: hidden; /* Ensures the float doesn't affect section height */
+}
+
+.activity-image {
+  float: right;
+  margin: 0 0 10px 20px; /* Adjust the margin to allow text to wrap better */
+  width: 30%; /* Adjust width for better text wrapping */
+  max-width: 250px; /* Ensures the image does not become too large */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow to the image */
+  transition: transform 0.3s ease; /* Smoothly transition the image size on hover */
+}
+
+.activity-image:hover {
+  transform: scale(1.1); /* Makes the image pop up on hover */
+}
+
+.educational-social-activities-section p {
+  font-size: 24px; /* Font size for the paragraphs */
+  color: black; /* Text color */
+  line-height: 1.6; /* Line spacing for readability */
+  text-align: justify; /* Justifies the text */
+  margin-bottom: 20px; /* Adds space between the paragraphs */
+}
+
+
+
+
+
   
   
   
@@ -250,8 +260,8 @@ nav ul ul a::before {
   }
   
   .cultural-activities-section h2 {
-    font-size: 24px;
-    color: #000; /* Black text color */
+    font-size: 32px;
+    color: #1e3f9d; /* Black text color */
     margin-bottom: 15px;
   }
   
@@ -271,12 +281,13 @@ nav ul ul a::before {
     transform: scale(1.1); /* Slightly zoom in the image on hover */
   }
   
-  p {
-    font-size: 16px;
+  .content-wrapper p{
+    font-size: 24px;
     color: #000; /* Black text color */
     line-height: 1.6;
     margin: 0;
-  }
+    text-align: justify;
+  } 
   
 
 
@@ -302,7 +313,7 @@ nav ul ul a::before {
 
 .sports-meet-title {
     color: #1e3f9d;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
 }
@@ -319,7 +330,7 @@ nav ul ul a::before {
     font-style: italic;
     font-family: 'Brush Script MT', cursive; /* Apply a proper cursive font */
     quotes: "“" "”"; /* Stylish quotes */
-    font-size: 24px; /* Make the quote slightly larger */
+    font-size: 32px; /* Make the quote slightly larger */
 }
 
 .sports-meet-author {
@@ -352,8 +363,8 @@ nav ul ul a::before {
 }
 
 .unique-sports-section h2 {
-  font-size: 28px; /* Adjust font size if needed */
-  color: black; /* Ensures text color is consistent */
+  font-size: 32px; /* Adjust font size if needed */
+  color: #1e3f9d; /* Ensures text color is consistent */
 }
 
 .unique-content-wrapper {
@@ -376,10 +387,110 @@ nav ul ul a::before {
 
 
 .unique-sports-section p {
-  font-size: 18px; /* Adjust font size as preferred */
+  font-size: 24px; /* Adjust font size as preferred */
   color: black; /* Ensures text color is consistent */
   line-height: 1.6; /* Increases readability */
+  text-align: justify;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-gallery-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.scrolling-gallery {
+  display: flex;
+  cursor: grab;
+  width: fit-content; /* Allows for all images to be in one row */
+  transition: transform 0.1s ease; /* Smooth transition for scrolling */
+}
+
+.gallery-img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px; /* Adds space between images */
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+/* Fullscreen Overlay */
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -411,6 +522,7 @@ nav ul ul a::before {
     display: flex;
     justify-content: space-between; /* Align segments evenly */
     flex-wrap: wrap;
+    font-family: "Arial", sans-serif;
   }
   
   .footer-segment {

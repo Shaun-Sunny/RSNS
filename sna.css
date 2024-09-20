@@ -59,13 +59,15 @@ header {
 .contact-info {
   display: flex;
   gap: 20px;
+  font-family: "Arial", sans-serif;
 }
 
 .contact-info .icon {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -73,6 +75,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -163,7 +166,7 @@ nav ul ul a::before {
   background-image: url('snalabel.jpg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,15 +203,15 @@ nav ul ul a::before {
 }
 
 .info-box h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-  color: black;
+  color: #1e3f9d;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .info-box p {
-  font-size: 18px;
+  font-size: 24px;
   color: black;
   margin-bottom: 10px;
   text-align: center;
@@ -278,14 +281,14 @@ nav ul ul a::before {
 }
 
 .objectives h3 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   color: #1e3f9d;
   margin-bottom: 20px;
 }
 
 .objectives-text p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.8;
   margin-bottom: 15px;
   text-align: justify;
@@ -401,6 +404,7 @@ nav ul ul a::before {
     display: flex;
     justify-content: space-between; /* Align segments evenly */
     flex-wrap: wrap;
+    font-family: "Arial", sans-serif;
   }
   
   .footer-segment {

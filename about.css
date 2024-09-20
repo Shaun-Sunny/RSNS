@@ -54,14 +54,15 @@ header {
 
 .contact-info {
   display: flex;
-  gap: 20px;
+  gap: 20px;  
 }
 
 .contact-info .icon {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -160,7 +161,7 @@ nav ul ul a::before {
   background-image: url('rsm11.jpg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,7 +223,7 @@ nav ul ul a::before {
 }
 
 .history-section .text-content {
-  text-align: left;
+  text-align: justify;
 }
 
 .history-section .image-container {
@@ -344,9 +345,10 @@ nav ul ul a::before {
 }
 
 .founders-heading {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Arial", sans-serif;
   text-align: center;
   margin-bottom: 20px;
+  color: rgba(32,65,178,255);
 }
 
 .founder-container {
@@ -362,39 +364,40 @@ nav ul ul a::before {
 }
 
 .founder img {
-  width: 150px;  /* Increased width */
-  height: 150px; /* Increased height */
+  width: 150px;  
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
 .founder h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px; /* Increased font size */
+  font-family: "Arial", sans-serif;
+  font-size: 18px; 
   margin-bottom: 5px;
 }
 
 .founder p {
-  font-family: "Times New Roman", serif;
+  font-family: "Arial", sans-serif;
   margin-top: 0;
-  font-size: 20px; /* Increased font size for the years */
-  font-weight: bold; /* Optional: Make the years bold */
+  font-size: 20px;
+  font-weight: bold;
 }
-
 
 .founder img:hover {
   transform: scale(1.1);
 }
 
 .founders-text {
-  text-align: center;
+  text-align: justify; /* Justified text */
   margin-top: 20px;
-  font-family: 'Bahnschrift', cursive;
+  font-family: "Arial", sans-serif; /* Changed font to Arial */
   margin-left: 150px;
   margin-right: 150px;
+  max-width: 80%; /* Adds control over wider screens */
   font-size: 18px;
 }
+
 
 
 
@@ -582,6 +585,7 @@ nav ul ul a::before {
   display: flex;
   justify-content: space-between; /* Align segments evenly */
   flex-wrap: wrap;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-segment {

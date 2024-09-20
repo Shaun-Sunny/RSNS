@@ -64,7 +64,8 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -72,6 +73,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -162,7 +164,7 @@ nav ul ul a::before {
   background-image: url('alumnibanner.jpeg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,28 +198,32 @@ nav ul ul a::before {
 }
 
 .alumni-section {
-  background: none; /* Transparent background */
+  background: rgba(173, 216, 230, 0.7); /* Semi-transparent light blue */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(173, 216, 230, 0.5)); /* Semi-transparent white to light blue */
   padding: 20px;
+  border-radius: 15px; /* Rounded corners */
   border-top: 3px solid #000; /* Black top border */
   border-bottom: 3px solid #000; /* Black bottom border */
   color: #000;
   font-family: 'Arial', sans-serif;
   font-weight: bold; /* Bold text */
+  text-align: justify; /* Justified text */
 }
 
 .alumni-section h2 {
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
   color: #1e3f9d; /* Preferred heading color */
 }
 
 .alumni-section p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.8;
   color: #000;
   margin-bottom: 15px;
 }
+
 
 
 
@@ -285,6 +291,7 @@ nav ul ul a::before {
 .alumni-content p {
   margin: 0;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* For responsive handling to avoid overflow on smaller screens */
@@ -414,8 +421,8 @@ nav ul ul a::before {
 
 
 .success-marquee-wrapper {
-  margin: 0 auto;
-  max-width: 600px;
+  margin: 0; /* Remove auto centering */
+  width: 100%; /* Make the wrapper span the full width of the page */
   text-align: center;
 }
 
@@ -427,6 +434,7 @@ nav ul ul a::before {
   white-space: nowrap; /* Ensures the text scrolls in one line */
   padding: 30px;
 }
+
 
 
 
@@ -497,6 +505,7 @@ nav ul ul a::before {
   display: flex;
   justify-content: space-between; /* Align segments evenly */
   flex-wrap: wrap;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-segment {

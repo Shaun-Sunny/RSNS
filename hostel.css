@@ -56,6 +56,7 @@ header {
 }
 
 .contact-info {
+  font-family: 'Arial', sans-serif;
   display: flex;
   gap: 20px;
 }
@@ -64,7 +65,8 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -72,6 +74,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -162,7 +165,7 @@ nav ul ul a::before {
   background-image: url('hostel1.jpeg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,7 +247,10 @@ nav ul ul a::before {
   margin: 0 auto;
   width: 80%;
   padding: 40px 20px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.6); /* Translucent background */
+  backdrop-filter: blur(10px); /* Blurred background effect */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional for a shadow effect */
   text-align: center;
 }
 
@@ -254,8 +260,9 @@ nav ul ul a::before {
 }
 
 .instructions-section h2 {
-  font-size: 24px;
+  font-size: 32px; /* Increased heading size */
   color: black;
+  font-family: "Arial", sans-serif; /* Font family */
 }
 
 .instructions-section ol {
@@ -267,16 +274,22 @@ nav ul ul a::before {
 }
 
 .instructions-section li {
-  font-size: 16px;
+  font-size: 24px; /* Increased content size */
   color: black;
+  font-family: "Arial", sans-serif; /* Font family */
+  text-align: justify;
 }
+
 
 /* Styles for the policies section */
 .policies-section-wrapper {
   margin: 0 auto;
   width: 80%;
   padding: 40px 20px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.6); /* Translucent background */
+  backdrop-filter: blur(10px); /* Blurred background effect */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional for a shadow effect */
   text-align: center;
 }
 
@@ -286,21 +299,27 @@ nav ul ul a::before {
 }
 
 .policies-section h2 {
-  font-size: 24px;
+  font-size: 32px; /* Increased heading size */
   color: black;
+  font-family: "Arial", sans-serif; /* Font family */
 }
 
 .policies-section ul {
   list-style-type: none;
   padding: 0;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .policies-section li {
-  font-size: 16px;
+  font-size: 24px; /* Increased content size */
   color: black;
+  font-family: "Arial", sans-serif; /* Font family */
   margin-bottom: 10px;
-  text-align: left;
+  text-align: justify;
 }
+
 
 
 
@@ -344,7 +363,10 @@ nav ul ul a::before {
   margin: 0 auto;
   width: 80%;
   padding: 40px 20px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.5); /* Lighter translucent background */
+  backdrop-filter: blur(8px); /* Blurred background effect */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
 .hostel-section {
@@ -357,39 +379,56 @@ nav ul ul a::before {
   max-width: 30%;
   height: auto;
   margin-right: 20px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for popup effect */
+}
+
+.hostel-image:hover {
+  transform: scale(1.1); /* Popup effect when hovered */
 }
 
 .hostel-section h2 {
-  font-size: 24px;
+  font-size: 32px; /* Updated heading size */
   color: black;
+  font-family: "Arial", sans-serif; /* Font family */
 }
 
 .hostel-section p {
-  font-size: 16px;
+  font-size: 24px; /* Updated content size */
   color: black;
   line-height: 1.6;
+  font-family: "Arial", sans-serif; /* Font family */
+  text-align: justify;
 }
+
 
 /* Styles for the transport section */
 .transport-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  width: 80%;
+  width: 100%; /* Full width of the page */
   padding: 40px 20px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3); /* Light translucent background */
+  backdrop-filter: blur(5px); /* Very light blur effect */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
-.transport-image {
+.transport-image, .transport-secondary-image {
   flex: 1;
+  overflow: hidden; /* Ensures the image stays within bounds during scale */
 }
 
-.transport-image img {
+.transport-image img, .transport-secondary-image img {
   max-width: 100%;
   height: auto;
   border: none;
   box-shadow: none;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.transport-image img:hover, .transport-secondary-image img:hover {
+  transform: scale(1.1); /* Scale up image on hover */
 }
 
 .transport-content {
@@ -398,27 +437,20 @@ nav ul ul a::before {
 }
 
 .transport-content h1 {
-  font-size: 24px;
+  font-size: 30px;
   color: black;
 }
 
 .transport-content p {
-  font-size: 16px;
+  font-size: 20px;
   color: black;
   line-height: 1.6;
+  text-align: justify;
+  padding: 20px;
 }
 
-/* Styles for the second transport image */
-.transport-secondary-image {
-  flex: 1;
-}
 
-.transport-secondary-image img {
-  max-width: 100%;
-  height: auto;
-  border: none;
-  box-shadow: none;
-}
+
 
 
 
@@ -526,6 +558,7 @@ nav ul ul a::before {
   display: flex;
   justify-content: space-between; /* Align segments evenly */
   flex-wrap: wrap;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-segment {

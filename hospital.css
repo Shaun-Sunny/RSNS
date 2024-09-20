@@ -63,7 +63,8 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -162,7 +163,7 @@ nav ul ul a::before {
   background-image: url('hospital1\ -\ Copy.jpeg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +235,7 @@ nav ul ul a::before {
 }
 
 .image1 {
-  width: 70%; /* Ensure both images are similar in size */
+  width: 50%; /* Ensure both images are similar in size */
   height: auto;
   position: absolute;
   bottom: 50%; /* Center vertically within the container */
@@ -259,7 +260,7 @@ nav ul ul a::before {
 
 .right-section h2 {
   font-family: 'Poppins', sans-serif;
-  color: rgb(22, 121, 252);
+  color: #1e3f9d;
   margin-bottom: 10px;
   font-size: 24px;
 }
@@ -598,6 +599,75 @@ nav ul ul a::before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Optional margin for spacing */
+}
+
+.full-width-image {
+  width: 85%; /* Decreased size to leave more space on the sides */
+  max-width: 1000px; /* Adjust based on your preference */
+  height: auto;
+  border-radius: 10px; /* Optional for slightly rounded corners */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Scroll to Top Button Styles */
 #scrollToTopBtn {
   display: none; /* Hidden by default */
@@ -652,6 +722,7 @@ nav ul ul a::before {
   display: flex;
   justify-content: space-between; /* Align segments evenly */
   flex-wrap: wrap;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-segment {

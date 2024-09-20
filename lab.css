@@ -65,7 +65,8 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -73,6 +74,7 @@ nav {
   width: 100%;
   background-color: var(--background-color); /* Optional: add a background color */
   z-index: 100;
+  font-size: larger;
 }
 
 nav ul {
@@ -163,7 +165,7 @@ nav ul ul a::before {
   background-image: url('lab.jpg');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,16 +195,21 @@ nav ul ul a::before {
 
 
 .nursing-lab-info {
-    margin: 0 auto; /* Centers the div */
-    width: 80%; /* Makes the div broader */
-    padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
-    background-color: transparent; /* Makes the background fully transparent */
-    text-align: center; /* Centers text inside the div */
-    font-size: 1.5em; /* Slightly increases the font size */
-    line-height: 1.6; /* Improves readability */
-    color: black; /* Sets text color to white to stand out against the background */
-    font-weight: bolder;
-  }
+  margin: 0 auto; /* Centers the div */
+  width: 80%; /* Adjusts width */
+  padding: 40px 20px; /* Adds padding */
+  background-color: rgba(255, 255, 255, 0.5); /* Light translucent background */
+  backdrop-filter: blur(5px); /* Adds blur effect */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow effect */
+  font-size: 24px; /* Font size as per your preference */
+  color: black; /* Text color */
+  text-align: center; /* Justify text for neat alignment */
+  line-height: 1.8; /* Enhances readability */
+  font-family: "Arial", sans-serif; /* Sets font to Arial */
+  font-weight: bold;
+}
+
   
   
   
@@ -231,7 +238,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: center; /* Centers text inside the div */
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -271,7 +278,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: center; /* Centers text inside the div */
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -310,7 +317,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -354,7 +361,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -397,9 +404,10 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
+    text-align: center;
   }
   
 
@@ -437,9 +445,10 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
+    text-align: center;
   }
   
 
@@ -476,9 +485,10 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
+    text-align: center;
   }
   
 
@@ -512,7 +522,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -550,7 +560,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -590,7 +600,7 @@ nav ul ul a::before {
     width: 80%; /* Makes the div broader */
     padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
     text-align: left; /* Aligns text to the left */
-    font-size: 1.3em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     line-height: 1.6; /* Improves readability */
     color: #000; /* Sets text color to black */
   }
@@ -622,6 +632,7 @@ nav ul ul a::before {
     display: flex;
     justify-content: space-between; /* Align segments evenly */
     flex-wrap: wrap;
+    font-family: "Arial", sans-serif;
   }
   
   .footer-segment {

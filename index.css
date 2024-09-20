@@ -75,7 +75,8 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--text-color);
+  color: rgba(255,16,65,255);
+  font-weight: bold;
 }
 
 /* Navigation styles */
@@ -425,6 +426,7 @@ nav ul ul a::before {
   padding-left: 30px; /* Add padding to the left for space */
   text-indent: -20px; /* Create a hanging indent */
   line-height: 1.5; /* Improve readability with better line spacing */
+  text-align: justify;
 }
 
 .nurse-call-box ul li::before {
@@ -523,7 +525,7 @@ nav ul ul a::before {
 
 .core-values-list li i {
   margin-right: 15px; /* Increased space between icon and text */
-  color: rgb(11, 75, 252); /* Icon color */
+  color: rgba(255,16,65,255); /* Icon color */
   font-size: 1.8rem; /* Increased icon size for better visibility */
 }
 
@@ -622,6 +624,7 @@ nav ul ul a::before {
   line-height: 1.6; /* Improve readability with line height */
   margin-top: 20px; /* Increased space above the paragraph */
   margin-bottom: 0; /* Remove bottom margin */
+  text-align: justify;
 }
 
 .message-image {
@@ -713,6 +716,7 @@ nav ul ul a::before {
   display: flex;
   justify-content: space-between; /* Align segments evenly */
   flex-wrap: wrap;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-segment {
