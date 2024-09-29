@@ -20,7 +20,7 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-image: url('careerbg (2).jpg');
+  background-image: url('careerbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -43,6 +43,7 @@ header {
   align-items: center;
   margin-bottom: 20px;
   border-bottom: 2px solid var(--border-color);
+  font-family: "Arial", sans-serif;
 }
 
 .logo {
@@ -163,7 +164,7 @@ nav ul ul a::before {
   background-image: url('library1.jpg');
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,25 +228,27 @@ nav ul ul a::before {
   font-size: 24px;
   line-height: 1.8;
   color: black;
-  font-weight: bolder;
+  font-weight: normal; /* Updated to remove boldness */
   text-align: justify;
 }
 
 /* Specific styles for headings */
 .library-section-container h2 {
-  font-size: 32px;
+  font-size: 32px; /* Set heading size to 32px */
   margin-bottom: 20px;
   color: #1e3f9d; /* Preferred heading color */
   text-align: center;
+  font-weight: bold; /* Ensure heading is bold */
 }
 
 /* Paragraph styles with justified text */
 .library-section-container p {
-  font-size: 24px;
+  font-size: 24px; /* Set paragraph font size to 24px */
   line-height: 1.8;
   color: black;
   margin-bottom: 15px;
   text-align: justify; /* Ensures paragraphs are justified */
+  font-weight: normal; /* Ensure paragraphs are not bold */
 }
 
 /* Image styling */
@@ -254,7 +257,6 @@ nav ul ul a::before {
   height: auto;
   margin-top: 20px; /* Adds space between text and image */
 }
-
 
 /* General container for the library sections with blurred translucent background */
 .general-guidelines-container, .book-issue-container {
@@ -268,17 +270,18 @@ nav ul ul a::before {
   font-size: 24px; /* Adjusted font size */
   line-height: 1.8;
   color: black;
-  font-weight: bolder;
+  font-weight: normal; /* Ensure content is not bold */
   text-align: justify;
   overflow: hidden; /* Ensures the box contains all content neatly */
 }
 
 /* Specific styles for headings */
 .general-guidelines-container h2, .book-issue-container h2 {
-  font-size: 32px; /* Adjusted heading size */
+  font-size: 32px; /* Set heading size to 32px */
   margin-bottom: 20px;
   color: #1e3f9d; /* Preferred heading color */
   text-align: center;
+  font-weight: bold; /* Ensure headings are bold */
 }
 
 /* Specific styles for lists */
@@ -287,6 +290,7 @@ nav ul ul a::before {
   padding-left: 0; /* Remove padding for list items */
   text-align: justify; /* Justified text for better alignment */
   font-size: 24px;
+  font-weight: normal; /* Ensure lists are not bold */
 }
 
 .general-guidelines-container li, .book-issue-container li {
@@ -301,6 +305,7 @@ hr.custom-hr {
   background: #000; /* Color of the line */
   margin: 40px 0; /* Space around the line */
 }
+
 
 
 

@@ -548,105 +548,151 @@ nav ul ul a::before {
 
 
 
+/* Base styles for large screens */
 .principal-message-section {
-  background-image: url('principalbg.png'); /* Set the background image */
-  background-size: cover; /* Ensure the image covers the entire section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent image repetition */
-  padding: 40px 20px; /* Adjust padding as needed */
-  display: flex; /* Spread section sidewise */
-  justify-content: center; /* Center align the content */
-  text-align: center; /* Center align text in the section */
-  min-height: 100vh; /* Ensure full viewport height for background coverage */
-  width: 100%; /* Full width of the parent container */
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+  background-image: url('principalbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .principal-message-section .content-wrapper {
-  max-width: 1200px; /* Increase max width to spread section */
-  margin: 0 auto; /* Center align the content wrapper */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for the content */
-  border: 2px solid #000; /* Black border for consistency */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
-  backdrop-filter: blur(10px); /* Optional: Adds a blur effect for better text readability */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .principal-message-section h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  color: #1e3f9d; /* Title color */
+  color: #1e3f9d;
   margin-bottom: 20px;
 }
 
 .message-content {
   display: flex;
-  align-items: center; /* Align items vertically center */
-  gap: 20px; /* Space between text and image */
+  align-items: center;
+  gap: 20px;
 }
 
 .message-text {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center the content vertically */
-  flex: 1 1 60%; /* Allow text to take up 60% of the width, flexible */
-  text-align: left; /* Left align text for better readability */
+  flex: 1 1 60%;
+  text-align: left;
 }
 
 .message-text h3 {
   font-family: 'Times New Roman', serif;
-  font-size: 1.6rem; /* Adjusted font size for quote */
-  color: black; /* Black text color */
-  font-style: italic; /* Italic style for quote */
-  margin: 0; /* Remove margin */
-  text-align: left; /* Left align the quote */
-  white-space: nowrap; /* Prevent the quote from wrapping to a new line */
-  overflow: hidden; /* Hide overflow text */
-  text-overflow: ellipsis; /* Add ellipsis if the text is too long */
-  display: flex; /* Enable flexbox for alignment */
-  align-items: center; /* Center align items vertically */
+  font-size: 1.6rem;
+  color: black;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
 }
 
 .message-text h3:last-of-type {
-  font-size: 1.1rem; /* Adjusted size for the author */
-  text-align: right; /* Right align the author */
-  margin-top: 10px; /* Reduced spacing between quote and author */
-  display: block; /* Ensure the author is on its own line */
-  white-space: nowrap; /* Prevent wrapping */
+  font-size: 1.1rem;
+  text-align: right;
+  margin-top: 10px;
+  white-space: nowrap;
 }
 
 .message-text p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  color: black; /* Black text color */
-  line-height: 1.6; /* Improve readability with line height */
-  margin-top: 20px; /* Increased space above the paragraph */
-  margin-bottom: 0; /* Remove bottom margin */
+  color: black;
+  line-height: 1.6;
+  margin-top: 20px;
   text-align: justify;
 }
 
 .message-image {
-  position: relative;
+  flex: 0 1 35%;
   display: flex;
-  align-items: center; /* Center align image vertically */
-  flex: 0 1 35%; /* Allow image to take up 35% of the width, flexible */
-  justify-content: center; /* Center align image horizontally */
+  justify-content: center;
+  align-items: center;
 }
 
 .message-image img {
-  width: 350px; /* Increased size of the image */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners for image */
-  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+  width: 350px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
   position: relative;
-  top: 20px; /* Lower the image to match the center of the text */
+  top: 20px;
 }
 
 .message-image img:hover {
-  transform: scale(1.1); /* Scale image on hover */
+  transform: scale(1.1);
 }
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .principal-message-section {
+    padding: 30px 15px;
+  }
+
+  .principal-message-section h2 {
+    font-size: 2rem;
+  }
+
+  .message-content {
+    flex-direction: column; /* Stack text and image vertically */
+    gap: 10px;
+  }
+
+  .message-text {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .message-image {
+    flex: 0 1 auto;
+  }
+
+  .message-image img {
+    width: 300px; /* Reduce image size on smaller screens */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .principal-message-section {
+    padding: 20px 10px;
+  }
+
+  .principal-message-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .message-text h3 {
+    font-size: 1.4rem; /* Adjust font size for mobile */
+  }
+
+  .message-text p {
+    font-size: 1rem;
+  }
+
+  .message-image img {
+    width: 250px; /* Further reduce image size for mobile */
+  }
+}
+
 
 
 

@@ -84,25 +84,49 @@
   <div class="objectives">
     <div class="objectives-text">
       <h3>OBJECTIVES:</h3>
-      <p>a) To help the students to uphold the dignity of the profession.</p>
-      <p>b) To promote team spirit among students for a common goal.</p>
-      <p>c) To help the students develop professional ethics.</p>
-      <p>d) To encourage students to gain a positive attitude towards the nursing profession.</p>
-      <p>e) To encourage the students to develop leadership qualities and effective communication skills for overall development.</p>
-      <p>f) To encourage students to participate and compete in various events at state, regional, and national conferences.</p>
-      <p>g) <strong>Professional Development:</strong> Through workshops, conferences, and seminars, SNA members can enhance their skills and knowledge in various nursing specialties and practices.</p>
-      <p>h) <strong>Community Service:</strong> Many SNAs organize community outreach programs, health fairs, and volunteer opportunities. These activities allow students to give back to their communities and gain practical experience.</p>
-      <p>i) <strong>Advocacy:</strong> SNA often engages in advocacy efforts on behalf of nursing students and the nursing profession. This can include lobbying for policy changes, participating in health campaigns, and raising awareness about issues affecting the nursing community.</p>
-      <p>j) <strong>Educational Resources:</strong> Members have access to various resources, such as journals, newsletters, and study materials, which can aid in their academic and professional development.</p>
-      <p>k) <strong>Scholarships and Awards:</strong> Many SNAs offer scholarships and awards to recognize outstanding students and support their educational pursuits.</p>
+      <ol>
+        <li>To help the students to uphold the dignity of the profession.</li>
+        <li>To promote team spirit among students for a common goal.</li>
+        <li>To help the students develop professional ethics.</li>
+        <li>To encourage students to gain a positive attitude towards the nursing profession.</li>
+        <li>To encourage the students to develop leadership qualities and effective communication skills for overall development.</li>
+        <li>To encourage students to participate and compete in various events at state, regional, and national conferences.</li>
+        <li><strong>Professional Development:</strong> Through workshops, conferences, and seminars, SNA members can enhance their skills and knowledge in various nursing specialties and practices.</li>
+        <li><strong>Community Service:</strong> Many SNAs organize community outreach programs, health fairs, and volunteer opportunities. These activities allow students to give back to their communities and gain practical experience.</li>
+        <li><strong>Advocacy:</strong> SNA often engages in advocacy efforts on behalf of nursing students and the nursing profession. This can include lobbying for policy changes, participating in health campaigns, and raising awareness about issues affecting the nursing community.</li>
+        <li><strong>Educational Resources:</strong> Members have access to various resources, such as journals, newsletters, and study materials, which can aid in their academic and professional development.</li>
+        <li><strong>Scholarships and Awards:</strong> Many SNAs offer scholarships and awards to recognize outstanding students and support their educational pursuits.</li>
+      </ol>
     </div>
-    
     <div class="sna-images">
-      <img src="sna2.jpg" alt="SNA Image 2" class="sna-image">
-      <img src="sna.jpg" alt="SNA Image" class="sna-image">
-      <img src="sna3.jpg" alt="SNA Image 3" class="sna-image">
+      <img src="sna2.jpg" alt="SNA Image 2" class="sna-image" onclick="openFullScreen(this)">
+      <img src="sna3.jpg" alt="SNA Image" class="sna-image" onclick="openFullScreen(this)">
+      <img src="sna.jpg" alt="SNA Image 3" class="sna-image" onclick="openFullScreen(this)">
     </div>
   </div>
+  
+  <!-- Fullscreen Modal -->
+  <div id="fullscreen-modal" class="fullscreen-modal" onclick="closeFullScreen()">
+    <span class="close-button" onclick="closeFullScreen()">✖</span>
+    <img class="fullscreen-image" id="fullscreen-image" src="" alt="Fullscreen Image">
+  </div>
+
+  <script>
+    function openFullScreen(image) {
+      const modal = document.getElementById("fullscreen-modal");
+      const fullScreenImage = document.getElementById("fullscreen-image");
+      
+      fullScreenImage.src = image.src; // Set the source of the fullscreen image
+      modal.style.display = "flex"; // Show the modal
+    }
+  
+    function closeFullScreen() {
+      const modal = document.getElementById("fullscreen-modal");
+      modal.style.display = "none"; // Hide the modal
+    }
+  </script>
+  
+  
   
   
   

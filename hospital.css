@@ -163,7 +163,7 @@ nav ul ul a::before {
   background-image: url('hospital1\ -\ Copy.jpeg');
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,22 +256,24 @@ nav ul ul a::before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 3;
+  font-family: 'Raleway', sans-serif; /* Updated font family */
 }
 
 .right-section h2 {
-  font-family: 'Poppins', sans-serif;
   color: #1e3f9d;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 32px; /* Updated heading font size */
 }
 
 .right-section p {
-  font-family: 'Poppins', sans-serif;
   color: var(--text-color);
   margin-bottom: 10px;
   text-align: justify;
-  font-size: 18px;
+  font-size: 24px; /* Updated content font size */
+  font-weight: normal; /* Ensure the paragraph font is not bold */
 }
+
+
 
 @media (max-width: 768px) {
   .container {

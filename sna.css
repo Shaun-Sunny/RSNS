@@ -20,7 +20,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-image: url('careerbg (2).jpg');
+    background-image: url('careerbg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -166,7 +166,7 @@ nav ul ul a::before {
   background-image: url('snalabel.jpg');
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,20 +264,18 @@ nav ul ul a::before {
   max-width: 1100px; /* Increase the width of the container */
   margin: auto;
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 20px;
+  padding: 40px; /* Added padding for better spacing */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between; /* Space between text and image column */
-  align-items: center; /* Align items vertically to the center */
-  position: relative;
+  flex-direction: column; /* Change to column to stack text and images */
+  align-items: center; /* Center align content */
 }
 
 /* Text Styling */
 .objectives-text {
-  flex: 1;
-  margin-right: 40px; /* Space between text and images */
+  margin-bottom: 40px; /* Space between text and images */
 }
 
 .objectives h3 {
@@ -287,22 +285,23 @@ nav ul ul a::before {
   margin-bottom: 20px;
 }
 
-.objectives-text p {
+.objectives-text ol {
+  padding-left: 20px; /* Add padding to the ordered list */
+}
+
+.objectives-text li {
   font-size: 24px;
   line-height: 1.8;
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space between each list item */
   text-align: justify;
 }
 
 /* Image Container Styling */
 .sna-images {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribute images evenly */
-  align-items: flex-end; /* Align images to the rightmost side */
-  height: 500px; /* Set a fixed height for the images column */
-  margin-right: 20px; /* Add some space between the image and the right side */
-  position: relative;
+  justify-content: center; /* Center images */
+  align-items: center; /* Center vertically */
+  margin-top: 20px; /* Space above images */
 }
 
 /* Image Styling */
@@ -312,11 +311,40 @@ nav ul ul a::before {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
-  margin-bottom: 30px; /* Increase space between images */
+  margin: 0 10px; /* Space between images */
+  cursor: pointer; /* Indicate the images are clickable */
 }
 
 .sna-image:hover {
   transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Fullscreen Modal Styles */
+.fullscreen-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  justify-content: center; /* Center the image */
+  align-items: center; /* Center the image vertically */
+}
+
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Media Query for Smaller Screens */
@@ -326,10 +354,8 @@ nav ul ul a::before {
   }
 
   .sna-images {
-    position: static; /* Remove absolute positioning on smaller screens */
-    width: 100%;
-    margin: 20px auto;
-    height: auto;
+    width: 100%; /* Full width on smaller screens */
+    margin: 20px auto; /* Centering the images */
   }
 
   .sna-image {
@@ -342,6 +368,8 @@ nav ul ul a::before {
     margin-right: 0; /* Remove right margin for text on smaller screens */
   }
 }
+
+
 
 
 

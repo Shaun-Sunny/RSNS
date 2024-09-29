@@ -20,7 +20,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-image: url('careerbg (2).jpg');
+    background-image: url('careerbg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -45,6 +45,7 @@ header {
   align-items: center;
   margin-bottom: 20px;
   border-bottom: 2px solid var(--border-color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -165,7 +166,7 @@ nav ul ul a::before {
   background-image: url('lab.jpg');
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Header styles */
@@ -161,7 +161,7 @@ nav ul ul a::before {
   background-image: url('rsm11.jpg');
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,11 +435,20 @@ nav ul ul a::before {
 }
 
 .benefactor-image {
-  width: 200px; /* Increased size */
+  width: 210px; /* Increased size */
   height: auto;
   border-radius: 50%;
   margin: 10px 0;
 }
+.benefactor-image {
+  border: 5px solid black; /* Thick black border */
+  transition: transform 0.3s ease-in-out;
+}
+
+.benefactor-image:hover {
+  transform: scale(1.1); /* Image pops up on hover */
+}
+
 
 .right-container {
   flex: 1;
