@@ -90,7 +90,7 @@
   <div class="centered-content-box">
     <div class="centered-content">
       <img src="pic1.jpg" alt="Rt. Rev. George Mamlassery" class="profile-pic">
-      <p><strong> George Mamlassery, Bishop Emeritus, Diocese of Tura, Meghalaya<br>
+      <p style="color: #fe174d;"><strong> George Mamlassery, Bishop Emeritus, Diocese of Tura, Meghalaya<br>
         (1932-2024)</strong>
         </p>
     </div>
@@ -176,6 +176,99 @@
   
   
   
+
+
+
+<div class="slideshow-container">
+  <div class="slideshow-track">
+    <img src="H1.jpg" class="slideshow-image" alt="H1">
+    <img src="H2.jpg" class="slideshow-image" alt="H2">
+    <img src="H3.jpg" class="slideshow-image" alt="H3">
+    <img src="H4.jpg" class="slideshow-image" alt="H4">
+    <img src="H5.jpg" class="slideshow-image" alt="H5">
+    <img src="H6.jpg" class="slideshow-image" alt="H6">
+    <img src="H7.jpg" class="slideshow-image" alt="H7">
+    <img src="H8.jpg" class="slideshow-image" alt="H8">
+    <img src="H9.jpg" class="slideshow-image" alt="H9">
+  </div>
+</div>
+
+<!-- Fullscreen modal -->
+<div id="fullscreen-modal" class="fullscreen-modal">
+  <span class="close">&times;</span>
+  <img class="fullscreen-content" id="fullscreen-image">
+</div>
+
+
+
+<script>
+const images = document.querySelectorAll('.slideshow-image');
+const modal = document.getElementById("fullscreen-modal");
+const fullscreenImg = document.getElementById("fullscreen-image");
+const closeBtn = document.querySelector(".close");
+const slideshowTrack = document.querySelector('.slideshow-track');
+let isMouseDown = false;
+let startX, scrollLeft;
+
+// Open fullscreen on click
+images.forEach(image => {
+  image.addEventListener('click', function () {
+    modal.style.display = "block";
+    fullscreenImg.src = this.src;
+  });
+});
+
+// Close fullscreen when anywhere else is clicked
+modal.addEventListener('click', function () {
+  modal.style.display = "none";
+});
+
+// Pause animation on hover and allow user control
+slideshowTrack.addEventListener('mouseenter', () => {
+  slideshowTrack.style.animationPlayState = 'paused';
+});
+
+slideshowTrack.addEventListener('mouseleave', () => {
+  slideshowTrack.style.animationPlayState = 'running';
+});
+
+// Allow user to drag to scroll
+slideshowTrack.addEventListener('mousedown', (e) => {
+  isMouseDown = true;
+  startX = e.pageX - slideshowTrack.offsetLeft;
+  scrollLeft = slideshowTrack.scrollLeft;
+});
+
+slideshowTrack.addEventListener('mouseleave', () => {
+  isMouseDown = false;
+});
+
+slideshowTrack.addEventListener('mouseup', () => {
+  isMouseDown = false;
+});
+
+slideshowTrack.addEventListener('mousemove', (e) => {
+  if (!isMouseDown) return; // Stop the fn from running
+  e.preventDefault();
+  const x = e.pageX - slideshowTrack.offsetLeft;
+  const walk = (x - startX) * 1; // Adjust scroll speed
+  slideshowTrack.scrollLeft = scrollLeft - walk;
+});
+function openFullscreen(image) {
+  const modal = document.getElementById("fullscreen-modal");
+  const fullImage = document.getElementById("fullscreen-image");
+  
+  fullImage.src = image.src; // Set the full image source to the clicked image
+  modal.style.display = "block"; // Show the modal
+}
+
+function closeFullscreen() {
+  const modal = document.getElementById("fullscreen-modal");
+  modal.style.display = "none"; // Hide the modal
+}
+
+
+  </script>
 
 
 

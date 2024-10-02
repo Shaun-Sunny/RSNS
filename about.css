@@ -214,9 +214,9 @@ nav ul ul a::before {
 }
 
 .section-heading {
-  color: #1e3f9d;
+  color: rgba(30, 63, 157, 255);
   text-align: center;
-  font-size: 54px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: bolder;
@@ -247,7 +247,7 @@ nav ul ul a::before {
 }
 
 .history-section .text-content p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
@@ -271,7 +271,7 @@ nav ul ul a::before {
 
 
 .organogram-section {
-  background-image: url('bg3.webp');
+  background-image: url('wel.jpg');
   background-size: cover; /* Scales the image to cover the entire div */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center;
@@ -375,6 +375,7 @@ nav ul ul a::before {
   font-family: "Arial", sans-serif;
   font-size: 18px; 
   margin-bottom: 5px;
+  color: rgba(251,11,76,255);
 }
 
 .founder p {
@@ -382,6 +383,7 @@ nav ul ul a::before {
   margin-top: 0;
   font-size: 20px;
   font-weight: bold;
+  color: rgba(251,11,76,255);
 }
 
 .founder img:hover {
@@ -414,13 +416,34 @@ nav ul ul a::before {
   display: flex;
   justify-content: space-between;
   margin: 20px;
-  transition: all 0.3s ease; /* Smooth transition for resizing */
+  transition: all 0.3s ease;
+  background-image: url('rsm11.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Reduced opacity */
+  z-index: 1;
+}
+
+.left-container,
+.right-container {
+  position: relative;
+  z-index: 2; /* Ensure content appears above the background */
 }
 
 .left-container {
   flex: 1;
   padding: 20px;
-  background-color: var(--background-color);
   border: none; /* Removed border */
   border-radius: 10px;
   margin: 10px;
@@ -432,16 +455,15 @@ nav ul ul a::before {
   transition: all 0.3s ease; /* Smooth transition for resizing */
   font-size: 20px;
   font-weight: bold;
+  background-color: transparent; /* Ensure transparency */
 }
 
 .benefactor-image {
-  width: 210px; /* Increased size */
+  width: 210px;
   height: auto;
   border-radius: 50%;
   margin: 10px 0;
-}
-.benefactor-image {
-  border: 5px solid black; /* Thick black border */
+  border: 5px solid #2596be; /* Light blue border */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -449,17 +471,17 @@ nav ul ul a::before {
   transform: scale(1.1); /* Image pops up on hover */
 }
 
-
 .right-container {
   flex: 1;
   padding: 20px;
-  background-color: var(--background-color);
-  border: 2px solid var(--border-color);
+  background-color: transparent; /* Transparent background for right section */
+  border: 2px solid #2596be; /* Light blue border */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
-  transition: all 0.3s ease; /* Smooth transition for resizing */
+  transition: all 0.3s ease;
 }
+
 
 .collapsible-menu {
   width: 100%;
@@ -469,10 +491,12 @@ nav ul ul a::before {
   border-radius: 5px;
   margin-top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow */
-  background-color: white; /* White background */
+  background-color: white; /* White background for the menu */
   color: black; /* Black font color */
   transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
 }
+
 
 .collapsible-menu.collapsed .description-content {
   max-height: 0;
@@ -486,6 +510,7 @@ nav ul ul a::before {
   opacity: 1;
   padding: 10px 20px;
   transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+  background-color: white; /* White background for active state of the menu */
 }
 
 .collapsible-header {
@@ -493,39 +518,25 @@ nav ul ul a::before {
   padding: 10px 20px;
   border-radius: 5px;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: white; /* White background for header */
 }
 
 .collapsible-header:hover {
-  background-color: darken(lightblue, 10%); /* Darken light blue for hover effect */
+  background-color: rgba(173, 216, 230, 0.8); /* Light blue hover effect */
 }
 
 .collapsible-menu:not(.active) .collapsible-header {
-  background-color: lightblue; /* Light blue background before first opening */
+  background-color: transparent; /* Transparent background before first opening */
   color: black; /* Black font before first opening */
   font-weight: normal; /* Normal font weight before first opening */
 }
 
 .collapsible-menu.active .collapsible-header {
-  background-color: white; /* White background when active */
+  background-color: transparent; /* Transparent background when active */
   color: black; /* Black font color when active */
   font-weight: bold; /* Bold font when active */
-}
-
-
-
-.collapsible-header {
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 18px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.collapsible-header:hover {
-  background-color: darken(lightblue, 10%); /* Darken light blue for hover effect */
 }
 
 .description-content {
@@ -534,6 +545,7 @@ nav ul ul a::before {
   padding: 0 20px;
   transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
   overflow: hidden;
+  font-size: larger;
 }
 
 .description-content ul {
@@ -549,11 +561,14 @@ nav ul ul a::before {
   max-height: 1000px;
   opacity: 1;
   padding: 10px 20px;
+  background-color: transparent; /* Transparent background for active content */
 }
 
 .collapsible-menu.active .collapsible-header {
   opacity: 1; /* Ensure header is visible when active */
 }
+
+
 
 
 

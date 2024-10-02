@@ -160,7 +160,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('hospital1\ -\ Copy.jpeg');
+  background-image: url('Hospital\ Header.jpg');
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -223,29 +223,32 @@ nav ul ul a::before {
   max-width: 400px; /* Set a max-width for the images */
 }
 
+.image1 {
+  width: 70%; /* Increase total size */
+  height: auto; /* Keep aspect ratio */
+  position: absolute;
+  bottom: 45%; /* Adjust position to accommodate the larger size */
+  left: 50%;
+  transform: translate(-50%, 50%); /* Centering remains the same */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  animation: glide-up 5s infinite alternate ease-in-out; /* Smooth hover effect */
+  z-index: 2; /* Keep above image2 */
+}
+
+/* Bottom Image (image2) */
 .image2 {
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: brightness(50%); /* Apply darker shade */
-  animation: glide-down 3s infinite alternate ease-in-out;
-  z-index: 1; /* Ensure this image is under the other image */
+  filter: brightness(50%); /* Keep the darker shade */
+  animation: glide-down 5s infinite alternate ease-in-out; /* Smooth hover effect */
+  z-index: 1;
   position: relative;
-  border-radius: 15px; /* Add curved edges */
+  border-radius: 15px; /* Curved edges */
 }
 
-.image1 {
-  width: 50%; /* Ensure both images are similar in size */
-  height: auto;
-  position: absolute;
-  bottom: 50%; /* Center vertically within the container */
-  left: 50%;
-  transform: translate(-50%, 50%); /* Center the first image at the bottom center of the second image */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  animation: glide-up 3s infinite alternate ease-in-out;
-  z-index: 2; /* Ensure this image is above the other image */
-}
+
 
 /* Right section styles */
 .right-section {
@@ -263,13 +266,14 @@ nav ul ul a::before {
   color: #1e3f9d;
   margin-bottom: 10px;
   font-size: 32px; /* Updated heading font size */
+  font-weight: bold;
 }
 
 .right-section p {
   color: var(--text-color);
   margin-bottom: 10px;
   text-align: justify;
-  font-size: 24px; /* Updated content font size */
+  font-size: 20px; /* Updated content font size */
   font-weight: normal; /* Ensure the paragraph font is not bold */
 }
 
@@ -298,12 +302,13 @@ nav ul ul a::before {
   }
 }
 
+/* Smooth Hover Effect */
 @keyframes glide-up {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-15px); /* Smooth upward movement */
   }
 }
 
@@ -312,7 +317,7 @@ nav ul ul a::before {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(10px);
+    transform: translateY(15px); /* Smooth downward movement */
   }
 }
 
@@ -642,6 +647,86 @@ nav ul ul a::before {
   border-radius: 10px; /* Optional for slightly rounded corners */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+.slideshow-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 30px;
+}
+
+.slideshow-track {
+  display: flex;
+  animation: slide-left 60s linear infinite; /* Adjust speed as needed */
+}
+
+.slideshow-image {
+  width: 180px; /* Fixed width for smartphone shape */
+  height: 320px; /* Fixed height for smartphone shape */
+  margin: 0 10px; /* Space between images */
+  border-radius: 15px; /* Rounded corners */
+  object-fit: cover; /* Crop the images to fit */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.slideshow-image:hover {
+  transform: scale(1.05); /* Popup effect on hover */
+  opacity: 0.9; /* Slightly dim the image on hover */
+}
+
+/* Animation for the continuous scrolling effect */
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Fullscreen modal styling */
+.fullscreen-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.fullscreen-content {
+  width: auto;
+  height: auto; /* Allow the full image height */
+  max-height: 90%;
+  max-width: 90%; /* Maintain aspect ratio in fullscreen */
+  margin: auto;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hide scrollbar for the smooth slideshow effect */
+body {
+  overflow-x: hidden;
+}
 
 
 

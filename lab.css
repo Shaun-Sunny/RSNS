@@ -214,35 +214,39 @@ nav ul ul a::before {
   
   
   
-  .parallax-heading {
-    background-image: url('lab.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    height: 300px; /* Adjust based on your needs */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #000; /* Font color in the heading */
-  }
-  
-  .parallax-heading h1 {
-    font-size: 3em; /* Increased font size */
-    margin: 0;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Optional: Adds a background to the heading for better readability */
-  }
-  
-  .nursing-practice-info {
-    margin: 0 auto; /* Centers the div */
-    width: 80%; /* Makes the div broader */
-    padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
-    text-align: center; /* Centers text inside the div */
-    font-size: 1.5em; /* Increased font size */
-    line-height: 1.6; /* Improves readability */
-    color: #000; /* Sets text color to black */
-  }
+.parallax-heading {
+  background-image: url('lab.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 300px; /* Adjust based on your needs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000; /* Font color in the heading */
+}
+
+.parallax-heading h1 {
+  color: rgba(30, 63, 157, 255);
+  font-size: 3em; /* Increased font size */
+  margin: 0;
+  padding: 10px 15px; /* Reduced padding */
+  background-color: rgba(255, 255, 255, 0.7); /* Optional: Adds a background to the heading for better readability */
+  max-width: 80%; /* Set a max width to control the size of the background */
+}
+
+.nursing-practice-info {
+  margin: 0 auto; /* Centers the div */
+  width: 80%; /* Makes the div broader */
+  padding: 40px 20px; /* Adds padding on top and bottom, 40px each, and 20px on the sides */
+  text-align: center; /* Centers text inside the div */
+  font-size: 1.5em; /* Increased font size */
+  line-height: 1.6; /* Improves readability */
+  color: #000; /* Sets text color to black */
+}
+
+
 
 
 
