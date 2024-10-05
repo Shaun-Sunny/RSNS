@@ -239,6 +239,77 @@ nav ul ul a::before {
 
 
 
+/* Slideshow Container */
+.slideshow-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 30px;
+}
+
+/* Slideshow Track */
+.slideshow-track {
+  display: flex;
+  animation: slide-left 60s linear infinite; /* Adjust speed as needed */
+}
+
+/* Slideshow Images */
+.slideshow-image {
+  width: 180px; /* Fixed width for smartphone shape */
+  height: 320px; /* Fixed height for smartphone shape */
+  margin: 0 10px; /* Space between images */
+  border-radius: 15px; /* Rounded corners */
+  object-fit: cover; /* Crop the images to fit */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.slideshow-image:hover {
+  transform: scale(1.05); /* Popup effect on hover */
+  opacity: 0.9; /* Slightly dim the image on hover */
+}
+
+/* Animation for the continuous scrolling effect */
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Fullscreen Modal Styling */
+.fullscreen-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.fullscreen-content {
+  width: auto;
+  height: auto; /* Allow the full image height */
+  max-height: 90%;
+  max-width: 90%; /* Maintain aspect ratio in fullscreen */
+  margin: auto;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hide scrollbar for the smooth slideshow effect */
+body {
+  overflow-x: hidden;
+}
 
 
 
