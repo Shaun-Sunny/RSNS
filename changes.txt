@@ -1,0 +1,26 @@
+About us: 
+school image - remove, replace with something blue
+mission, vision, motto, philosophy - background colour blue, title change blue, inside font - left aligned
+benefactors name change colour
+Hospital:
+moving images - fix it
+hostial first title - full caps
+first title and content - 1 line space
+first textual content - font and size same as history of rsm
+Library:
+2nd section - move to 1st section
+1st title - full caps
+SWA:
+header file - heart hand image send in mail
+1st title - full caps
+1st section - remove image on side
+1st section left image - add in slideshow
+1st section - add slideshow
+2nd title - full caps
+2nd section - remove image on side
+SNA:
+change the images with newly edited cropped images
+Hostel:
+Hostel Accomodation - first para
+Hostel Accomodation - left side flower exchange image
+

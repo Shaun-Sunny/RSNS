@@ -204,6 +204,7 @@ nav ul ul a::before {
   padding: 20px;
   border: 2px solid var(--border-color);
   margin: 20px;
+  position: relative;
 }
 
 /* Left section styles */
@@ -224,17 +225,18 @@ nav ul ul a::before {
 }
 
 .image1 {
-  width: 70%; /* Increase total size */
+  width: 70%; /* Maintain the size */
   height: auto; /* Keep aspect ratio */
   position: absolute;
-  bottom: 45%; /* Adjust position to accommodate the larger size */
-  left: 50%;
-  transform: translate(-50%, 50%); /* Centering remains the same */
+  bottom: 45%; /* Adjust the vertical position */
+  left: 30%; /* Move image1 slightly to the left by reducing the percentage */
+  transform: translate(-50%, 50%); /* Center it horizontally */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  animation: glide-up 5s infinite alternate ease-in-out; /* Smooth hover effect */
+  animation: glide-up 5s infinite alternate ease-in-out;
   z-index: 2; /* Keep above image2 */
 }
+
 
 /* Bottom Image (image2) */
 .image2 {
@@ -275,7 +277,10 @@ nav ul ul a::before {
   text-align: justify;
   font-size: 20px; /* Updated content font size */
   font-weight: normal; /* Ensure the paragraph font is not bold */
+  line-height: 1.6; /* Increase line height for more space between lines */
+  letter-spacing: 0.5px; /* Increase letter spacing slightly */
 }
+
 
 
 

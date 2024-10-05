@@ -304,11 +304,10 @@ nav ul ul a::before {
 
 
 
-/* Styles for the hostel section */
 .hostel-section-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  align-items: flex-start; /* Align items to the top */
   margin: 0 auto;
   width: 80%;
   padding: 40px 20px;
@@ -320,14 +319,17 @@ nav ul ul a::before {
 
 .hostel-section {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: row; /* Keep the row layout */
+  align-items: center; /* Center the image vertically */
+  justify-content: flex-start; /* Align items to the left */
+  width: 100%; /* Ensure the section takes full width */
 }
 
 .hostel-image {
-  max-width: 30%;
-  height: auto;
-  margin-right: 20px;
+  margin-right: 20px; /* Space between the image and the text */
+  max-width: 30%; /* Set a max width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Curved borders */
   transition: transform 0.3s ease-in-out; /* Smooth transition for popup effect */
 }
 
@@ -339,6 +341,7 @@ nav ul ul a::before {
   font-size: 32px; /* Updated heading size */
   color: #1e3f9d; /* Preferred heading color */
   font-family: 'Raleway', sans-serif; /* Updated font family */
+  margin: 0; /* Remove default margin */
 }
 
 .hostel-section p {
@@ -346,8 +349,21 @@ nav ul ul a::before {
   color: black;
   line-height: 1.6;
   font-family: 'Raleway', sans-serif; /* Updated font family */
-  text-align: justify;
+  text-align: justify; /* Justify text for better readability */
+  margin: 10px 0; /* Margin for spacing between paragraphs */
 }
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 /* Styles for the transport section */
 .transport-section {

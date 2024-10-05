@@ -347,27 +347,7 @@ nav ul ul a::before {
   cursor: pointer;
 }
 
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .objectives {
-    display: block; /* Stack elements vertically on smaller screens */
-  }
 
-  .sna-images {
-    width: 100%; /* Full width on smaller screens */
-    margin: 20px auto; /* Centering the images */
-  }
-
-  .sna-image {
-    width: 80%; /* Adjust width for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; /* Add space between images */
-  }
-
-  .objectives-text {
-    margin-right: 0; /* Remove right margin for text on smaller screens */
-  }
-}
 
 
 

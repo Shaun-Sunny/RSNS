@@ -162,7 +162,7 @@ nav ul ul a::before {
 /* Background section styles */
 .background-section {
   position: relative;
-  background-image: url('swabanner.jpg');
+  background-image: url('Student\ Welfare\ Activities\ Header1.jpg');
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -232,6 +232,13 @@ nav ul ul a::before {
   text-align: justify; /* Justifies the text */
   margin-bottom: 20px; /* Adds space between the paragraphs */
 }
+
+
+
+
+
+
+
 
 
 
