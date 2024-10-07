@@ -165,7 +165,7 @@ nav ul ul a::before {
   background-image: url('Student\ Welfare\ Activities\ Header1.jpg');
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ nav ul ul a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark filter */
+  background: rgba(0, 0, 0, 0.3); /* Dark filter */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,8 +203,12 @@ nav ul ul a::before {
 }
 
 .educational-social-activities-section h2 {
-  font-size: 32px; /* Adjust font size if needed */
-  color: #1e3f9d; /* Ensures text color is consistent */
+  color: rgba(30, 63, 157, 255);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 
 .content-wrapper {

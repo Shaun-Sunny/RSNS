@@ -265,10 +265,12 @@ nav ul ul a::before {
 }
 
 .right-section h2 {
-  color: #1e3f9d;
-  margin-bottom: 10px;
-  font-size: 32px; /* Updated heading font size */
-  font-weight: bold;
+  color: rgba(30, 63, 157, 255);
+    text-align: left;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 
 .right-section p {

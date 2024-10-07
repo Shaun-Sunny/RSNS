@@ -338,10 +338,12 @@ nav ul ul a::before {
 }
 
 .hostel-section h2 {
-  font-size: 32px; /* Updated heading size */
-  color: #1e3f9d; /* Preferred heading color */
-  font-family: 'Raleway', sans-serif; /* Updated font family */
-  margin: 0; /* Remove default margin */
+  color: rgba(30, 63, 157, 255);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 
 .hostel-section p {
@@ -355,6 +357,77 @@ nav ul ul a::before {
 
 
  
+
+
+
+
+
+
+
+
+
+
+.mess-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.3); /* Light translucent background */
+  backdrop-filter: blur(5px); /* Very light blur effect */
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.mess-image {
+  flex: 1;
+  overflow: hidden; /* Ensures the image stays within bounds during scale */
+}
+
+.mess-image img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.mess-image img:hover {
+  transform: scale(1.1); /* Scale up image on hover */
+}
+
+.mess-content {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.mess-content h1 {
+  font-size: 32px; /* Updated heading size */
+  color: #1e3f9d; /* Preferred heading color */
+  font-family: 'Raleway', sans-serif; /* Updated font family */
+}
+
+.mess-content p {
+  font-size: 24px; /* Updated content size */
+  color: black;
+  line-height: 1.6;
+  font-family: 'Raleway', sans-serif; /* Updated font family */
+  text-align: justify;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

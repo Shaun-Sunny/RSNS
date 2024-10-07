@@ -234,11 +234,12 @@ nav ul ul a::before {
 
 /* Specific styles for headings */
 .library-section-container h2 {
-  font-size: 32px; /* Set heading size to 32px */
-  margin-bottom: 20px;
-  color: #1e3f9d; /* Preferred heading color */
-  text-align: center;
-  font-weight: bold; /* Ensure heading is bold */
+    color: rgba(30, 63, 157, 255);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 
 /* Paragraph styles with justified text */

@@ -203,11 +203,12 @@ nav ul ul a::before {
 }
 
 .info-box h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #1e3f9d;
-  margin-bottom: 10px;
+  color: rgba(30, 63, 157, 255);
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
 }
 
 .info-box p {
