@@ -208,7 +208,6 @@ nav ul ul a::before {
   text-align: center; /* Justify text for neat alignment */
   line-height: 1.8; /* Enhances readability */
   font-family: "Arial", sans-serif; /* Sets font to Arial */
-  font-weight: bold;
 }
 
   

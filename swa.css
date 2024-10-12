@@ -447,6 +447,7 @@ body {
 .unique-sports-section h2 {
   font-size: 32px; /* Adjust font size if needed */
   color: #1e3f9d; /* Ensures text color is consistent */
+  margin-bottom: 15px;
 }
 
 .unique-content-wrapper {

@@ -201,18 +201,41 @@ nav ul ul a::before {
 
 
 
-.content-box {
-  margin: 20px auto;
-  font-family: 'Poppins', sans-serif;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  width: 95%; /* Increased width */
-  max-width: 1000px; /* Maximum width */
-  background-color: lightblue; /* For browsers that do not support gradients */
-  background-image: linear-gradient(lightblue, white);
+/* Main section (background can be changed here) */
+.history-section {
+  background-image: url('bg3.webp'); /* Background image for the entire section */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px; /* Padding around the content */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Content wrapper (background image and style can be customized separately) */
+.history-section .content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+  /* Background image for content wrapper */
+  background-image: url('hbg.jpg'); /* Set background image */
+  background-size: cover; /* Ensure the image covers the entire wrapper */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Optional: this will blur the background image behind the content */
+}
+
+
+/* Section heading */
 .section-heading {
   color: rgba(30, 63, 157, 255);
   text-align: center;
@@ -222,20 +245,23 @@ nav ul ul a::before {
   font-weight: bolder;
 }
 
+/* Text content styling */
 .history-section .text-content {
   text-align: justify;
 }
 
+/* Image container */
 .history-section .image-container {
   float: right;
-  margin: 0 0 10px 20px; /* Adjust margins as needed */
+  margin: 0 0 10px 20px;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 40%; /* Adjusted width */
+  max-width: 40%;
 }
 
+/* Image styling */
 .popup-image {
-  width: 100%; /* Adjusted width */
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -246,12 +272,50 @@ nav ul ul a::before {
   transform: scale(1.05);
 }
 
+/* Text paragraph styling */
 .history-section .text-content p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .history-section {
+    padding: 30px 15px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .history-section .image-container {
+    float: none;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+  }
+
+  .popup-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-section {
+    padding: 20px 10px;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .history-section .text-content p {
+    font-size: 1rem;
+  }
+}
+
+
 
 
 
@@ -341,14 +405,20 @@ nav ul ul a::before {
   margin-right: auto;
   box-shadow: 5px 10px;
   border-style: solid;
-  background-color: white;
+  background-image: url('bg3.webp'); /* Background image for the entire section */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
 }
 
 .founders-heading {
-  font-family: "Arial", sans-serif;
+  color: rgba(30, 63, 157, 255);
   text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: rgba(32,65,178,255);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder
 }
 
 .founder-container {

@@ -569,17 +569,23 @@ nav ul ul a::before {
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
+  background-image: url('bg3.webp'); /* Updated background image */
+  background-size: cover;
+  background-position: center;
   border: 2px solid #000;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
 }
 
+
 .principal-message-section h2 {
-  font-family: 'Poppins', sans-serif;
+  color: rgba(30, 63, 157, 255);
+  text-align: center;
   font-size: 2.5rem;
-  color: #1e3f9d;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
 }
 
 .message-content {
@@ -649,7 +655,7 @@ nav ul ul a::before {
   }
 
   .principal-message-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .message-content {
