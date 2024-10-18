@@ -113,59 +113,63 @@
   </div>
   
   <script>
-  const images = document.querySelectorAll('.slideshow-image');
-  const modal = document.getElementById("fullscreen-modal");
-  const fullscreenImg = document.getElementById("fullscreen-image");
-  const closeBtn = document.querySelector(".close");
-  const slideshowTrack = document.querySelector('.slideshow-track');
-  let isMouseDown = false;
-  let startX, scrollLeft;
+    const images = document.querySelectorAll('.slideshow-image');
+    const modal = document.getElementById("fullscreen-modal");
+    const fullscreenImg = document.getElementById("fullscreen-image");
+    const closeBtn = document.querySelector(".close");
+    const slideshowTrack = document.querySelector('.slideshow-track');
+    let isMouseDown = false;
+    let startX, scrollLeft;
   
-  // Open fullscreen on click
-  images.forEach(image => {
-    image.addEventListener('click', function () {
-      modal.style.display = "block";
-      fullscreenImg.src = this.src;
+    // Open fullscreen on image click
+    images.forEach(image => {
+      image.addEventListener('click', function (e) {
+        modal.style.display = "flex";  // Open modal in flexbox mode
+        fullscreenImg.src = this.src;
+        e.stopPropagation(); // Prevent closing modal when clicking image
+      });
     });
-  });
   
-  // Close fullscreen when anywhere else is clicked
-  modal.addEventListener('click', function () {
-    modal.style.display = "none";
-  });
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal || e.target === closeBtn) {
+        modal.style.display = "none";  // Close modal
+      }
+    });
   
-  // Pause animation on hover and allow user control
-  slideshowTrack.addEventListener('mouseenter', () => {
-    slideshowTrack.style.animationPlayState = 'paused';
-  });
+    // Pause slideshow animation when hovering
+    slideshowTrack.addEventListener('mouseenter', () => {
+      slideshowTrack.style.animationPlayState = 'paused';
+    });
   
-  slideshowTrack.addEventListener('mouseleave', () => {
-    slideshowTrack.style.animationPlayState = 'running';
-  });
+    slideshowTrack.addEventListener('mouseleave', () => {
+      slideshowTrack.style.animationPlayState = 'running';
+    });
   
-  // Allow user to drag to scroll
-  slideshowTrack.addEventListener('mousedown', (e) => {
-    isMouseDown = true;
-    startX = e.pageX - slideshowTrack.offsetLeft;
-    scrollLeft = slideshowTrack.scrollLeft;
-  });
+    // Drag-to-scroll functionality
+    slideshowTrack.addEventListener('mousedown', (e) => {
+      isMouseDown = true;
+      startX = e.pageX - slideshowTrack.offsetLeft;
+      scrollLeft = slideshowTrack.scrollLeft;
+    });
   
-  slideshowTrack.addEventListener('mouseleave', () => {
-    isMouseDown = false;
-  });
+    slideshowTrack.addEventListener('mouseleave', () => {
+      isMouseDown = false;
+    });
   
-  slideshowTrack.addEventListener('mouseup', () => {
-    isMouseDown = false;
-  });
+    slideshowTrack.addEventListener('mouseup', () => {
+      isMouseDown = false;
+    });
   
-  slideshowTrack.addEventListener('mousemove', (e) => {
-    if (!isMouseDown) return; // Stop the function from running
-    e.preventDefault();
-    const x = e.pageX - slideshowTrack.offsetLeft;
-    const walk = (x - startX) * 1; // Adjust scroll speed
-    slideshowTrack.scrollLeft = scrollLeft - walk;
-  });
+    slideshowTrack.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      const x = e.pageX - slideshowTrack.offsetLeft;
+      const walk = (x - startX) * 1; // Scroll speed factor
+      slideshowTrack.scrollLeft = scrollLeft - walk;
+    });
   </script>
+  
 
 
 
@@ -183,7 +187,7 @@
 
 
   <div class="cultural-activities-section">
-    <h2>CULTURAL ACTIVITIES</h2>
+    <h2>Cultural Activities</h2>
     <div class="content-wrapper">
       <p>
         Students get fairly good opportunity in the school to exhibit their talents through a host of celebrations. They participate in various cultural activities which are organized to cater to the all round development of personality. Inter school sport competitions and cultural competitions are organized by Trained Nurses Association of India (TNAI) in Shillong in which students participate and develop a sense of confidence and achievement. Our school hosts annual cultural festivals that celebrate the rich diversity of our heritage and values, showcasing traditional music, dance, cuisine, and art forms from various regions. These festivals provide students with opportunities to learn about different cultures, connect with peers from diverse backgrounds, and foster a sense of unity and inclusivity.        The school encourages student participation in sports tournaments, talent shows, and charity fundraisers, fostering a spirit of camaraderie, teamwork, and leadership among students. Through our diverse array of events and cultural programs, we strive to create a dynamic and inclusive campus environment that promotes personal growth, cultural appreciation, and academic excellence. These events play a vital role in enhancing the overall student experience and shaping well-rounded healthcare professionals who are equipped to make meaningful contributions to society.
@@ -211,90 +215,92 @@
   </div>
   
   <script>
-    const gallery = document.querySelector('.scrolling-gallery');
-    const images = document.querySelectorAll('.gallery-img');
-    let isDragging = false;
-    let startX, scrollLeft, velocity;
-    let autoScrollInterval;
-  
-    // Start dragging
-    function startDragging(e) {
-        clearInterval(autoScrollInterval); // Stop auto-scrolling
-        isDragging = true;
-        startX = e.pageX - gallery.offsetLeft;
-        scrollLeft = gallery.scrollLeft;
-        velocity = 0;
-        gallery.style.cursor = 'grabbing';
+const gallery = document.querySelector('.scrolling-gallery');
+const images = document.querySelectorAll('.gallery-img');
+let isDragging = false;
+let startX, scrollLeft, velocity;
+let autoScrollInterval;
+
+// Start dragging
+function startDragging(e) {
+    clearInterval(autoScrollInterval); // Stop auto-scrolling
+    isDragging = true;
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+    velocity = 0;
+    gallery.style.cursor = 'grabbing';
+}
+
+// Stop dragging
+function stopDragging() {
+    isDragging = false;
+    gallery.style.cursor = 'grab';
+    beginMomentumScroll();
+    startAutoScroll(); // Restart auto-scrolling
+}
+
+// Dragging functionality
+function drag(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - gallery.offsetLeft;
+    const walk = (x - startX) * 2; // Sensitivity
+    gallery.scrollLeft = scrollLeft - walk;
+    velocity = walk; // Update velocity
+}
+
+// Momentum scrolling
+function beginMomentumScroll() {
+    if (Math.abs(velocity) > 0.5) {
+        gallery.scrollLeft -= velocity; // Apply velocity
+        velocity *= 0.95; // Decay velocity
+        requestAnimationFrame(beginMomentumScroll);
     }
-  
-    // Stop dragging
-    function stopDragging() {
-        isDragging = false;
-        gallery.style.cursor = 'grab';
-        beginMomentumScroll();
-        startAutoScroll(); // Restart auto-scrolling
-    }
-  
-    // Dragging functionality
-    function drag(e) {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 2; // Sensitivity
-        gallery.scrollLeft = scrollLeft - walk;
-        velocity = walk; // Update velocity
-    }
-  
-    // Momentum scrolling
-    function beginMomentumScroll() {
-        if (Math.abs(velocity) > 0.5) {
-            gallery.scrollLeft -= velocity; // Apply velocity
-            velocity *= 0.95; // Decay velocity
-            requestAnimationFrame(beginMomentumScroll);
+}
+
+// Auto-scroll functionality
+function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+        gallery.scrollLeft += 1; // Change this value to control scroll speed
+        if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+            gallery.scrollLeft = 0; // Loop back to start
         }
+    }, 30); // Adjust time for scroll speed
+}
+
+// Fullscreen functionality
+const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+const fullscreenImage = document.getElementById('fullscreen-image');
+const closeBtn = document.getElementById('close-btn');
+
+// Open fullscreen when an image is clicked
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        fullscreenImage.src = img.src;  // Set the source of the fullscreen image
+        fullscreenOverlay.style.display = 'flex';  // Display the fullscreen overlay
+    });
+});
+
+// Close fullscreen when clicking outside the image or on the close button
+fullscreenOverlay.addEventListener('click', (e) => {
+    if (e.target !== fullscreenImage && e.target !== closeBtn) {
+        fullscreenOverlay.style.display = 'none';  // Hide the fullscreen overlay
     }
-  
-    // Auto-scroll functionality
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(() => {
-            gallery.scrollLeft += 1; // Change this value to control scroll speed
-            if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-                gallery.scrollLeft = 0; // Loop back to start
-            }
-        }, 30); // Adjust time for scroll speed
-    }
-  
-    // Fullscreen functionality
-    const fullscreenOverlay = document.getElementById('fullscreen-overlay');
-    const fullscreenImage = document.getElementById('fullscreen-image');
-    const closeBtn = document.getElementById('close-btn');
-  
-    images.forEach(img => {
-        img.addEventListener('click', () => {
-            fullscreenImage.src = img.src;
-            fullscreenOverlay.style.display = 'flex';
-        });
-    });
-  
-    // Close fullscreen
-    fullscreenOverlay.addEventListener('click', (e) => {
-        if (e.target !== fullscreenImage && e.target !== closeBtn) {
-            fullscreenOverlay.style.display = 'none';
-        }
-    });
-  
-    closeBtn.addEventListener('click', () => {
-        fullscreenOverlay.style.display = 'none';
-    });
-  
-    // Event listeners for dragging
-    gallery.addEventListener('mousedown', startDragging);
-    gallery.addEventListener('mouseleave', stopDragging);
-    gallery.addEventListener('mouseup', stopDragging);
-    gallery.addEventListener('mousemove', drag);
-  
-    // Start auto-scrolling initially
-    startAutoScroll();
+});
+
+closeBtn.addEventListener('click', () => {
+    fullscreenOverlay.style.display = 'none';  // Hide the fullscreen overlay
+});
+
+// Event listeners for dragging
+gallery.addEventListener('mousedown', startDragging);
+gallery.addEventListener('mouseleave', stopDragging);
+gallery.addEventListener('mouseup', stopDragging);
+gallery.addEventListener('mousemove', drag);
+
+// Start auto-scrolling initially
+startAutoScroll();
+
   </script>
   
 

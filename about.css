@@ -223,7 +223,7 @@ nav ul ul a::before {
   padding: 20px;
   
   /* Background image for content wrapper */
-  background-image: url('hbg.jpg'); /* Set background image */
+  background-image: url('careerbg1.jpg'); /* Set background image */
   background-size: cover; /* Ensure the image covers the entire wrapper */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent image from repeating */
@@ -405,7 +405,7 @@ nav ul ul a::before {
   margin-right: auto;
   box-shadow: 5px 10px;
   border-style: solid;
-  background-image: url('bg3.webp'); /* Background image for the entire section */
+  background-image: url('careerbg1.jpg'); /* Background image for the entire section */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -487,7 +487,7 @@ nav ul ul a::before {
   justify-content: space-between;
   margin: 20px;
   transition: all 0.3s ease;
-  background-image: url('bg3.webp');
+  background-image: url('careerbg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
