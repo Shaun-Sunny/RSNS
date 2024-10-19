@@ -203,7 +203,7 @@ nav ul ul a::before {
 
 /* Main section (background can be changed here) */
 .history-section {
-  background-image: url('bg3.webp'); /* Background image for the entire section */
+  background-image: url('careerbg.jpg'); /* Background image for the entire section */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
