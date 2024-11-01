@@ -699,7 +699,6 @@ nav ul ul a::before {
   100% { transform: translateX(-100%); }
 }
 
-/* Fullscreen modal styling */
 .fullscreen-modal {
   display: none;
   position: fixed;
@@ -709,16 +708,17 @@ nav ul ul a::before {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
+  display: flex; /* Flexbox to center the content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 .fullscreen-content {
-  width: auto;
-  height: auto; /* Allow the full image height */
   max-height: 90%;
-  max-width: 90%; /* Maintain aspect ratio in fullscreen */
-  margin: auto;
-  display: block;
+  max-width: 90%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure image fits without distortion */
 }
+
 
 .close {
   position: absolute;

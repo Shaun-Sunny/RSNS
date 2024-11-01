@@ -113,61 +113,81 @@
   </div>
   
   <script>
-    const images = document.querySelectorAll('.slideshow-image');
-    const modal = document.getElementById("fullscreen-modal");
-    const fullscreenImg = document.getElementById("fullscreen-image");
-    const closeBtn = document.querySelector(".close");
-    const slideshowTrack = document.querySelector('.slideshow-track');
-    let isMouseDown = false;
-    let startX, scrollLeft;
-  
-    // Open fullscreen on image click
-    images.forEach(image => {
-      image.addEventListener('click', function (e) {
-        modal.style.display = "flex";  // Open modal in flexbox mode
-        fullscreenImg.src = this.src;
-        e.stopPropagation(); // Prevent closing modal when clicking image
-      });
-    });
-  
-    // Close modal when clicking outside the image
-    modal.addEventListener('click', function (e) {
-      if (e.target === modal || e.target === closeBtn) {
-        modal.style.display = "none";  // Close modal
-      }
-    });
-  
-    // Pause slideshow animation when hovering
-    slideshowTrack.addEventListener('mouseenter', () => {
-      slideshowTrack.style.animationPlayState = 'paused';
-    });
-  
-    slideshowTrack.addEventListener('mouseleave', () => {
-      slideshowTrack.style.animationPlayState = 'running';
-    });
-  
-    // Drag-to-scroll functionality
-    slideshowTrack.addEventListener('mousedown', (e) => {
-      isMouseDown = true;
-      startX = e.pageX - slideshowTrack.offsetLeft;
-      scrollLeft = slideshowTrack.scrollLeft;
-    });
-  
-    slideshowTrack.addEventListener('mouseleave', () => {
-      isMouseDown = false;
-    });
-  
-    slideshowTrack.addEventListener('mouseup', () => {
-      isMouseDown = false;
-    });
-  
-    slideshowTrack.addEventListener('mousemove', (e) => {
-      if (!isMouseDown) return;
-      e.preventDefault();
-      const x = e.pageX - slideshowTrack.offsetLeft;
-      const walk = (x - startX) * 1; // Scroll speed factor
-      slideshowTrack.scrollLeft = scrollLeft - walk;
-    });
+// Select elements and initialize variables
+const images = document.querySelectorAll('.slideshow-image');
+const modal = document.getElementById("fullscreen-modal");
+const fullscreenImg = document.getElementById("fullscreen-image");
+const closeBtn = document.querySelector(".close");
+const slideshowTrack = document.querySelector('.slideshow-track');
+let isMouseDown = false;
+let startX, scrollLeft;
+let scrollSpeed = 1; // Adjust the scroll speed as needed
+let autoScroll; // Declare the variable for auto-scroll
+
+// Open fullscreen on image click
+images.forEach(image => {
+  image.addEventListener('click', function (e) {
+    modal.style.display = "flex";  // Open modal in flexbox mode
+    fullscreenImg.src = this.src;
+    e.stopPropagation(); // Prevent closing modal when clicking image
+  });
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', function (e) {
+  if (e.target === modal || e.target === closeBtn) {
+    modal.style.display = "none";  // Close modal
+  }
+});
+
+// Pause slideshow animation when hovering
+slideshowTrack.addEventListener('mouseenter', () => {
+  clearInterval(autoScroll); // Stop auto-scrolling
+});
+
+slideshowTrack.addEventListener('mouseleave', () => {
+  autoScroll = setInterval(scrollSlideshow, 20); // Resume auto-scrolling
+});
+
+// Drag-to-scroll functionality
+slideshowTrack.addEventListener('mousedown', (e) => {
+  isMouseDown = true;
+  startX = e.pageX - slideshowTrack.offsetLeft;
+  scrollLeft = slideshowTrack.scrollLeft;
+  clearInterval(autoScroll); // Pause auto-scroll while dragging
+});
+
+slideshowTrack.addEventListener('mouseleave', () => {
+  isMouseDown = false;
+  autoScroll = setInterval(scrollSlideshow, 20); // Resume auto-scrolling
+});
+
+slideshowTrack.addEventListener('mouseup', () => {
+  isMouseDown = false;
+  autoScroll = setInterval(scrollSlideshow, 20); // Resume auto-scrolling
+});
+
+slideshowTrack.addEventListener('mousemove', (e) => {
+  if (!isMouseDown) return;
+  e.preventDefault();
+  const x = e.pageX - slideshowTrack.offsetLeft;
+  const walk = (x - startX) * 1; // Scroll speed factor
+  slideshowTrack.scrollLeft = scrollLeft - walk;
+});
+
+// Infinite scrolling function
+function scrollSlideshow() {
+  slideshowTrack.scrollLeft += scrollSpeed;
+
+  // If scroll reaches the duplicated set, reset to the original images
+  if (slideshowTrack.scrollLeft >= slideshowTrack.scrollWidth / 2) {
+    slideshowTrack.scrollLeft = 0;
+  }
+}
+
+// Start auto-scrolling
+autoScroll = setInterval(scrollSlideshow, 20); // Adjust interval for speed control
+
   </script>
   
 
@@ -200,108 +220,42 @@
 
   <div class="image-gallery-container">
     <div class="scrolling-gallery">
-        <img src="CA 1.jpeg" alt="CA Image 1" class="gallery-img">
-        <img src="CA 2.jpg" alt="CA Image 2" class="gallery-img">
-        <img src="CA 3.jpg" alt="CA Image 3" class="gallery-img">
-        <img src="CA 4.jpg" alt="CA Image 4" class="gallery-img">
-        <img src="CA 5.jpeg" alt="CA Image 5" class="gallery-img">
-        <img src="CA 6.jpg" alt="CA Image 6" class="gallery-img">
+      <img src="CA 1.jpeg" alt="CA Image 1" class="gallery-img">
+      <img src="CA 2.jpg" alt="CA Image 2" class="gallery-img">
+      <img src="CA 3.jpg" alt="CA Image 3" class="gallery-img">
+      <img src="CA 4.jpg" alt="CA Image 4" class="gallery-img">
+      <img src="CA 5.jpeg" alt="CA Image 5" class="gallery-img">
+      <img src="CA 6.jpg" alt="CA Image 6" class="gallery-img">
     </div>
   </div>
   
-  <div id="fullscreen-overlay" class="fullscreen-overlay">
-    <span class="close-btn" id="close-btn">&times;</span>
-    <img id="fullscreen-image" class="fullscreen-image">
+  <!-- Fullscreen container for displaying images -->
+  <div class="fullscreen-overlay" id="fullscreenOverlay">
+    <img id="fullscreenImage" src="" alt="Fullscreen Image">
   </div>
-  
-  <script>
-const gallery = document.querySelector('.scrolling-gallery');
-const images = document.querySelectorAll('.gallery-img');
-let isDragging = false;
-let startX, scrollLeft, velocity;
-let autoScrollInterval;
+<script>
+(function() {
+  // Get references to elements
+  const images = document.querySelectorAll('.gallery-img');
+  const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+  const fullscreenImage = document.getElementById('fullscreenImage');
 
-// Start dragging
-function startDragging(e) {
-    clearInterval(autoScrollInterval); // Stop auto-scrolling
-    isDragging = true;
-    startX = e.pageX - gallery.offsetLeft;
-    scrollLeft = gallery.scrollLeft;
-    velocity = 0;
-    gallery.style.cursor = 'grabbing';
-}
-
-// Stop dragging
-function stopDragging() {
-    isDragging = false;
-    gallery.style.cursor = 'grab';
-    beginMomentumScroll();
-    startAutoScroll(); // Restart auto-scrolling
-}
-
-// Dragging functionality
-function drag(e) {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - gallery.offsetLeft;
-    const walk = (x - startX) * 2; // Sensitivity
-    gallery.scrollLeft = scrollLeft - walk;
-    velocity = walk; // Update velocity
-}
-
-// Momentum scrolling
-function beginMomentumScroll() {
-    if (Math.abs(velocity) > 0.5) {
-        gallery.scrollLeft -= velocity; // Apply velocity
-        velocity *= 0.95; // Decay velocity
-        requestAnimationFrame(beginMomentumScroll);
-    }
-}
-
-// Auto-scroll functionality
-function startAutoScroll() {
-    autoScrollInterval = setInterval(() => {
-        gallery.scrollLeft += 1; // Change this value to control scroll speed
-        if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-            gallery.scrollLeft = 0; // Loop back to start
-        }
-    }, 30); // Adjust time for scroll speed
-}
-
-// Fullscreen functionality
-const fullscreenOverlay = document.getElementById('fullscreen-overlay');
-const fullscreenImage = document.getElementById('fullscreen-image');
-const closeBtn = document.getElementById('close-btn');
-
-// Open fullscreen when an image is clicked
-images.forEach(img => {
+  // Add click event listeners to each image
+  images.forEach(img => {
     img.addEventListener('click', () => {
-        fullscreenImage.src = img.src;  // Set the source of the fullscreen image
-        fullscreenOverlay.style.display = 'flex';  // Display the fullscreen overlay
+      fullscreenImage.src = img.src; // Set the fullscreen image source to clicked image source
+      fullscreenOverlay.style.display = 'flex'; // Display the overlay
     });
-});
+  });
 
-// Close fullscreen when clicking outside the image or on the close button
-fullscreenOverlay.addEventListener('click', (e) => {
-    if (e.target !== fullscreenImage && e.target !== closeBtn) {
-        fullscreenOverlay.style.display = 'none';  // Hide the fullscreen overlay
-    }
-});
+  // Hide fullscreen on click outside the image
+  fullscreenOverlay.addEventListener('click', () => {
+    fullscreenOverlay.style.display = 'none'; // Hide overlay
+  });
+})();
 
-closeBtn.addEventListener('click', () => {
-    fullscreenOverlay.style.display = 'none';  // Hide the fullscreen overlay
-});
-
-// Event listeners for dragging
-gallery.addEventListener('mousedown', startDragging);
-gallery.addEventListener('mouseleave', stopDragging);
-gallery.addEventListener('mouseup', stopDragging);
-gallery.addEventListener('mousemove', drag);
-
-// Start auto-scrolling initially
-startAutoScroll();
-
-  </script>
+</script>  
+  
   
 
 
@@ -480,114 +434,42 @@ startAutoScroll();
 
 <div class="image-gallery-container">
   <div class="scrolling-gallery">
-      <!-- <img src="swa3.jpg" alt="Image 3" class="gallery-img">
-      <img src="swa4.jpg" alt="Image 4" class="gallery-img">
-      <img src="swa5.png" alt="Image 5" class="gallery-img">
-      <img src="swa6.png" alt="Image 6" class="gallery-img">
-      <img src="swa7.jpg" alt="Image 7" class="gallery-img">
-      <img src="swa8.png" alt="Image 8" class="gallery-img">
-      <img src="swa9.png" alt="Image 9" class="gallery-img">
-      <img src="swa10.png" alt="Image 10" class="gallery-img"> -->
-      <img src="S1.jpg" alt="Image 3" class="gallery-img">
-      <img src="S3.jpeg" alt="Image 4" class="gallery-img">
-      <img src="S4.jpeg" alt="Image 5" class="gallery-img">
-      <img src="S5.jpg" alt="Image 6" class="gallery-img">
-      <img src="S6.jpeg" alt="Image 7" class="gallery-img">
+      <img src="S1.jpg" alt="Image 1" class="gallery-img">
+      <img src="S3.jpeg" alt="Image 2" class="gallery-img">
+      <img src="S4.jpeg" alt="Image 3" class="gallery-img">
+      <img src="S5.jpg" alt="Image 4" class="gallery-img">
+      <img src="S6.jpeg" alt="Image 5" class="gallery-img">
   </div>
 </div>
 
-<div id="fullscreen-overlay" class="fullscreen-overlay">
-  <span class="close-btn" id="close-btn">&times;</span>
-  <img id="fullscreen-image" class="fullscreen-image">
+<!-- Fullscreen container for displaying images -->
+<div class="fullscreen-overlay" id="fullscreenOverlay">
+  <img id="fullscreenImage" src="" alt="Fullscreen Image">
 </div>
-
 <script>
-const gallery = document.querySelector('.scrolling-gallery');
-const images = document.querySelectorAll('.gallery-img');
-let isDragging = false;
-let startX, scrollLeft, velocity;
-let autoScrollInterval;
+  (function() {
+  // Get references to elements
+  const images = document.querySelectorAll('.gallery-img');
+  const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+  const fullscreenImage = document.getElementById('fullscreenImage');
 
-// Start dragging
-function startDragging(e) {
-    clearInterval(autoScrollInterval); // Stop auto-scrolling
-    isDragging = true;
-    startX = e.pageX - gallery.offsetLeft;
-    scrollLeft = gallery.scrollLeft;
-    velocity = 0;
-    gallery.style.cursor = 'grabbing';
-}
-
-// Stop dragging
-function stopDragging() {
-    isDragging = false;
-    gallery.style.cursor = 'grab';
-    beginMomentumScroll();
-    startAutoScroll(); // Restart auto-scrolling
-}
-
-// Dragging functionality
-function drag(e) {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - gallery.offsetLeft;
-    const walk = (x - startX) * 2; // Sensitivity
-    gallery.scrollLeft = scrollLeft - walk;
-    velocity = walk; // Update velocity
-}
-
-// Momentum scrolling
-function beginMomentumScroll() {
-    if (Math.abs(velocity) > 0.5) {
-        gallery.scrollLeft -= velocity; // Apply velocity
-        velocity *= 0.95; // Decay velocity
-        requestAnimationFrame(beginMomentumScroll);
-    }
-}
-
-// Auto-scroll functionality
-function startAutoScroll() {
-    autoScrollInterval = setInterval(() => {
-        gallery.scrollLeft += 1; // Change this value to control scroll speed
-        if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-            gallery.scrollLeft = 0; // Loop back to start
-        }
-    }, 30); // Adjust time for scroll speed
-}
-
-// Fullscreen functionality
-const fullscreenOverlay = document.getElementById('fullscreen-overlay');
-const fullscreenImage = document.getElementById('fullscreen-image');
-const closeBtn = document.getElementById('close-btn');
-
-images.forEach(img => {
+  // Add click event listeners to each image
+  images.forEach(img => {
     img.addEventListener('click', () => {
-        fullscreenImage.src = img.src;
-        fullscreenOverlay.style.display = 'flex';
+      fullscreenImage.src = img.src; // Set the fullscreen image source to clicked image source
+      fullscreenOverlay.style.display = 'flex'; // Display the overlay
     });
-});
+  });
 
-// Close fullscreen
-fullscreenOverlay.addEventListener('click', (e) => {
-    if (e.target !== fullscreenImage) {
-        fullscreenOverlay.style.display = 'none';
-    }
-});
-
-closeBtn.addEventListener('click', () => {
-    fullscreenOverlay.style.display = 'none';
-});
-
-// Event listeners for dragging
-gallery.addEventListener('mousedown', startDragging);
-gallery.addEventListener('mouseleave', stopDragging);
-gallery.addEventListener('mouseup', stopDragging);
-gallery.addEventListener('mousemove', drag);
-
-// Start auto-scrolling initially
-startAutoScroll();
+  // Hide fullscreen on click outside the image
+  fullscreenOverlay.addEventListener('click', () => {
+    fullscreenOverlay.style.display = 'none'; // Hide overlay
+  });
+})();
 
 </script>
+
+
 
 
 

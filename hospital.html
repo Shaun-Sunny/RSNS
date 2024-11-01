@@ -90,7 +90,7 @@
   <div class="centered-content-box">
     <div class="centered-content">
       <img src="pic1.jpg" alt="Rt. Rev. George Mamlassery" class="profile-pic">
-      <p style="color: #fe174d;"><strong> George Mamlassery, Bishop Emeritus, Diocese of Tura, Meghalaya<br>
+      <p style="color: #fe174d;"><strong> George Mamalassery, Bishop Emeritus, Diocese of Tura, Meghalaya<br>
         (1932-2024)</strong>
         </p>
     </div>
@@ -213,10 +213,11 @@ let startX, scrollLeft;
 // Open fullscreen on click
 images.forEach(image => {
   image.addEventListener('click', function () {
-    modal.style.display = "block";
+    modal.style.display = "flex"; // Change from "block" to "flex"
     fullscreenImg.src = this.src;
   });
 });
+
 
 // Close fullscreen when anywhere else is clicked
 modal.addEventListener('click', function () {
