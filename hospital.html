@@ -193,7 +193,6 @@
   </div>
 </div>
 
-<!-- Fullscreen modal -->
 <div id="fullscreen-modal" class="fullscreen-modal">
   <span class="close">&times;</span>
   <img class="fullscreen-content" id="fullscreen-image">
@@ -337,41 +336,41 @@ scrollToTopBtn.addEventListener("click", function() {
   </div>
 
   <!-- Gallery Section -->
-  <div class="footer-segment gallery-segment">
+  <div class="footer-segment footer-gallery-segment">
     <h3>Gallery</h3>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="1.jpg" alt="Gallery Image 1" class="gallery-image">
+    <div class="footer-gallery-grid">
+      <div class="footer-gallery-item">
+        <img src="1.jpg" alt="Gallery Image 1" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="2.jpg" alt="Gallery Image 2" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="2.jpg" alt="Gallery Image 2" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="3.jpg" alt="Gallery Image 3" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="3.jpg" alt="Gallery Image 3" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="4.jpg" alt="Gallery Image 4" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="4.jpg" alt="Gallery Image 4" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="5.jpg" alt="Gallery Image 5" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="5.jpg" alt="Gallery Image 5" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="6.jpg" alt="Gallery Image 6" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="6.jpg" alt="Gallery Image 6" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="7.jpg" alt="Gallery Image 7" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="7.jpg" alt="Gallery Image 7" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="8.jpg" alt="Gallery Image 8" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="8.jpg" alt="Gallery Image 8" class="footer-gallery-image">
       </div>
-      <div class="gallery-item">
-        <img src="9.jpg" alt="Gallery Image 9" class="gallery-image">
+      <div class="footer-gallery-item">
+        <img src="9.jpg" alt="Gallery Image 9" class="footer-gallery-image">
       </div>
     </div>
     <!-- Fullscreen Modal -->
-    <div class="fullscreen-modal">
-      <span class="close">&times;</span>
-      <img class="fullscreen-image" alt="Fullscreen View">
+    <div class="footer-fullscreen-modal">
+      <span class="footer-close">&times;</span>
+      <img class="footer-fullscreen-image" alt="Fullscreen View">
     </div>
   </div>
   <!-- End of Gallery Section -->
@@ -407,10 +406,10 @@ scrollToTopBtn.addEventListener("click", function() {
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const galleryImages = document.querySelectorAll(".gallery-image");
-    const modal = document.querySelector(".fullscreen-modal");
-    const modalImg = modal.querySelector(".fullscreen-image");
-    const closeModal = modal.querySelector(".close");
+    const galleryImages = document.querySelectorAll(".footer-gallery-image");
+    const modal = document.querySelector(".footer-fullscreen-modal");
+    const modalImg = modal.querySelector(".footer-fullscreen-image");
+    const closeModal = modal.querySelector(".footer-close");
 
     galleryImages.forEach(image => {
       image.addEventListener("click", function () {
