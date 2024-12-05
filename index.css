@@ -775,7 +775,7 @@ nav ul ul a::before {
   flex: 1;
   margin: 20px;
   max-width: 280px;
-  min-width: 200px;
+  /* min-width: 200px; */
 }
 
 .logo-segment {
@@ -941,4 +941,270 @@ nav ul ul a::before {
   color: red;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 720px) {
+  /* General body styles */
+  body {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  /* Header */
+  header {
+    padding: 15px 10px; /* Reduce padding */
+  }
+
+  /* Logo */
+  .logo img {
+    max-width: auto; /* Adjust logo size */
+    max-height: auto;
+  }
+
+  /* Top Info Section */
+  .top-info {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column; /* Stack the contact items vertically */
+    align-items: flex-start;
+  }
+
+  .contact-info .icon {
+    gap: 8px;
+  }
+
+  /* Navigation */
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-start;
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  nav li {
+    margin: 5px 0; /* Reduce spacing between items */
+  }
+
+  /* Slideshow */
+  .slideshow-container {
+    padding: 10px;
+  }
+
+  .slideshow-container img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
+  }
+
+  .word {
+    font-size: 60px; /* Adjust text size */
+  }
+
+  /* Welcome Section */
+  .welcome-section {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+    color: rgba(30, 63, 157, 255); /* Adjust text color */
+    margin-bottom: 15px;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 15px;
+  }
+
+  /* Nurse Call Box */
+  .nurse-call-box {
+    padding: 15px;
+    font-size: 1.2rem; /* Adjust font size */
+    max-width: 100%; /* Ensure box is responsive */
+  }
+
+  .nurse-call-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .nurse-call-box ul li {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  /* Core Values Section */
+  .core-values-section {
+    padding: 40px 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .core-values-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .core-values-columns {
+    flex-direction: column; /* Stack the columns */
+    gap: 30px;
+  }
+
+  .core-values-list {
+    width: 100%; /* Ensure full-width on smaller screens */
+  }
+
+  .core-values-list li {
+    font-size: 1.2rem;
+  }
+
+  .core-values-list li i {
+    font-size: 1.6rem;
+  }
+
+  /* Principal Message Section */
+  .principal-message-section {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .principal-message-section h2 {
+    font-size: 2rem;
+  }
+
+  .message-content {
+    flex-direction: column; /* Stack message text and image */
+    gap: 20px;
+  }
+
+  .message-text {
+    text-align: center; /* Center-align text */
+  }
+
+  .message-image {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .message-image img {
+    width: 80%; /* Make image responsive */
+    max-width: 280px;
+  }
+
+  /* Scroll to Top Button */
+  #scrollToTopBtn {
+    bottom: 30px; /* Adjust button position */
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+/* Footer */
+.footer {
+  display: flex; /* Use flexbox to align items properly */
+  flex-direction: column; /* Stack footer items vertically */
+  align-items: center; /* Align content in the center */
+  text-align: center;
+  padding: 20px; /* Adjust padding for spacing */
+  margin-top: 20px; /* Ensure some space above the footer */
+}
+
+.footer-segment {
+  margin: 10px;
+  max-width: 100%;
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.footer-logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* Styling for Important Links */
+.footer-segment h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: white; /* Change the color of the heading to white */
+}
+
+.footer-segment ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.footer-segment li {
+  margin: 5px 0; /* Add vertical spacing between links */
+}
+
+.footer-segment a {
+  text-decoration: none;
+  color: #0066cc; /* Link color */
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-segment a:hover {
+  color: #0056a3; /* Darker blue on hover */
+}
+
+/* Map Container */
+.map-container {
+  width: 100%; /* Make map container full-width */
+  height: 200px;
+  margin-top: 20px; /* Ensure space above the map */
+}
+
+/* Modal */
+.fullscreen-modal img {
+  max-width: 85%;
+  max-height: 85%;
+}
+
+.fullscreen-modal .close {
+  font-size: 35px;
+}
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust grid layout */
+  gap: 30px; /* Increase space between grid items */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gallery-image {
+  width: 100%;  /* Ensure the gallery item takes full width */
+  height: auto;  /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+  border-radius: 10px; /* Optional: rounded corners */
+  transition: transform 0.3s ease-in-out; /* Optional: transition for hover effect */
+}
+
+.gallery-image img {
+  width: 100%; /* Ensure images take up the full width of their container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: add rounded corners to the images */
+  object-fit: cover; /* Optional: ensure images fill container while maintaining aspect ratio */
+}
+
+/* Optional: Hover effect to scale images slightly */
+.gallery-image:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+}
 
