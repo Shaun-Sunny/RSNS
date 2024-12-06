@@ -510,6 +510,62 @@ body {
     .icon {
       margin: 10px; /* Add margin for spacing around each icon */
     }
+    #footer-links, #footer-contact {
+      display: flex;
+      flex-direction: column; /* Stack the items vertically inside each footer-segment */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      width: 80%; /* Ensure the content doesn't stretch too wide */
+      max-width: 800px; /* Limit the maximum width */
+      margin-bottom: 30px; /* Space between the two footer-segments */
+    }
+    
+    /* Style for the "Important Links" section */
+    #footer-links ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    
+    #footer-links ul li {
+      margin: 5px 0;
+    }
+    
+    #footer-links ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+    }
+    
+    /* Style for the "Get in Touch" section */
+    #footer-contact .map-container {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    /* Optional: You can adjust font sizes and spacing for the footer headings and paragraphs */
+    #footer-links h3, #footer-contact h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    
+    #footer-contact p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    
+    #footer-contact a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    #footer-contact a:hover {
+      text-decoration: underline;
+    }
   }
 
 
