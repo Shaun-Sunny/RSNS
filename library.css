@@ -564,3 +564,286 @@ hr.custom-hr {
 .fullscreen-modal .close:hover {
   color: red;
 }
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .top-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .contact-info {
+    display: flex; /* Make contact-info a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the icons horizontally */
+  }
+
+  .icon {
+    margin: 10px; /* Add margin for spacing around each icon */
+  }
+  #footer-links, #footer-contact {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically inside each footer-segment */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 80%; /* Ensure the content doesn't stretch too wide */
+    max-width: 800px; /* Limit the maximum width */
+    margin-bottom: 30px; /* Space between the two footer-segments */
+  }
+  
+  /* Style for the "Important Links" section */
+  #footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  #footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  #footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  /* Style for the "Get in Touch" section */
+  #footer-contact .map-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Optional: You can adjust font sizes and spacing for the footer headings and paragraphs */
+  #footer-links h3, #footer-contact h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  #footer-contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  #footer-contact a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #footer-contact a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .background-section {
+    height: 250px; /* Reduced height for smaller screens */
+  }
+
+  .overlay h1 {
+    font-size: 1.8rem; /* Reduced font size */
+  }
+  /* Hide the original navigation menu by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    position: absolute;
+    top: 80px; /* Adjusted from 60px to 80px (a little lower) */
+    left: 0;
+    z-index: 1000;
+    padding-top: 10px;
+    transition: all 0.3s ease; /* Smooth transition for opening menu */
+  }
+
+  /* Show the hamburger menu icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    z-index: 1100;
+    transition: transform 0.3s ease; /* Smooth transition for hamburger icon */
+  }
+
+  /* Style the individual lines in the hamburger icon */
+  .hamburger .line {
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s ease; /* Smooth transition for lines */
+  }
+
+  /* Transform the hamburger lines into an "X" when the menu is open */
+  .hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+  }
+
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+
+  .hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+  }
+
+  /* Show the navigation menu when it's active */
+  nav ul.active {
+    display: flex; /* Display the menu */
+  }
+
+  /* Style the navigation items inside the mobile menu */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+  }
+
+  /* Submenus inside the hamburger menu (hidden by default) */
+  nav ul ul {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    width: 100%;
+    transition: all 0.3s ease; /* Smooth transition for submenus */
+  }
+
+  /* Show submenu when parent li has 'active' class */
+  nav ul li.active > ul {
+    display: flex;
+  }
+
+  /* Optional: Style for submenu items */
+  nav ul ul li a {
+    padding: 10px;
+    color: #ccc;
+  }
+
+  nav ul ul li a:hover {
+    background-color: #333;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  /* General container for the library sections with blurred translucent background */
+  .library-section-container {
+    width: 90%; /* Make the container slightly larger */
+    padding: 20px 10px; /* Reduced padding */
+    font-size: 16px; /* Reduced font size */
+    line-height: 1.5; /* Adjusted line height for readability */
+    text-align: justify; /* Keep justified text */
+    margin: 10px auto; /* Reduced margin */
+  }
+
+  /* Specific styles for headings */
+  .library-section-container h2 {
+    font-size: 1.8rem; /* Reduced font size */
+    margin-bottom: 10px; /* Reduced margin */
+    font-weight: bold; /* Retain bold for headings */
+  }
+
+  /* Paragraph styles with justified text */
+  .library-section-container p {
+    font-size: 16px; /* Reduced paragraph font size */
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+    line-height: 1.5; /* Adjusted line height for better text readability */
+    text-align: justify; /* Keep text justified */
+  }
+
+  /* Image styling */
+  .library-image {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    margin-top: 15px; /* Reduced margin */
+  }
+
+  /* General container for the library sections with blurred translucent background */
+  .general-guidelines-container, 
+  .book-issue-container {
+    width: 90%; /* Makes the container responsive */
+    padding: 20px 10px; /* Reduced padding */
+    font-size: 16px; /* Smaller font size */
+    line-height: 1.5; /* Adjusted line height */
+    margin: 10px auto; /* Reduced margins */
+    text-align: justify; /* Justify text for both containers */
+  }
+
+  /* Specific styles for headings in both containers */
+  .general-guidelines-container h2, 
+  .book-issue-container h2 {
+    font-size: 1.8rem; /* Reduced font size for headings */
+    margin-bottom: 10px; /* Reduced margin */
+    font-weight: bold; /* Maintain boldness for headings */
+    text-align: center; /* Center align headings */
+    color: #1e3f9d; /* Keep the preferred color */
+  }
+
+  /* Specific styles for lists */
+  .general-guidelines-container ul, 
+  .book-issue-container ul {
+    list-style: none; /* Remove default list style */
+    padding-left: 0; /* Remove padding */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .general-guidelines-container li, 
+  .book-issue-container li {
+    margin-bottom: 8px; /* Reduced space between list items */
+  }
+
+  /* Styling for the horizontal rule */
+  hr.custom-hr {
+    border: 0;
+    height: 2px;
+    background: #000; /* Line color */
+    margin: 20px 0; /* Reduced space around the line */
+  }
+}

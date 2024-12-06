@@ -1004,3 +1004,396 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .top-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .contact-info {
+    display: flex; /* Make contact-info a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the icons horizontally */
+  }
+
+  .icon {
+    margin: 10px; /* Add margin for spacing around each icon */
+  }
+  #footer-links, #footer-contact {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically inside each footer-segment */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 80%; /* Ensure the content doesn't stretch too wide */
+    max-width: 800px; /* Limit the maximum width */
+    margin-bottom: 30px; /* Space between the two footer-segments */
+  }
+  
+  /* Style for the "Important Links" section */
+  #footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  #footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  #footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  /* Style for the "Get in Touch" section */
+  #footer-contact .map-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Optional: You can adjust font sizes and spacing for the footer headings and paragraphs */
+  #footer-links h3, #footer-contact h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  #footer-contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  #footer-contact a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #footer-contact a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .background-section {
+    height: 250px; /* Reduced height for smaller screens */
+  }
+
+  .overlay h1 {
+    font-size: 1.8rem; /* Reduced font size */
+  }
+  /* Hide the original navigation menu by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    position: absolute;
+    top: 80px; /* Adjusted from 60px to 80px (a little lower) */
+    left: 0;
+    z-index: 1000;
+    padding-top: 10px;
+    transition: all 0.3s ease; /* Smooth transition for opening menu */
+  }
+
+  /* Show the hamburger menu icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    z-index: 1100;
+    transition: transform 0.3s ease; /* Smooth transition for hamburger icon */
+  }
+
+  /* Style the individual lines in the hamburger icon */
+  .hamburger .line {
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s ease; /* Smooth transition for lines */
+  }
+
+  /* Transform the hamburger lines into an "X" when the menu is open */
+  .hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+  }
+
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+
+  .hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+  }
+
+  /* Show the navigation menu when it's active */
+  nav ul.active {
+    display: flex; /* Display the menu */
+  }
+
+  /* Style the navigation items inside the mobile menu */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+  }
+
+  /* Submenus inside the hamburger menu (hidden by default) */
+  nav ul ul {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    width: 100%;
+    transition: all 0.3s ease; /* Smooth transition for submenus */
+  }
+
+  /* Show submenu when parent li has 'active' class */
+  nav ul li.active > ul {
+    display: flex;
+  }
+
+  /* Optional: Style for submenu items */
+  nav ul ul li a {
+    padding: 10px;
+    color: #ccc;
+  }
+
+  nav ul ul li a:hover {
+    background-color: #333;
+  }
+}
+
+
+
+
+
+
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    margin: 10px; /* Adjust margin */
+  }
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .left-section {
+    height: auto;
+    padding: 10px; /* Reduced padding for mobile */
+    position: relative; /* Establish relative positioning context */
+  }
+
+  .image1 {
+    width: 100%;
+    height: auto;
+    position: absolute; /* Position image1 over image2 */
+    top: 5px;
+    left: 0;
+    z-index: 2; /* Ensure image1 appears above image2 */
+    transform: none;
+    animation: none;
+  }
+
+  .image2 {
+    width: 100%;
+    height: auto;
+    position: relative; /* Image2 remains in normal flow */
+    z-index: 1; /* Ensure it stays behind image1 */
+  }
+
+  /* Right Section */
+  .right-section {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .right-section h2 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+    margin-bottom: 15px;
+  }
+
+  .right-section p {
+    font-size: 16px; /* Reduced font size */
+  }
+
+  /* Centered content box */
+  .centered-content-box {
+    padding: 15px; /* Reduced padding */
+    max-width: 100%; /* Full width for smaller screens */
+    margin: 15px 10px;
+  }
+
+  .centered-content img {
+    max-width: 80px; /* Smaller image */
+  }
+
+  /* Specialties and facilities sections */
+  .specialties-section, .facilities-section {
+    max-width: 100%; /* Full width */
+    margin: 15px auto;
+    padding: 15px; /* Reduced padding */
+  }
+
+  .specialties-content, .facilities-content {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .specialties-content i, .facilities-content i {
+    font-size: 1.1rem; /* Smaller icon size */
+  }
+
+  .billboard-section {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .main-heading {
+    font-size: 1.5rem; /* Reduced heading font size */
+  }
+
+  .subheading-container {
+    flex-direction: column; /* Stack subheadings */
+  }
+
+  .subheading {
+    width: 100%; /* Full width */
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  .vertical-line {
+    height: 50%; /* Reduce height of the line */
+    left: 50%;
+    transform: translateX(50%);
+  }
+
+  .slideshow-image {
+    width: 150px; /* Reduced width */
+    height: 250px; /* Adjusted height */
+  }
+
+  /* Modal */
+  .fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fullscreen-content {
+    max-height: 80%;
+    max-width: 80%;
+    object-fit: contain;
+  }
+
+  .close {
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  /* Full-width image container */
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .full-width-image {
+    width: 90%; /* Adjust size for mobile */
+    max-width: 1000px;
+  }
+
+  /* Slideshow */
+  .slideshow-container {
+    margin: 15px auto;
+  }
+
+  .slideshow-track {
+    display: flex;
+    animation: slide-left 60s linear infinite;
+  }
+
+  /* Hide scrollbar for smooth slideshow effect */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Smooth Hover Effect */
+@keyframes glide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes glide-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+
+
+
+
+

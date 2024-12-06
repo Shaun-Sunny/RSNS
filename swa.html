@@ -29,6 +29,13 @@
         </div>
       </div>
     </div>
+
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -82,7 +89,7 @@
       <!-- <img src="swa1.jpg" alt="Educational and Social Activities" class="activity-image"> -->
       <p>
         RSM organizes academic programmes like Seminars, health awareness campaigns and medical camps. Students actively participate in these programmes under the guidance of faculty.  Engaging in these activities provides a safe and jovial environment for students to develop communication, empathy, and teamwork. These activities not only build social skills but also boost confidence, making students feel comfortable and empowered in social situations.   
-        Nursing professionals with a broad range of skills and a proven dedication to their careers are highly valued by healthcare management. Partaking in these activities give opportunity to our students to demonstrate their commitment and willingness to go above and beyond the call of duty. Subsequently, they become more desirable candidates in the competitive job environment.  The experiences, particularly leadership roles, and involvement in nursing organizations, unequivocally, makes them stand out. Furthermore their active participation in these activities set them apart and improves their chances of getting the desired position in healthcare industry.      </p> -->
+        Nursing professionals with a broad range of skills and a proven dedication to their careers are highly valued by healthcare management. Partaking in these activities give opportunity to our students to demonstrate their commitment and willingness to go above and beyond the call of duty. Subsequently, they become more desirable candidates in the competitive job environment.  The experiences, particularly leadership roles, and involvement in nursing organizations, unequivocally, makes them stand out. Furthermore their active participation in these activities set them apart and improves their chances of getting the desired position in healthcare industry.      </p>
     
     </div>
   </div>
@@ -589,8 +596,8 @@ startAutoScroll();
   </div>
   <!-- End of Gallery Section -->
   
-    <div class="footer-segment">
-      <h3>Important Links</h3>
+  <div id="footer-links" class="footer-segment">
+    <h3>Important Links</h3>
       <ul>
         <li><a href="about.html">About Us</a></li>
         <li><a href="course.html">Courses</a></li>
@@ -600,7 +607,7 @@ startAutoScroll();
       </ul>
     </div>
   
-    <div class="footer-segment">
+    <div id="footer-contact" class="footer-segment">
       <h3>Get in Touch</h3>
       <p>New Tura, West Garo Hills, Pin-794101, New Tura, West Garo Hills, Meghalaya, India</p>
       <p><i class="fas fa-phone"></i> <a href="tel:+919378001174" class="phone-number">+91 9378001174</a></p>
@@ -645,6 +652,37 @@ startAutoScroll();
   </script>
   
     <script src="slider.js"></script>
+
+
+    <script>
+      // Toggle the hamburger menu open/close
+      document.querySelector('.hamburger').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click event from bubbling up to the document
+        this.classList.toggle('open'); // Toggle the "X" shape for hamburger
+        document.querySelector('nav ul').classList.toggle('active'); // Show/hide the menu
+      });
+      
+      // Close the hamburger menu when clicking outside of it
+      document.addEventListener('click', function(event) {
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('nav ul');
+        
+        // Check if the click was outside the hamburger button and the menu
+        if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+          hamburger.classList.remove('open'); // Close the hamburger button (X to three lines)
+          menu.classList.remove('active'); // Hide the menu
+        }
+      });
+      
+      // Prevent click from closing the menu when the menu or hamburger is clicked
+      document.querySelector('.hamburger').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the event from bubbling up to the document
+      });
+      
+      document.querySelector('nav ul').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the event from bubbling up to the document
+      });
+      </script>
   </body>
   </html>
   

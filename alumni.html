@@ -32,6 +32,13 @@
       </div>
     </div>
     <nav>
+
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -83,7 +90,7 @@
             and now increasingly, a responsibility towards the nation and their alma mater. A fairly large number of them have secured 
             attractive positions in the academics sphere as tutors and lecturers. Their abilities are well attested by the excellent reports 
             from their recruiters. Witnessing the progress of our alumni gives us immense gratification. Their successful journey into the 
-            professional world, upholding our motto <strong>"That they may have life in fullness”</strong> (John 10:10), is an inspiration 
+            professional world, upholding our motto <strong>"That they may have life in fullness"</strong> (John 10:10), is an inspiration 
             for aspiring students.
         </p>
         <p>
@@ -327,7 +334,7 @@ scrollToTopBtn.addEventListener("click", function() {
   </div>
   <!-- End of Gallery Section -->
 
-  <div class="footer-segment">
+  <div id="footer-links" class="footer-segment">
     <h3>Important Links</h3>
     <ul>
       <li><a href="about.html">About Us</a></li>
@@ -338,7 +345,7 @@ scrollToTopBtn.addEventListener("click", function() {
     </ul>
   </div>
 
-  <div class="footer-segment">
+  <div id="footer-contact" class="footer-segment">
     <h3>Get in Touch</h3>
     <p>New Tura, West Garo Hills, Pin-794001, New Tura, West Garo Hills, Meghalaya, India</p>
     <p><i class="fas fa-phone"></i> <a href="tel:+919378001174" class="phone-number">+91 9378001174</a></p>
@@ -383,5 +390,36 @@ scrollToTopBtn.addEventListener("click", function() {
 </script>
 
   <script src="slider.js"></script>
+
+
+  <script>
+    // Toggle the hamburger menu open/close
+    document.querySelector('.hamburger').addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent the click event from bubbling up to the document
+      this.classList.toggle('open'); // Toggle the "X" shape for hamburger
+      document.querySelector('nav ul').classList.toggle('active'); // Show/hide the menu
+    });
+    
+    // Close the hamburger menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+      const hamburger = document.querySelector('.hamburger');
+      const menu = document.querySelector('nav ul');
+      
+      // Check if the click was outside the hamburger button and the menu
+      if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+        hamburger.classList.remove('open'); // Close the hamburger button (X to three lines)
+        menu.classList.remove('active'); // Hide the menu
+      }
+    });
+    
+    // Prevent click from closing the menu when the menu or hamburger is clicked
+    document.querySelector('.hamburger').addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent the event from bubbling up to the document
+    });
+    
+    document.querySelector('nav ul').addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent the event from bubbling up to the document
+    });
+    </script>
 </body>
 </html>

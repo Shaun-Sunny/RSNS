@@ -488,7 +488,7 @@ body {
 
 
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     .top-info {
       display: flex;
       flex-direction: column;
@@ -570,7 +570,14 @@ body {
 
 
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
+    .background-section {
+      height: 250px; /* Reduced height for smaller screens */
+    }
+  
+    .overlay h1 {
+      font-size: 1.8rem; /* Reduced font size */
+    }
     /* Hide the original navigation menu by default */
     nav ul {
       display: none;
@@ -679,7 +686,7 @@ body {
 
 
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     body {
       background-image: url('lg.jpg');
       background-size: cover; /* Make the background image adjust to fit within the viewport */

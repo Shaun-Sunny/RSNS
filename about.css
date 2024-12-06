@@ -672,6 +672,9 @@ nav ul ul a::before {
 
 
 
+
+
+
 .footer {
   background-color: #192841;
   color: var(--footer-text-color);
@@ -885,4 +888,354 @@ nav ul ul a::before {
 
 #scrollToTopBtn:active {
   transform: scale(0.95); /* Scale down on click */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .top-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .contact-info {
+    display: flex; /* Make contact-info a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the icons horizontally */
+  }
+
+  .icon {
+    margin: 10px; /* Add margin for spacing around each icon */
+  }
+  #footer-links, #footer-contact {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically inside each footer-segment */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 80%; /* Ensure the content doesn't stretch too wide */
+    max-width: 800px; /* Limit the maximum width */
+    margin-bottom: 30px; /* Space between the two footer-segments */
+  }
+  
+  /* Style for the "Important Links" section */
+  #footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  #footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  #footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  /* Style for the "Get in Touch" section */
+  #footer-contact .map-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Optional: You can adjust font sizes and spacing for the footer headings and paragraphs */
+  #footer-links h3, #footer-contact h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  #footer-contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  #footer-contact a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #footer-contact a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .background-section {
+    height: 250px; /* Reduced height for smaller screens */
+  }
+
+  .overlay h1 {
+    font-size: 1.8rem; /* Reduced font size */
+  }
+  /* Hide the original navigation menu by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    position: absolute;
+    top: 80px; /* Adjusted from 60px to 80px (a little lower) */
+    left: 0;
+    z-index: 1000;
+    padding-top: 10px;
+    transition: all 0.3s ease; /* Smooth transition for opening menu */
+  }
+
+  /* Show the hamburger menu icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    z-index: 1100;
+    transition: transform 0.3s ease; /* Smooth transition for hamburger icon */
+  }
+
+  /* Style the individual lines in the hamburger icon */
+  .hamburger .line {
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s ease; /* Smooth transition for lines */
+  }
+
+  /* Transform the hamburger lines into an "X" when the menu is open */
+  .hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+  }
+
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+
+  .hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+  }
+
+  /* Show the navigation menu when it's active */
+  nav ul.active {
+    display: flex; /* Display the menu */
+  }
+
+  /* Style the navigation items inside the mobile menu */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+  }
+
+  /* Submenus inside the hamburger menu (hidden by default) */
+  nav ul ul {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    width: 100%;
+    transition: all 0.3s ease; /* Smooth transition for submenus */
+  }
+
+  /* Show submenu when parent li has 'active' class */
+  nav ul li.active > ul {
+    display: flex;
+  }
+
+  /* Optional: Style for submenu items */
+  nav ul ul li a {
+    padding: 10px;
+    color: #ccc;
+  }
+
+  nav ul ul li a:hover {
+    background-color: #333;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* Main Section */
+  .history-section {
+    padding: 20px 10px;
+  }
+
+  .history-section .content-wrapper {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Section heading */
+  .section-heading {
+    font-size: 1.8rem; /* Reduced font size */
+  }
+
+  /* Text content styling */
+  .history-section .text-content p {
+    font-size: 1rem; /* Reduced font size */
+  }
+
+  /* Image container */
+  .history-section .image-container {
+    float: none;
+    margin: 10px auto;
+    max-width: 100%;
+  }
+
+  .popup-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Organogram Section */
+  .organogram-section {
+    padding: 20px 10px;
+  }
+
+  .heading-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .organogram-image-container .small-image {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  /* Founders Box */
+  .founders-box-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .founders-box {
+    flex-direction: column; /* Stack the items vertically */
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .founders-heading {
+    font-size: 2rem; /* Reduced font size */
+  }
+
+  .founder-container {
+    flex-direction: column; /* Stack founders vertically */
+    align-items: center;
+  }
+
+  .founder img {
+    width: 120px;  /* Reduced image size */
+    height: 120px; /* Reduced image size */
+  }
+
+  .founder h2 {
+    font-size: 1rem; /* Reduced font size */
+  }
+
+  .founder p {
+    font-size: 1.2rem; /* Reduced font size */
+  }
+
+  .founders-text {
+    font-size: 1rem; /* Reduced font size */
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%; /* Ensure it fits the container */
+  }
+
+  @media (max-width: 768px) {
+    /* Main Section */
+    .container-section {
+      flex-direction: column; /* Stack left and right containers vertically */
+      padding: 10px;
+      margin: 0;
+      transition: all 0.3s ease; /* Ensure smooth transition */
+    }
+  
+    .left-container, .right-container {
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1rem;
+      transition: none; /* Remove unnecessary transitions */
+      width: 100%; /* Ensure full width on smaller screens */
+      box-sizing: border-box; /* Prevent overflow issues */
+    }
+  
+    .right-container {
+      border: 2px solid #2596be; /* Ensure consistent border */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent box shadow */
+      border-radius: 10px;
+      padding: 15px; /* Adjusted padding for better layout */
+      margin-top: 20px; /* Add some margin to prevent overlap */
+    }
+  
+    /* Prevent glitching by ensuring a stable layout */
+    .container-section .left-container {
+      margin-bottom: 20px; /* Space between left and right containers */
+    }
+  
+    /* Flexbox fix: Prevent layout glitch */
+    .container-section {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
+      justify-content: center; /* Center align content */
+    }
+  
+    .left-container, .right-container {
+      flex: 1; /* Allow both containers to take up equal space */
+      min-width: 100%; /* Ensure no overflow */
+    }
+  
+    /* Ensure smooth image scaling on hover */
+    .benefactor-image {
+      width: 120px; /* Adjust size for smaller screens */
+      height: 120px;
+      border-radius: 50%;
+      margin: 10px 0;
+      transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    }
+  
+    .benefactor-image:hover {
+      transform: scale(1.1); /* Slight scale-up effect */
+    }
+  }
+  
 }
